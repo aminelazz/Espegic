@@ -12,7 +12,7 @@ namespace e
         readonly Espegic db = new Espegic();
 
         //
-        // Connected user
+        // Connected user test
         //
         public int Connected
         {
