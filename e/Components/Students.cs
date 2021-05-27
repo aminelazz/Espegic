@@ -33,8 +33,6 @@ namespace e.Components
         private void Students_Load(object sender, EventArgs e)
         {
             StudentSource();
-            DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
-
             FormationName.DataSource = (from f in db.FORMATIONS
                                         select new { f.NAME }).ToList();
 
@@ -77,9 +75,10 @@ namespace e.Components
         //
         private void UpdateStudentBtn_Click(object sender, EventArgs e)
         {
+            DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
             STUDENT student = db.STUDENTS.Find(DID);
             CIN.Text            = student.CIN;
-            FormationName.Text  = db.FORMATIONS.Where(f => f.ID == student.FORMATION_ID).Select(f => f.NAME).First();
+            //FormationName.Text  = db.FORMATIONS.Where(f => f.ID == student.FORMATION_ID).Select(f => f.NAME).First();
             L_Name.Text         = student.L_NAME;
             F_Name.Text         = student.F_NAME;
             Establishment.Text  = student.ESTABLISHEMENT;
@@ -108,7 +107,7 @@ namespace e.Components
             // Input text
             STUDENT student = new STUDENT()
             {
-                FORMATION_ID    = FormationID,
+                //FORMATION_ID    = FormationID,
                 CIN             = CIN.Text.ToUpper(),
                 F_NAME          = L_Name.Text.ToUpper(),
                 L_NAME          = F_Name.Text.ToUpper(),
@@ -181,12 +180,12 @@ namespace e.Components
         {
             // Extract Formation ID
             int FormationID = db.FORMATIONS.Where(f => f.NAME == FormationName.Text).Select(f => f.ID).First();
-
+            DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
             // Input text
             STUDENT student = new STUDENT()
             {
                 ID = DID,
-                FORMATION_ID = FormationID,
+                //FORMATION_ID = FormationID,
                 CIN = CIN.Text.ToUpper(),
                 F_NAME = L_Name.Text.ToUpper(),
                 L_NAME = F_Name.Text.ToUpper(),
@@ -265,6 +264,7 @@ namespace e.Components
             {
                 if (MessageBox.Show($"Voulez vous vraiment supprimer cet étudiant ?", "Message", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
+                    DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
                     STUDENT student = db.STUDENTS.Find(DID);
                     student.ARCHIVE = true;
                     db.SaveChanges();
@@ -352,6 +352,7 @@ namespace e.Components
         //
         private void View_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
             STUDENT student = db.STUDENTS.Find(DID);
 
             CINShow.Text            = student.CIN;
@@ -366,7 +367,7 @@ namespace e.Components
             AddressShow.Text        = student.ADRESS;
             EmailShow.Text          = student.EMAIL;
             BirthShow.Text          = student.BIRTH.ToString();
-            FormationNameShow.Text  = db.FORMATIONS.Where(f => f.ID == student.FORMATION_ID).Select(f => f.NAME).First();
+            //FormationNameShow.Text  = db.FORMATIONS.Where(f => f.ID == student.FORMATION_ID).Select(f => f.NAME).First();
             Pages.PageName = "tabPage3";
         }
 

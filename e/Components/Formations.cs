@@ -34,7 +34,6 @@ namespace e.Components
         private void Formations_Load(object sender, EventArgs e)
         {
             // Selected ID on data grid view
-            this.DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
             FormationSource();
             ModuleSource();
         }
@@ -64,6 +63,7 @@ namespace e.Components
         //
         private void UpdateFormationBtn_Click(object sender, EventArgs e)
         {
+            DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
             FORMATION formation = db.FORMATIONS.Find(DID);
             FormationName.Text = formation.NAME;
             FormationDuration.Text = formation.DURATION.ToString();
@@ -98,6 +98,7 @@ namespace e.Components
         //
         private void UpdateModuleBtn_Click(object sender, EventArgs e)
         {
+            DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
             MODULE module = db.MODULES.Find(DID);
             ModuleName.Text         = module.NAME;
             FormationDuration.Text  = db.FORMATIONS.Where(f => f.ID == module.FORMATION_ID).Select(f => f.NAME).First();
@@ -166,6 +167,7 @@ namespace e.Components
         //
         private void UpdateFormation_Click(object sender, EventArgs e)
         {
+            DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
             FORMATION formation = new FORMATION()
             {
                 ID          = DID,
@@ -224,6 +226,7 @@ namespace e.Components
             {
                 if (MessageBox.Show($"Voulez vous vraiment supprimer cette formation ?", "Message", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
+                    DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
                     FORMATION formation = db.FORMATIONS.Find(DID);
                     formation.ARCHIVE = true;
                     db.SaveChanges();
@@ -303,6 +306,8 @@ namespace e.Components
         {
             // Extract Formation ID
             int FormationID = db.FORMATIONS.Where(f => f.NAME == FormationName.Text).Select(f => f.ID).First();
+
+            DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
 
             // Input text
             MODULE module = new MODULE()

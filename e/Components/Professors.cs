@@ -34,8 +34,6 @@ namespace e.Components
         private void Professors_Load(object sender, EventArgs e)
         {
             ProfessorSource();
-            DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
-
         }
 
         //
@@ -70,7 +68,7 @@ namespace e.Components
         //
         private void UpdateProfessorBtn_Click(object sender, EventArgs e)
         {
-
+            DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
             PROFESSOR professor = db.PROFESSORS.Find(DID);
             CIN.Text            = professor.CIN;
             L_Name.Text         = professor.L_NAME;
@@ -167,6 +165,8 @@ namespace e.Components
         //
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
+            DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
+
             // Input text
             PROFESSOR professor = new PROFESSOR()
             {
@@ -247,6 +247,7 @@ namespace e.Components
             {
                 if (MessageBox.Show($"Voulez vous vraiment supprimer ce professeur ?", "Message", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
+                    DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
                     var professor = db.PROFESSORS.Find(DID);
                     professor.ARCHIVE = true;
                     db.SaveChanges();
@@ -334,6 +335,8 @@ namespace e.Components
         //
         private void View_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
+
             PROFESSOR professor = db.PROFESSORS.Find(DID);
 
             CINShow.Text            = professor.CIN;

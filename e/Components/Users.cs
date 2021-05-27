@@ -34,7 +34,6 @@ namespace e.Components
         private void Users_Load(object sender, EventArgs e)
         {
             // Selected ID on data grid view
-            this.DID    = Convert.ToInt32(View.CurrentRow.Cells["ID_Formation"].Value);
             this.Dock   = DockStyle.Fill;
             UserSource();
         }
@@ -92,6 +91,7 @@ namespace e.Components
         //
         private void UpdateUserBtn_Click(object sender, EventArgs e)
         {
+            DID = Convert.ToInt32(View.CurrentRow.Cells["ID_Formation"].Value);
             USER user = db.USERS.Find(DID);
             // Fill input
             CIN.Text        = user.CIN;
@@ -210,6 +210,7 @@ namespace e.Components
         //
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
+            DID = Convert.ToInt32(View.CurrentRow.Cells["ID_Formation"].Value);
             // Input text
             USER user = new USER()
             {
@@ -288,7 +289,8 @@ namespace e.Components
             {
                 if (MessageBox.Show($"Voulez vous vraiment supprimer cette utilisateur ?", "Message", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    var user = db.USERS.Find(DID);
+                    DID = Convert.ToInt32(View.CurrentRow.Cells["ID_Formation"].Value);
+                    USER user = db.USERS.Find(DID);
                     user.ARCHIVE = true;
                     db.SaveChanges();
                     UserSource();
