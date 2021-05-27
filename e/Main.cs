@@ -24,16 +24,16 @@ namespace e
         //
         // Properties
         //
-        Helpers help = new Helpers();
-        Espegic db = new Espegic();
+        readonly Helpers help = new Helpers();
+        readonly Espegic db = new Espegic();
 
         //
         // Load
         //
         private void Main_Load(object sender, EventArgs e)
         {
-            Container.Controls.Clear();
-            Container.Controls.Add(new Home());
+            Content.Controls.Clear();
+            Content.Controls.Add(new Home());
             Profile.Text = db.USERS.Find(help.Connected).L_NAME.ToLower();
         }
 
@@ -42,8 +42,8 @@ namespace e
         //
         private void HomeBtn_Click(object sender, EventArgs e)
         {
-            Container.Controls.Clear();
-            Container.Controls.Add(new Home());
+            Content.Controls.Clear();
+            Content.Controls.Add(new Home());
         }
 
         //
@@ -51,8 +51,8 @@ namespace e
         //
         private void UsersBtn_Click(object sender, EventArgs e)
         {
-            Container.Controls.Clear();
-            Container.Controls.Add(new Users());
+            Content.Controls.Clear();
+            Content.Controls.Add(new Users());
         }
 
         //
@@ -60,16 +60,16 @@ namespace e
         //
         private void ProfessorsBtn_Click(object sender, EventArgs e)
         {
-            Container.Controls.Clear();
-            Container.Controls.Add(new Professors());
+            Content.Controls.Clear();
+            Content.Controls.Add(new Professors());
         }
 
         //
         // Navigate to students
         private void StudentsBtn_Click(object sender, EventArgs e)
         {
-            Container.Controls.Clear();
-            Container.Controls.Add(new Students());
+            Content.Controls.Clear();
+            Content.Controls.Add(new Students());
         }
 
         //
@@ -77,8 +77,8 @@ namespace e
         //
         private void FormationsBtn_Click(object sender, EventArgs e)
         {
-            Container.Controls.Clear();
-            Container.Controls.Add(new Formations());
+            Content.Controls.Clear();
+            Content.Controls.Add(new Formations());
         }
     }
 }

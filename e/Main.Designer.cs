@@ -45,7 +45,7 @@ namespace e
             this.Profile = new System.Windows.Forms.ToolStripMenuItem();
             this.ProfileBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.DisconnectBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.Container = new Guna.UI2.WinForms.Guna2Panel();
+            this.Content = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -68,7 +68,7 @@ namespace e
             this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.menuStrip1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HomeBtn,
             this.UsersBtn,
@@ -77,47 +77,47 @@ namespace e
             this.FormationsBtn,
             this.Plus});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(227, 27);
+            this.menuStrip1.Location = new System.Drawing.Point(277, 27);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(486, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(436, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // HomeBtn
             // 
-            this.HomeBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeBtn.Name = "HomeBtn";
-            this.HomeBtn.Size = new System.Drawing.Size(54, 20);
+            this.HomeBtn.Size = new System.Drawing.Size(51, 20);
             this.HomeBtn.Text = "Acceil";
             this.HomeBtn.Click += new System.EventHandler(this.HomeBtn_Click);
             // 
             // UsersBtn
             // 
-            this.UsersBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsersBtn.Name = "UsersBtn";
-            this.UsersBtn.Size = new System.Drawing.Size(112, 20);
+            this.UsersBtn.Size = new System.Drawing.Size(98, 20);
             this.UsersBtn.Text = "Administrateur";
             this.UsersBtn.Click += new System.EventHandler(this.UsersBtn_Click);
             // 
             // ProfessorsBtn
             // 
             this.ProfessorsBtn.Name = "ProfessorsBtn";
-            this.ProfessorsBtn.Size = new System.Drawing.Size(95, 20);
+            this.ProfessorsBtn.Size = new System.Drawing.Size(84, 20);
             this.ProfessorsBtn.Text = "Professeurs";
             this.ProfessorsBtn.Click += new System.EventHandler(this.ProfessorsBtn_Click);
             // 
             // StudentsBtn
             // 
             this.StudentsBtn.Name = "StudentsBtn";
-            this.StudentsBtn.Size = new System.Drawing.Size(80, 20);
+            this.StudentsBtn.Size = new System.Drawing.Size(70, 20);
             this.StudentsBtn.Text = "Etudiants";
             this.StudentsBtn.Click += new System.EventHandler(this.StudentsBtn_Click);
             // 
             // FormationsBtn
             // 
             this.FormationsBtn.Name = "FormationsBtn";
-            this.FormationsBtn.Size = new System.Drawing.Size(90, 20);
+            this.FormationsBtn.Size = new System.Drawing.Size(81, 20);
             this.FormationsBtn.Text = "Formations";
             this.FormationsBtn.Click += new System.EventHandler(this.FormationsBtn_Click);
             // 
@@ -128,32 +128,32 @@ namespace e
             this.UserGuideBtn,
             this.TechnicalGuideBtn});
             this.Plus.Name = "Plus";
-            this.Plus.Size = new System.Drawing.Size(46, 20);
+            this.Plus.Size = new System.Drawing.Size(43, 20);
             this.Plus.Text = "Plus";
             // 
             // StatisticsBtn
             // 
             this.StatisticsBtn.Name = "StatisticsBtn";
-            this.StatisticsBtn.Size = new System.Drawing.Size(188, 22);
+            this.StatisticsBtn.Size = new System.Drawing.Size(172, 22);
             this.StatisticsBtn.Text = "Statistique";
             // 
             // UserGuideBtn
             // 
             this.UserGuideBtn.Name = "UserGuideBtn";
-            this.UserGuideBtn.Size = new System.Drawing.Size(188, 22);
+            this.UserGuideBtn.Size = new System.Drawing.Size(172, 22);
             this.UserGuideBtn.Text = "Guide d\'utilisation";
             // 
             // TechnicalGuideBtn
             // 
             this.TechnicalGuideBtn.Name = "TechnicalGuideBtn";
-            this.TechnicalGuideBtn.Size = new System.Drawing.Size(188, 22);
+            this.TechnicalGuideBtn.Size = new System.Drawing.Size(172, 22);
             this.TechnicalGuideBtn.Text = "Guide technique";
             // 
             // menuStrip2
             // 
             this.menuStrip2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            this.menuStrip2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Profile});
             this.menuStrip2.Location = new System.Drawing.Point(20, 27);
@@ -176,35 +176,35 @@ namespace e
             // ProfileBtn
             // 
             this.ProfileBtn.Name = "ProfileBtn";
-            this.ProfileBtn.Size = new System.Drawing.Size(180, 22);
+            this.ProfileBtn.Size = new System.Drawing.Size(171, 22);
             this.ProfileBtn.Text = "Profile";
             // 
             // DisconnectBtn
             // 
             this.DisconnectBtn.Name = "DisconnectBtn";
-            this.DisconnectBtn.Size = new System.Drawing.Size(180, 22);
+            this.DisconnectBtn.Size = new System.Drawing.Size(171, 22);
             this.DisconnectBtn.Text = "Se deconnecter";
             // 
-            // Container
+            // Content
             // 
-            this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Container.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Container.Location = new System.Drawing.Point(0, 78);
-            this.Container.Name = "Container";
-            this.Container.ShadowDecoration.Parent = this.Container;
-            this.Container.Size = new System.Drawing.Size(734, 483);
-            this.Container.TabIndex = 3;
+            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Content.Location = new System.Drawing.Point(0, 78);
+            this.Content.Name = "Content";
+            this.Content.ShadowDecoration.Parent = this.Content;
+            this.Content.Size = new System.Drawing.Size(734, 483);
+            this.Content.TabIndex = 3;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(734, 561);
-            this.Controls.Add(this.Container);
+            this.Controls.Add(this.Content);
             this.Controls.Add(this.guna2Panel1);
-            this.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -227,7 +227,7 @@ namespace e
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem UsersBtn;
-        private Guna.UI2.WinForms.Guna2Panel Container;
+        private Guna.UI2.WinForms.Guna2Panel Content;
         private System.Windows.Forms.ToolStripMenuItem Plus;
         private System.Windows.Forms.ToolStripMenuItem UserGuideBtn;
         private System.Windows.Forms.ToolStripMenuItem TechnicalGuideBtn;
