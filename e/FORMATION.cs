@@ -14,6 +14,13 @@ namespace e
     
     public partial class FORMATION
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public FORMATION()
+        {
+            this.MODULES = new HashSet<MODULE>();
+            this.STUDENTS = new HashSet<STUDENT>();
+        }
+    
         public int ID { get; set; }
         public string NAME { get; set; }
         public int DURATION { get; set; }
@@ -23,5 +30,10 @@ namespace e
         public System.DateTime CREATED_AT { get; set; }
         public int UPDATED_BY { get; set; }
         public System.DateTime UPDATED_AT { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MODULE> MODULES { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<STUDENT> STUDENTS { get; set; }
     }
 }

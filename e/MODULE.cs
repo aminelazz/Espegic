@@ -22,5 +22,7 @@ namespace e
         public System.DateTime CREATED_AT { get; set; }
         public int UPDATED_BY { get; set; }
         public System.DateTime UPDATED_AT { get; set; }
+    
+        public virtual FORMATION FORMATION { get; set; }
     }
 }

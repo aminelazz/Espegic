@@ -4,13 +4,13 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EspegicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ESPEGICModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="FORMATIONS">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NAME" Type="text" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="DURATION" Type="int" Nullable="false" />
           <Property Name="PRICE" Type="nchar" MaxLength="10" />
           <Property Name="ARCHIVE" Type="bit" Nullable="false" />
@@ -77,8 +77,8 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CIN" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="F_NAME" Type="text" Nullable="false" />
-          <Property Name="L_NAME" Type="text" Nullable="false" />
+          <Property Name="F_NAME" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="L_NAME" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="PHONE" Type="varchar" MaxLength="12" Nullable="false" />
           <Property Name="EMAIL" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="NATIONALITY" Type="text" Nullable="false" />
@@ -99,6 +99,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FORMATION_ID" Type="int" Nullable="false" />
           <Property Name="CIN" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="F_NAME" Type="text" Nullable="false" />
           <Property Name="L_NAME" Type="text" Nullable="false" />
@@ -153,7 +154,31 @@
           <Property Name="UPDATED_BY" Type="int" Nullable="false" />
           <Property Name="UPDATED_AT" Type="datetime" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="EspegicModelStoreContainer">
+        <Association Name="FK__MODULES__FORMATI__373B3228">
+          <End Role="FORMATIONS" Type="Self.FORMATIONS" Multiplicity="1" />
+          <End Role="MODULES" Type="Self.MODULES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FORMATIONS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MODULES">
+              <PropertyRef Name="FORMATION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__STUDENTS__FORMAT__0880433F">
+          <End Role="FORMATIONS" Type="Self.FORMATIONS" Multiplicity="1" />
+          <End Role="STUDENTS" Type="Self.STUDENTS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FORMATIONS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="STUDENTS">
+              <PropertyRef Name="FORMATION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ESPEGICModelStoreContainer">
           <EntitySet Name="FORMATIONS" EntityType="Self.FORMATIONS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HELPERS" EntityType="Self.HELPERS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HISTORIES" EntityType="Self.HISTORIES" Schema="dbo" store:Type="Tables" />
@@ -165,18 +190,26 @@
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TEACHES" EntityType="Self.TEACHES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__MODULES__FORMATI__373B3228" Association="Self.FK__MODULES__FORMATI__373B3228">
+            <End Role="FORMATIONS" EntitySet="FORMATIONS" />
+            <End Role="MODULES" EntitySet="MODULES" />
+          </AssociationSet>
+          <AssociationSet Name="FK__STUDENTS__FORMAT__0880433F" Association="Self.FK__STUDENTS__FORMAT__0880433F">
+            <End Role="FORMATIONS" EntitySet="FORMATIONS" />
+            <End Role="STUDENTS" EntitySet="STUDENTS" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="EspegicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="ESPEGICModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="FORMATION">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DURATION" Type="Int32" Nullable="false" />
           <Property Name="PRICE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="ARCHIVE" Type="Boolean" Nullable="false" />
@@ -184,6 +217,8 @@
           <Property Name="CREATED_AT" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="UPDATED_BY" Type="Int32" Nullable="false" />
           <Property Name="UPDATED_AT" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="MODULES" Relationship="Self.FK__MODULES__FORMATI__373B3228" FromRole="FORMATIONS" ToRole="MODULES" />
+          <NavigationProperty Name="STUDENTS" Relationship="Self.FK__STUDENTS__FORMAT__0880433F" FromRole="FORMATIONS" ToRole="STUDENTS" />
         </EntityType>
         <EntityType Name="HELPER">
           <Key>
@@ -213,6 +248,7 @@
           <Property Name="CREATED_AT" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="UPDATED_BY" Type="Int32" Nullable="false" />
           <Property Name="UPDATED_AT" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="FORMATION" Relationship="Self.FK__MODULES__FORMATI__373B3228" FromRole="MODULES" ToRole="FORMATIONS" />
         </EntityType>
         <EntityType Name="PAYMENT">
           <Key>
@@ -243,8 +279,8 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CIN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="F_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="L_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="L_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PHONE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="EMAIL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NATIONALITY" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
@@ -265,6 +301,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FORMATION_ID" Type="Int32" Nullable="false" />
           <Property Name="CIN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="F_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="L_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
@@ -283,6 +320,7 @@
           <Property Name="CREATED_AT" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="UPDATED_BY" Type="Int32" Nullable="false" />
           <Property Name="UPDATED_AT" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="FORMATION" Relationship="Self.FK__STUDENTS__FORMAT__0880433F" FromRole="STUDENTS" ToRole="FORMATIONS" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -319,6 +357,30 @@
           <Property Name="UPDATED_BY" Type="Int32" Nullable="false" />
           <Property Name="UPDATED_AT" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
+        <Association Name="FK__MODULES__FORMATI__373B3228">
+          <End Role="FORMATIONS" Type="Self.FORMATION" Multiplicity="1" />
+          <End Role="MODULES" Type="Self.MODULE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FORMATIONS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MODULES">
+              <PropertyRef Name="FORMATION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__STUDENTS__FORMAT__0880433F">
+          <End Role="FORMATIONS" Type="Self.FORMATION" Multiplicity="1" />
+          <End Role="STUDENTS" Type="Self.STUDENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FORMATIONS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="STUDENTS">
+              <PropertyRef Name="FORMATION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="Espegic" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="FORMATIONS" EntityType="Self.FORMATION" />
           <EntitySet Name="HELPERS" EntityType="Self.HELPER" />
@@ -331,15 +393,23 @@
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TEACHES" EntityType="Self.TEACH" />
           <EntitySet Name="USERS" EntityType="Self.USER" />
+          <AssociationSet Name="FK__MODULES__FORMATI__373B3228" Association="Self.FK__MODULES__FORMATI__373B3228">
+            <End Role="FORMATIONS" EntitySet="FORMATIONS" />
+            <End Role="MODULES" EntitySet="MODULES" />
+          </AssociationSet>
+          <AssociationSet Name="FK__STUDENTS__FORMAT__0880433F" Association="Self.FK__STUDENTS__FORMAT__0880433F">
+            <End Role="FORMATIONS" EntitySet="FORMATIONS" />
+            <End Role="STUDENTS" EntitySet="STUDENTS" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EspegicModelStoreContainer" CdmEntityContainer="Espegic">
+        <EntityContainerMapping StorageEntityContainer="ESPEGICModelStoreContainer" CdmEntityContainer="Espegic">
           <EntitySetMapping Name="FORMATIONS">
-            <EntityTypeMapping TypeName="EspegicModel.FORMATION">
+            <EntityTypeMapping TypeName="ESPEGICModel.FORMATION">
               <MappingFragment StoreEntitySet="FORMATIONS">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="NAME" ColumnName="NAME" />
@@ -354,7 +424,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HELPERS">
-            <EntityTypeMapping TypeName="EspegicModel.HELPER">
+            <EntityTypeMapping TypeName="ESPEGICModel.HELPER">
               <MappingFragment StoreEntitySet="HELPERS">
                 <ScalarProperty Name="KEY" ColumnName="KEY" />
                 <ScalarProperty Name="VALUE" ColumnName="VALUE" />
@@ -362,7 +432,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HISTORIES">
-            <EntityTypeMapping TypeName="EspegicModel.HISTORy">
+            <EntityTypeMapping TypeName="ESPEGICModel.HISTORy">
               <MappingFragment StoreEntitySet="HISTORIES">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ACTION" ColumnName="ACTION" />
@@ -372,7 +442,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MODULES">
-            <EntityTypeMapping TypeName="EspegicModel.MODULE">
+            <EntityTypeMapping TypeName="ESPEGICModel.MODULE">
               <MappingFragment StoreEntitySet="MODULES">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="FORMATION_ID" ColumnName="FORMATION_ID" />
@@ -386,7 +456,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PAYMENTs">
-            <EntityTypeMapping TypeName="EspegicModel.PAYMENT">
+            <EntityTypeMapping TypeName="ESPEGICModel.PAYMENT">
               <MappingFragment StoreEntitySet="PAYMENT">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="STUDENT_ID" ColumnName="STUDENT_ID" />
@@ -397,7 +467,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PERMISSIONS">
-            <EntityTypeMapping TypeName="EspegicModel.PERMISSION">
+            <EntityTypeMapping TypeName="ESPEGICModel.PERMISSION">
               <MappingFragment StoreEntitySet="PERMISSIONS">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
@@ -411,7 +481,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PROFESSORS">
-            <EntityTypeMapping TypeName="EspegicModel.PROFESSOR">
+            <EntityTypeMapping TypeName="ESPEGICModel.PROFESSOR">
               <MappingFragment StoreEntitySet="PROFESSORS">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="CIN" ColumnName="CIN" />
@@ -435,9 +505,10 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="STUDENTS">
-            <EntityTypeMapping TypeName="EspegicModel.STUDENT">
+            <EntityTypeMapping TypeName="ESPEGICModel.STUDENT">
               <MappingFragment StoreEntitySet="STUDENTS">
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FORMATION_ID" ColumnName="FORMATION_ID" />
                 <ScalarProperty Name="CIN" ColumnName="CIN" />
                 <ScalarProperty Name="F_NAME" ColumnName="F_NAME" />
                 <ScalarProperty Name="L_NAME" ColumnName="L_NAME" />
@@ -460,7 +531,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="EspegicModel.sysdiagram">
+            <EntityTypeMapping TypeName="ESPEGICModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -471,7 +542,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TEACHES">
-            <EntityTypeMapping TypeName="EspegicModel.TEACH">
+            <EntityTypeMapping TypeName="ESPEGICModel.TEACH">
               <MappingFragment StoreEntitySet="TEACHES">
                 <ScalarProperty Name="PROFESSOR_ID" ColumnName="PROFESSOR_ID" />
                 <ScalarProperty Name="FORMATION_ID" ColumnName="FORMATION_ID" />
@@ -479,7 +550,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="USERS">
-            <EntityTypeMapping TypeName="EspegicModel.USER">
+            <EntityTypeMapping TypeName="ESPEGICModel.USER">
               <MappingFragment StoreEntitySet="USERS">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="CIN" ColumnName="CIN" />

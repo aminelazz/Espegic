@@ -15,6 +15,7 @@ namespace e
     public partial class STUDENT
     {
         public int ID { get; set; }
+        public int FORMATION_ID { get; set; }
         public string CIN { get; set; }
         public string F_NAME { get; set; }
         public string L_NAME { get; set; }
@@ -33,5 +34,7 @@ namespace e
         public System.DateTime CREATED_AT { get; set; }
         public int UPDATED_BY { get; set; }
         public System.DateTime UPDATED_AT { get; set; }
+    
+        public virtual FORMATION FORMATION { get; set; }
     }
 }
