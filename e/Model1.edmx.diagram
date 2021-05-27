@@ -4,6 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
+<<<<<<< HEAD
       <Diagram DiagramId="3291cf793d39430d93de49f52281cdc4" Name="Diagram1" ZoomLevel="94">
         <EntityTypeShape EntityType="ESPEGICModel.FORMATION" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="ESPEGICModel.HELPER" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
@@ -18,6 +19,20 @@
         <EntityTypeShape EntityType="ESPEGICModel.USER" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
         <AssociationConnector Association="ESPEGICModel.FK__MODULES__FORMATI__373B3228" ManuallyRouted="false" />
         <AssociationConnector Association="ESPEGICModel.FK__STUDENTS__FORMAT__0880433F" ManuallyRouted="false" />
+=======
+      <Diagram DiagramId="115413a847304173b6a6dee675e4e83d" Name="Diagram1">
+        <EntityTypeShape EntityType="EspegicModel.FORMATION" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EspegicModel.HELPER" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EspegicModel.HISTORy" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EspegicModel.MODULE" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EspegicModel.PAYMENT" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EspegicModel.PERMISSION" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EspegicModel.PROFESSOR" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EspegicModel.STUDENT" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EspegicModel.sysdiagram" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EspegicModel.TEACH" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EspegicModel.USER" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+>>>>>>> e1f9130580aae1aff5568188b07097ab4da53fd6
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
