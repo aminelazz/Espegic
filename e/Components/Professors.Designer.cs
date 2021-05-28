@@ -37,6 +37,12 @@ namespace e.Components
             this.Pages = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.View = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Next = new Guna.UI2.WinForms.Guna2Button();
@@ -61,10 +67,10 @@ namespace e.Components
             this.Email = new Guna.UI2.WinForms.Guna2TextBox();
             this.Phone = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SaveBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ReturnBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -93,12 +99,7 @@ namespace e.Components
             this.panel2 = new System.Windows.Forms.Panel();
             this.ReturnBtn1 = new Guna.UI2.WinForms.Guna2Button();
             this.FullName = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.Pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.View)).BeginInit();
@@ -124,10 +125,10 @@ namespace e.Components
             this.Pages.Margin = new System.Windows.Forms.Padding(0);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.tabPage3;
-            this.Pages.PageIndex = 2;
-            this.Pages.PageName = "tabPage3";
-            this.Pages.PageTitle = "tabPage3";
+            this.Pages.Page = this.tabPage1;
+            this.Pages.PageIndex = 0;
+            this.Pages.PageName = "tabPage1";
+            this.Pages.PageTitle = "tabPage1";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(734, 483);
             this.Pages.TabIndex = 1;
@@ -237,6 +238,43 @@ namespace e.Components
             this.View.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.View.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.View_CellDoubleClick);
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "CIN";
+            this.Column2.HeaderText = "CIN";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "L_NAME";
+            this.Column3.HeaderText = "L_NAME";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "F_NAME";
+            this.Column4.HeaderText = "F_NAME";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "PHONE";
+            this.Column5.HeaderText = "PHONE";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "EMAIL";
+            this.Column6.HeaderText = "EMAIL";
+            this.Column6.Name = "Column6";
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.panel4);
@@ -318,6 +356,7 @@ namespace e.Components
             this.UpdateProfessor.ShadowDecoration.Parent = this.UpdateProfessor;
             this.UpdateProfessor.Size = new System.Drawing.Size(40, 30);
             this.UpdateProfessor.TabIndex = 1;
+            this.guna2HtmlToolTip1.SetToolTip(this.UpdateProfessor, "Modifier le professeur sélectionné");
             this.UpdateProfessor.Click += new System.EventHandler(this.UpdateProfessorBtn_Click);
             // 
             // AddProfessor
@@ -338,6 +377,7 @@ namespace e.Components
             this.AddProfessor.ShadowDecoration.Parent = this.AddProfessor;
             this.AddProfessor.Size = new System.Drawing.Size(40, 30);
             this.AddProfessor.TabIndex = 1;
+            this.guna2HtmlToolTip1.SetToolTip(this.AddProfessor, "Ajouter un professeur");
             this.AddProfessor.Click += new System.EventHandler(this.AddProfessorBtn_Click);
             // 
             // DeleteProfessor
@@ -358,6 +398,7 @@ namespace e.Components
             this.DeleteProfessor.ShadowDecoration.Parent = this.DeleteProfessor;
             this.DeleteProfessor.Size = new System.Drawing.Size(40, 30);
             this.DeleteProfessor.TabIndex = 1;
+            this.guna2HtmlToolTip1.SetToolTip(this.DeleteProfessor, "Supprimer le professeur sélectionné");
             this.DeleteProfessor.Click += new System.EventHandler(this.DeleteProfessor_Click);
             // 
             // label3
@@ -730,26 +771,6 @@ namespace e.Components
             this.panel1.Size = new System.Drawing.Size(720, 55);
             this.panel1.TabIndex = 45;
             // 
-            // UpdateBtn
-            // 
-            this.UpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.UpdateBtn.BorderRadius = 2;
-            this.UpdateBtn.CheckedState.Parent = this.UpdateBtn;
-            this.UpdateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UpdateBtn.CustomImages.Parent = this.UpdateBtn;
-            this.UpdateBtn.FillColor = System.Drawing.Color.Plum;
-            this.UpdateBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBtn.ForeColor = System.Drawing.Color.White;
-            this.UpdateBtn.HoverState.Parent = this.UpdateBtn;
-            this.UpdateBtn.ImageSize = new System.Drawing.Size(15, 15);
-            this.UpdateBtn.Location = new System.Drawing.Point(617, 13);
-            this.UpdateBtn.Name = "UpdateBtn";
-            this.UpdateBtn.ShadowDecoration.Parent = this.UpdateBtn;
-            this.UpdateBtn.Size = new System.Drawing.Size(86, 30);
-            this.UpdateBtn.TabIndex = 12;
-            this.UpdateBtn.Text = "Modifier";
-            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
-            // 
             // SaveBtn
             // 
             this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -799,6 +820,26 @@ namespace e.Components
             this.label1.Size = new System.Drawing.Size(267, 19);
             this.label1.TabIndex = 11;
             this.label1.Text = "Ajouter un nouvelle professeur";
+            // 
+            // UpdateBtn
+            // 
+            this.UpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.UpdateBtn.BorderRadius = 2;
+            this.UpdateBtn.CheckedState.Parent = this.UpdateBtn;
+            this.UpdateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UpdateBtn.CustomImages.Parent = this.UpdateBtn;
+            this.UpdateBtn.FillColor = System.Drawing.Color.Plum;
+            this.UpdateBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtn.ForeColor = System.Drawing.Color.White;
+            this.UpdateBtn.HoverState.Parent = this.UpdateBtn;
+            this.UpdateBtn.ImageSize = new System.Drawing.Size(15, 15);
+            this.UpdateBtn.Location = new System.Drawing.Point(617, 13);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.ShadowDecoration.Parent = this.UpdateBtn;
+            this.UpdateBtn.Size = new System.Drawing.Size(86, 30);
+            this.UpdateBtn.TabIndex = 12;
+            this.UpdateBtn.Text = "Modifier";
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // label4
             // 
@@ -1205,42 +1246,10 @@ namespace e.Components
             this.FullName.TabIndex = 11;
             this.FullName.Text = "Mohammed Hamham";
             // 
-            // ID
+            // guna2HtmlToolTip1
             // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "CIN";
-            this.Column2.HeaderText = "CIN";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "L_NAME";
-            this.Column3.HeaderText = "L_NAME";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "F_NAME";
-            this.Column4.HeaderText = "F_NAME";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "PHONE";
-            this.Column5.HeaderText = "PHONE";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "EMAIL";
-            this.Column6.HeaderText = "EMAIL";
-            this.Column6.Name = "Column6";
+            this.guna2HtmlToolTip1.AllowLinksHandling = true;
+            this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
             // 
             // Professors
             // 
@@ -1340,5 +1349,6 @@ namespace e.Components
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
     }
 }

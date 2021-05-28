@@ -37,8 +37,16 @@ namespace e.Components
             this.Pages = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.View = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Next = new Guna.UI2.WinForms.Guna2Button();
+            this.Previous = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateStudent = new Guna.UI2.WinForms.Guna2Button();
             this.AddStudent = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteStudent = new Guna.UI2.WinForms.Guna2Button();
@@ -65,6 +73,7 @@ namespace e.Components
             this.SaveBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ReturnBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -126,25 +135,17 @@ namespace e.Components
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.BirthShow = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.MassarShow = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.FormationNameShow = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ReturnBtn1 = new Guna.UI2.WinForms.Guna2Button();
             this.FullName = new System.Windows.Forms.Label();
-            this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.Next = new Guna.UI2.WinForms.Guna2Button();
-            this.Previous = new Guna.UI2.WinForms.Guna2Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.Pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.View)).BeginInit();
@@ -284,6 +285,53 @@ namespace e.Components
             this.View.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.View.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.View_CellDoubleClick);
             // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.DataPropertyName = "CIN";
+            this.Column2.HeaderText = "CIN";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 85;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.DataPropertyName = "L_NAME";
+            this.Column3.HeaderText = "L_NAME";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 144;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.DataPropertyName = "F_NAME";
+            this.Column4.HeaderText = "F_NAME";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 144;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column5.DataPropertyName = "PHONE";
+            this.Column5.HeaderText = "PHONE";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 144;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.DataPropertyName = "EMAIL";
+            this.Column6.HeaderText = "EMAIL";
+            this.Column6.Name = "Column6";
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.panel4);
@@ -309,6 +357,44 @@ namespace e.Components
             this.panel4.Size = new System.Drawing.Size(720, 55);
             this.panel4.TabIndex = 44;
             // 
+            // Next
+            // 
+            this.Next.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Next.BorderRadius = 2;
+            this.Next.CheckedState.Parent = this.Next;
+            this.Next.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Next.CustomImages.Parent = this.Next;
+            this.Next.FillColor = System.Drawing.Color.SkyBlue;
+            this.Next.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Next.ForeColor = System.Drawing.Color.White;
+            this.Next.HoverState.Parent = this.Next;
+            this.Next.Location = new System.Drawing.Point(363, 12);
+            this.Next.Name = "Next";
+            this.Next.ShadowDecoration.Parent = this.Next;
+            this.Next.Size = new System.Drawing.Size(40, 30);
+            this.Next.TabIndex = 16;
+            this.Next.Text = ">";
+            this.Next.Click += new System.EventHandler(this.Next_Click);
+            // 
+            // Previous
+            // 
+            this.Previous.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Previous.BorderRadius = 2;
+            this.Previous.CheckedState.Parent = this.Previous;
+            this.Previous.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Previous.CustomImages.Parent = this.Previous;
+            this.Previous.FillColor = System.Drawing.Color.SkyBlue;
+            this.Previous.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Previous.ForeColor = System.Drawing.Color.White;
+            this.Previous.HoverState.Parent = this.Previous;
+            this.Previous.Location = new System.Drawing.Point(317, 12);
+            this.Previous.Name = "Previous";
+            this.Previous.ShadowDecoration.Parent = this.Previous;
+            this.Previous.Size = new System.Drawing.Size(40, 30);
+            this.Previous.TabIndex = 17;
+            this.Previous.Text = "<";
+            this.Previous.Click += new System.EventHandler(this.Previous_Click);
+            // 
             // UpdateStudent
             // 
             this.UpdateStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -327,6 +413,7 @@ namespace e.Components
             this.UpdateStudent.ShadowDecoration.Parent = this.UpdateStudent;
             this.UpdateStudent.Size = new System.Drawing.Size(40, 30);
             this.UpdateStudent.TabIndex = 1;
+            this.guna2HtmlToolTip1.SetToolTip(this.UpdateStudent, "Modifier l\'étudiant sélectionné");
             this.UpdateStudent.Click += new System.EventHandler(this.UpdateStudentBtn_Click);
             // 
             // AddStudent
@@ -347,6 +434,7 @@ namespace e.Components
             this.AddStudent.ShadowDecoration.Parent = this.AddStudent;
             this.AddStudent.Size = new System.Drawing.Size(40, 30);
             this.AddStudent.TabIndex = 1;
+            this.guna2HtmlToolTip1.SetToolTip(this.AddStudent, "Ajouter un étudiant");
             this.AddStudent.Click += new System.EventHandler(this.AddStudentBtn_Click);
             // 
             // DeleteStudent
@@ -367,6 +455,7 @@ namespace e.Components
             this.DeleteStudent.ShadowDecoration.Parent = this.DeleteStudent;
             this.DeleteStudent.Size = new System.Drawing.Size(40, 30);
             this.DeleteStudent.TabIndex = 1;
+            this.guna2HtmlToolTip1.SetToolTip(this.DeleteStudent, "Supprimer l\'étudiant sélectionné");
             this.DeleteStudent.Click += new System.EventHandler(this.DeleteStudent_Click);
             // 
             // label3
@@ -859,6 +948,26 @@ namespace e.Components
             this.label1.TabIndex = 11;
             this.label1.Text = "Ajouter un nouvelle etudiant";
             // 
+            // UpdateBtn
+            // 
+            this.UpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.UpdateBtn.BorderRadius = 2;
+            this.UpdateBtn.CheckedState.Parent = this.UpdateBtn;
+            this.UpdateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UpdateBtn.CustomImages.Parent = this.UpdateBtn;
+            this.UpdateBtn.FillColor = System.Drawing.Color.Plum;
+            this.UpdateBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtn.ForeColor = System.Drawing.Color.White;
+            this.UpdateBtn.HoverState.Parent = this.UpdateBtn;
+            this.UpdateBtn.ImageSize = new System.Drawing.Size(15, 15);
+            this.UpdateBtn.Location = new System.Drawing.Point(617, 13);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.ShadowDecoration.Parent = this.UpdateBtn;
+            this.UpdateBtn.Size = new System.Drawing.Size(86, 30);
+            this.UpdateBtn.TabIndex = 12;
+            this.UpdateBtn.Text = "Modifier";
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -984,7 +1093,7 @@ namespace e.Components
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.54546F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.96296F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.77778F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(686, 117);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(686, 124);
             this.tableLayoutPanel2.TabIndex = 49;
             // 
             // December
@@ -1001,10 +1110,10 @@ namespace e.Components
             this.December.HoverState.Parent = this.December;
             this.December.Image = global::e.Properties.Resources.printer_filled_tool_for_print_button__2_;
             this.December.ImageSize = new System.Drawing.Size(15, 15);
-            this.December.Location = new System.Drawing.Point(631, 86);
+            this.December.Location = new System.Drawing.Point(631, 92);
             this.December.Name = "December";
             this.December.ShadowDecoration.Parent = this.December;
-            this.December.Size = new System.Drawing.Size(51, 27);
+            this.December.Size = new System.Drawing.Size(51, 28);
             this.December.TabIndex = 1;
             // 
             // November
@@ -1021,10 +1130,10 @@ namespace e.Components
             this.November.HoverState.Parent = this.November;
             this.November.Image = global::e.Properties.Resources.printer_filled_tool_for_print_button__2_;
             this.November.ImageSize = new System.Drawing.Size(15, 15);
-            this.November.Location = new System.Drawing.Point(574, 86);
+            this.November.Location = new System.Drawing.Point(574, 92);
             this.November.Name = "November";
             this.November.ShadowDecoration.Parent = this.November;
-            this.November.Size = new System.Drawing.Size(50, 27);
+            this.November.Size = new System.Drawing.Size(50, 28);
             this.November.TabIndex = 1;
             // 
             // October
@@ -1041,10 +1150,10 @@ namespace e.Components
             this.October.HoverState.Parent = this.October;
             this.October.Image = global::e.Properties.Resources.printer_filled_tool_for_print_button__2_;
             this.October.ImageSize = new System.Drawing.Size(15, 15);
-            this.October.Location = new System.Drawing.Point(517, 86);
+            this.October.Location = new System.Drawing.Point(517, 92);
             this.October.Name = "October";
             this.October.ShadowDecoration.Parent = this.October;
-            this.October.Size = new System.Drawing.Size(50, 27);
+            this.October.Size = new System.Drawing.Size(50, 28);
             this.October.TabIndex = 1;
             // 
             // September
@@ -1061,10 +1170,10 @@ namespace e.Components
             this.September.HoverState.Parent = this.September;
             this.September.Image = global::e.Properties.Resources.printer_filled_tool_for_print_button__2_;
             this.September.ImageSize = new System.Drawing.Size(15, 15);
-            this.September.Location = new System.Drawing.Point(460, 86);
+            this.September.Location = new System.Drawing.Point(460, 92);
             this.September.Name = "September";
             this.September.ShadowDecoration.Parent = this.September;
-            this.September.Size = new System.Drawing.Size(50, 27);
+            this.September.Size = new System.Drawing.Size(50, 28);
             this.September.TabIndex = 1;
             // 
             // August
@@ -1081,10 +1190,10 @@ namespace e.Components
             this.August.HoverState.Parent = this.August;
             this.August.Image = global::e.Properties.Resources.printer_filled_tool_for_print_button__2_;
             this.August.ImageSize = new System.Drawing.Size(15, 15);
-            this.August.Location = new System.Drawing.Point(403, 86);
+            this.August.Location = new System.Drawing.Point(403, 92);
             this.August.Name = "August";
             this.August.ShadowDecoration.Parent = this.August;
-            this.August.Size = new System.Drawing.Size(50, 27);
+            this.August.Size = new System.Drawing.Size(50, 28);
             this.August.TabIndex = 1;
             // 
             // July
@@ -1101,10 +1210,10 @@ namespace e.Components
             this.July.HoverState.Parent = this.July;
             this.July.Image = global::e.Properties.Resources.printer_filled_tool_for_print_button__2_;
             this.July.ImageSize = new System.Drawing.Size(15, 15);
-            this.July.Location = new System.Drawing.Point(346, 86);
+            this.July.Location = new System.Drawing.Point(346, 92);
             this.July.Name = "July";
             this.July.ShadowDecoration.Parent = this.July;
-            this.July.Size = new System.Drawing.Size(50, 27);
+            this.July.Size = new System.Drawing.Size(50, 28);
             this.July.TabIndex = 1;
             // 
             // June
@@ -1121,10 +1230,10 @@ namespace e.Components
             this.June.HoverState.Parent = this.June;
             this.June.Image = global::e.Properties.Resources.printer_filled_tool_for_print_button__2_;
             this.June.ImageSize = new System.Drawing.Size(15, 15);
-            this.June.Location = new System.Drawing.Point(289, 86);
+            this.June.Location = new System.Drawing.Point(289, 92);
             this.June.Name = "June";
             this.June.ShadowDecoration.Parent = this.June;
-            this.June.Size = new System.Drawing.Size(50, 27);
+            this.June.Size = new System.Drawing.Size(50, 28);
             this.June.TabIndex = 1;
             // 
             // Mai
@@ -1141,10 +1250,10 @@ namespace e.Components
             this.Mai.HoverState.Parent = this.Mai;
             this.Mai.Image = global::e.Properties.Resources.printer_filled_tool_for_print_button__2_;
             this.Mai.ImageSize = new System.Drawing.Size(15, 15);
-            this.Mai.Location = new System.Drawing.Point(232, 86);
+            this.Mai.Location = new System.Drawing.Point(232, 92);
             this.Mai.Name = "Mai";
             this.Mai.ShadowDecoration.Parent = this.Mai;
-            this.Mai.Size = new System.Drawing.Size(50, 27);
+            this.Mai.Size = new System.Drawing.Size(50, 28);
             this.Mai.TabIndex = 1;
             // 
             // April
@@ -1161,10 +1270,10 @@ namespace e.Components
             this.April.HoverState.Parent = this.April;
             this.April.Image = global::e.Properties.Resources.printer_filled_tool_for_print_button__2_;
             this.April.ImageSize = new System.Drawing.Size(15, 15);
-            this.April.Location = new System.Drawing.Point(175, 86);
+            this.April.Location = new System.Drawing.Point(175, 92);
             this.April.Name = "April";
             this.April.ShadowDecoration.Parent = this.April;
-            this.April.Size = new System.Drawing.Size(50, 27);
+            this.April.Size = new System.Drawing.Size(50, 28);
             this.April.TabIndex = 1;
             // 
             // March
@@ -1181,10 +1290,10 @@ namespace e.Components
             this.March.HoverState.Parent = this.March;
             this.March.Image = global::e.Properties.Resources.printer_filled_tool_for_print_button__2_;
             this.March.ImageSize = new System.Drawing.Size(15, 15);
-            this.March.Location = new System.Drawing.Point(118, 86);
+            this.March.Location = new System.Drawing.Point(118, 92);
             this.March.Name = "March";
             this.March.ShadowDecoration.Parent = this.March;
-            this.March.Size = new System.Drawing.Size(50, 27);
+            this.March.Size = new System.Drawing.Size(50, 28);
             this.March.TabIndex = 1;
             // 
             // February
@@ -1201,10 +1310,10 @@ namespace e.Components
             this.February.HoverState.Parent = this.February;
             this.February.Image = global::e.Properties.Resources.printer_filled_tool_for_print_button__2_;
             this.February.ImageSize = new System.Drawing.Size(15, 15);
-            this.February.Location = new System.Drawing.Point(61, 86);
+            this.February.Location = new System.Drawing.Point(61, 92);
             this.February.Name = "February";
             this.February.ShadowDecoration.Parent = this.February;
-            this.February.Size = new System.Drawing.Size(50, 27);
+            this.February.Size = new System.Drawing.Size(50, 28);
             this.February.TabIndex = 1;
             // 
             // January
@@ -1221,10 +1330,10 @@ namespace e.Components
             this.January.HoverState.Parent = this.January;
             this.January.Image = global::e.Properties.Resources.printer_filled_tool_for_print_button__2_;
             this.January.ImageSize = new System.Drawing.Size(15, 15);
-            this.January.Location = new System.Drawing.Point(4, 86);
+            this.January.Location = new System.Drawing.Point(4, 92);
             this.January.Name = "January";
             this.January.ShadowDecoration.Parent = this.January;
-            this.January.Size = new System.Drawing.Size(50, 27);
+            this.January.Size = new System.Drawing.Size(50, 28);
             this.January.TabIndex = 1;
             // 
             // label32
@@ -1236,7 +1345,7 @@ namespace e.Components
             this.label32.BackColor = System.Drawing.Color.White;
             this.label32.Location = new System.Drawing.Point(61, 1);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(50, 38);
+            this.label32.Size = new System.Drawing.Size(50, 41);
             this.label32.TabIndex = 0;
             this.label32.Text = "Fev";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1250,7 +1359,7 @@ namespace e.Components
             this.label48.BackColor = System.Drawing.Color.White;
             this.label48.Location = new System.Drawing.Point(4, 1);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(50, 38);
+            this.label48.Size = new System.Drawing.Size(50, 41);
             this.label48.TabIndex = 0;
             this.label48.Text = "Jan";
             this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1264,7 +1373,7 @@ namespace e.Components
             this.label29.BackColor = System.Drawing.Color.White;
             this.label29.Location = new System.Drawing.Point(118, 1);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(50, 38);
+            this.label29.Size = new System.Drawing.Size(50, 41);
             this.label29.TabIndex = 0;
             this.label29.Text = "Mar";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1278,7 +1387,7 @@ namespace e.Components
             this.label30.BackColor = System.Drawing.Color.White;
             this.label30.Location = new System.Drawing.Point(175, 1);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(50, 38);
+            this.label30.Size = new System.Drawing.Size(50, 41);
             this.label30.TabIndex = 0;
             this.label30.Text = "Avr";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1292,7 +1401,7 @@ namespace e.Components
             this.label31.BackColor = System.Drawing.Color.White;
             this.label31.Location = new System.Drawing.Point(232, 1);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(50, 38);
+            this.label31.Size = new System.Drawing.Size(50, 41);
             this.label31.TabIndex = 0;
             this.label31.Text = "Mai";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1306,7 +1415,7 @@ namespace e.Components
             this.label33.BackColor = System.Drawing.Color.White;
             this.label33.Location = new System.Drawing.Point(289, 1);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(50, 38);
+            this.label33.Size = new System.Drawing.Size(50, 41);
             this.label33.TabIndex = 0;
             this.label33.Text = "Juin";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1320,7 +1429,7 @@ namespace e.Components
             this.label34.BackColor = System.Drawing.Color.White;
             this.label34.Location = new System.Drawing.Point(346, 1);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(50, 38);
+            this.label34.Size = new System.Drawing.Size(50, 41);
             this.label34.TabIndex = 0;
             this.label34.Text = "Juil";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1334,7 +1443,7 @@ namespace e.Components
             this.label35.BackColor = System.Drawing.Color.White;
             this.label35.Location = new System.Drawing.Point(403, 1);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(50, 38);
+            this.label35.Size = new System.Drawing.Size(50, 41);
             this.label35.TabIndex = 0;
             this.label35.Text = "Aout";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1348,7 +1457,7 @@ namespace e.Components
             this.label36.BackColor = System.Drawing.Color.White;
             this.label36.Location = new System.Drawing.Point(460, 1);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(50, 38);
+            this.label36.Size = new System.Drawing.Size(50, 41);
             this.label36.TabIndex = 0;
             this.label36.Text = "Sep";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1362,7 +1471,7 @@ namespace e.Components
             this.label37.BackColor = System.Drawing.Color.White;
             this.label37.Location = new System.Drawing.Point(517, 1);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(50, 38);
+            this.label37.Size = new System.Drawing.Size(50, 41);
             this.label37.TabIndex = 0;
             this.label37.Text = "Oct";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1376,7 +1485,7 @@ namespace e.Components
             this.label38.BackColor = System.Drawing.Color.White;
             this.label38.Location = new System.Drawing.Point(574, 1);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(50, 38);
+            this.label38.Size = new System.Drawing.Size(50, 41);
             this.label38.TabIndex = 0;
             this.label38.Text = "Nov";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1390,7 +1499,7 @@ namespace e.Components
             this.label39.BackColor = System.Drawing.Color.White;
             this.label39.Location = new System.Drawing.Point(631, 1);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(51, 38);
+            this.label39.Size = new System.Drawing.Size(51, 41);
             this.label39.TabIndex = 0;
             this.label39.Text = "Dec";
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1404,9 +1513,9 @@ namespace e.Components
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Enabled = false;
-            this.checkBox1.Location = new System.Drawing.Point(4, 43);
+            this.checkBox1.Location = new System.Drawing.Point(4, 46);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(50, 36);
+            this.checkBox1.Size = new System.Drawing.Size(50, 39);
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "500";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -1420,9 +1529,9 @@ namespace e.Components
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Enabled = false;
-            this.checkBox2.Location = new System.Drawing.Point(61, 43);
+            this.checkBox2.Location = new System.Drawing.Point(61, 46);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(50, 36);
+            this.checkBox2.Size = new System.Drawing.Size(50, 39);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "800";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -1436,9 +1545,9 @@ namespace e.Components
             this.checkBox3.Checked = true;
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Enabled = false;
-            this.checkBox3.Location = new System.Drawing.Point(118, 43);
+            this.checkBox3.Location = new System.Drawing.Point(118, 46);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(50, 36);
+            this.checkBox3.Size = new System.Drawing.Size(50, 39);
             this.checkBox3.TabIndex = 1;
             this.checkBox3.Text = "600";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -1452,9 +1561,9 @@ namespace e.Components
             this.checkBox4.Checked = true;
             this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox4.Enabled = false;
-            this.checkBox4.Location = new System.Drawing.Point(175, 43);
+            this.checkBox4.Location = new System.Drawing.Point(175, 46);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(50, 36);
+            this.checkBox4.Size = new System.Drawing.Size(50, 39);
             this.checkBox4.TabIndex = 1;
             this.checkBox4.Text = "700";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -1466,9 +1575,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox5.AutoSize = true;
             this.checkBox5.Enabled = false;
-            this.checkBox5.Location = new System.Drawing.Point(232, 43);
+            this.checkBox5.Location = new System.Drawing.Point(232, 46);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(50, 36);
+            this.checkBox5.Size = new System.Drawing.Size(50, 39);
             this.checkBox5.TabIndex = 1;
             this.checkBox5.Text = "00";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -1480,9 +1589,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox6.AutoSize = true;
             this.checkBox6.Enabled = false;
-            this.checkBox6.Location = new System.Drawing.Point(289, 43);
+            this.checkBox6.Location = new System.Drawing.Point(289, 46);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(50, 36);
+            this.checkBox6.Size = new System.Drawing.Size(50, 39);
             this.checkBox6.TabIndex = 1;
             this.checkBox6.Text = "00";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -1494,9 +1603,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox7.AutoSize = true;
             this.checkBox7.Enabled = false;
-            this.checkBox7.Location = new System.Drawing.Point(346, 43);
+            this.checkBox7.Location = new System.Drawing.Point(346, 46);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(50, 36);
+            this.checkBox7.Size = new System.Drawing.Size(50, 39);
             this.checkBox7.TabIndex = 1;
             this.checkBox7.Text = "00";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -1508,9 +1617,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox8.AutoSize = true;
             this.checkBox8.Enabled = false;
-            this.checkBox8.Location = new System.Drawing.Point(403, 43);
+            this.checkBox8.Location = new System.Drawing.Point(403, 46);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(50, 36);
+            this.checkBox8.Size = new System.Drawing.Size(50, 39);
             this.checkBox8.TabIndex = 1;
             this.checkBox8.Text = "00";
             this.checkBox8.UseVisualStyleBackColor = true;
@@ -1522,9 +1631,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox9.AutoSize = true;
             this.checkBox9.Enabled = false;
-            this.checkBox9.Location = new System.Drawing.Point(460, 43);
+            this.checkBox9.Location = new System.Drawing.Point(460, 46);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(50, 36);
+            this.checkBox9.Size = new System.Drawing.Size(50, 39);
             this.checkBox9.TabIndex = 1;
             this.checkBox9.Text = "00";
             this.checkBox9.UseVisualStyleBackColor = true;
@@ -1536,9 +1645,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox10.AutoSize = true;
             this.checkBox10.Enabled = false;
-            this.checkBox10.Location = new System.Drawing.Point(517, 43);
+            this.checkBox10.Location = new System.Drawing.Point(517, 46);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(50, 36);
+            this.checkBox10.Size = new System.Drawing.Size(50, 39);
             this.checkBox10.TabIndex = 1;
             this.checkBox10.Text = "00";
             this.checkBox10.UseVisualStyleBackColor = true;
@@ -1550,9 +1659,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox11.AutoSize = true;
             this.checkBox11.Enabled = false;
-            this.checkBox11.Location = new System.Drawing.Point(574, 43);
+            this.checkBox11.Location = new System.Drawing.Point(574, 46);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(50, 36);
+            this.checkBox11.Size = new System.Drawing.Size(50, 39);
             this.checkBox11.TabIndex = 1;
             this.checkBox11.Text = "00";
             this.checkBox11.UseVisualStyleBackColor = true;
@@ -1564,9 +1673,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox12.AutoSize = true;
             this.checkBox12.Enabled = false;
-            this.checkBox12.Location = new System.Drawing.Point(631, 43);
+            this.checkBox12.Location = new System.Drawing.Point(631, 46);
             this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(51, 36);
+            this.checkBox12.Size = new System.Drawing.Size(51, 39);
             this.checkBox12.TabIndex = 1;
             this.checkBox12.Text = "00";
             this.checkBox12.UseVisualStyleBackColor = true;
@@ -1880,20 +1989,6 @@ namespace e.Components
             this.BirthShow.Text = "30.09.1989";
             this.BirthShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label15.Location = new System.Drawing.Point(4, 1);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(130, 23);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "CIN";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label53
             // 
             this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1948,6 +2043,20 @@ namespace e.Components
             this.FormationNameShow.TabIndex = 0;
             this.FormationNameShow.Text = "Developement";
             this.FormationNameShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label15.Location = new System.Drawing.Point(4, 1);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(130, 23);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "CIN";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label16
             // 
@@ -2012,110 +2121,10 @@ namespace e.Components
             this.FullName.TabIndex = 11;
             this.FullName.Text = "Mohammed Hamham";
             // 
-            // UpdateBtn
+            // guna2HtmlToolTip1
             // 
-            this.UpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.UpdateBtn.BorderRadius = 2;
-            this.UpdateBtn.CheckedState.Parent = this.UpdateBtn;
-            this.UpdateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UpdateBtn.CustomImages.Parent = this.UpdateBtn;
-            this.UpdateBtn.FillColor = System.Drawing.Color.Plum;
-            this.UpdateBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBtn.ForeColor = System.Drawing.Color.White;
-            this.UpdateBtn.HoverState.Parent = this.UpdateBtn;
-            this.UpdateBtn.ImageSize = new System.Drawing.Size(15, 15);
-            this.UpdateBtn.Location = new System.Drawing.Point(617, 13);
-            this.UpdateBtn.Name = "UpdateBtn";
-            this.UpdateBtn.ShadowDecoration.Parent = this.UpdateBtn;
-            this.UpdateBtn.Size = new System.Drawing.Size(86, 30);
-            this.UpdateBtn.TabIndex = 12;
-            this.UpdateBtn.Text = "Modifier";
-            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
-            // 
-            // Next
-            // 
-            this.Next.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Next.BorderRadius = 2;
-            this.Next.CheckedState.Parent = this.Next;
-            this.Next.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Next.CustomImages.Parent = this.Next;
-            this.Next.FillColor = System.Drawing.Color.SkyBlue;
-            this.Next.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Next.ForeColor = System.Drawing.Color.White;
-            this.Next.HoverState.Parent = this.Next;
-            this.Next.Location = new System.Drawing.Point(363, 12);
-            this.Next.Name = "Next";
-            this.Next.ShadowDecoration.Parent = this.Next;
-            this.Next.Size = new System.Drawing.Size(40, 30);
-            this.Next.TabIndex = 16;
-            this.Next.Text = ">";
-            this.Next.Click += new System.EventHandler(this.Next_Click);
-            // 
-            // Previous
-            // 
-            this.Previous.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Previous.BorderRadius = 2;
-            this.Previous.CheckedState.Parent = this.Previous;
-            this.Previous.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Previous.CustomImages.Parent = this.Previous;
-            this.Previous.FillColor = System.Drawing.Color.SkyBlue;
-            this.Previous.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Previous.ForeColor = System.Drawing.Color.White;
-            this.Previous.HoverState.Parent = this.Previous;
-            this.Previous.Location = new System.Drawing.Point(317, 12);
-            this.Previous.Name = "Previous";
-            this.Previous.ShadowDecoration.Parent = this.Previous;
-            this.Previous.Size = new System.Drawing.Size(40, 30);
-            this.Previous.TabIndex = 17;
-            this.Previous.Text = "<";
-            this.Previous.Click += new System.EventHandler(this.Previous_Click);
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column2.DataPropertyName = "CIN";
-            this.Column2.HeaderText = "CIN";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 85;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.DataPropertyName = "L_NAME";
-            this.Column3.HeaderText = "L_NAME";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 144;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.DataPropertyName = "F_NAME";
-            this.Column4.HeaderText = "F_NAME";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 144;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column5.DataPropertyName = "PHONE";
-            this.Column5.HeaderText = "PHONE";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 144;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.DataPropertyName = "EMAIL";
-            this.Column6.HeaderText = "EMAIL";
-            this.Column6.Name = "Column6";
+            this.guna2HtmlToolTip1.AllowLinksHandling = true;
+            this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
             // 
             // Students
             // 
@@ -2263,5 +2272,6 @@ namespace e.Components
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
     }
 }
