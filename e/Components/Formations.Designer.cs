@@ -51,9 +51,6 @@ namespace e.Components
             this.Updated_At_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.NextFormation = new Guna.UI2.WinForms.Guna2Button();
-            this.PreviousFormation = new Guna.UI2.WinForms.Guna2Button();
-            this.ModuleBtn = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateFormationBtn = new Guna.UI2.WinForms.Guna2Button();
             this.AddFormation = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteFormationBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -83,9 +80,6 @@ namespace e.Components
             this.Updated_At_Module = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.NextModule = new Guna.UI2.WinForms.Guna2Button();
-            this.PreviousModule = new Guna.UI2.WinForms.Guna2Button();
-            this.FormuleBtn = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateModuleBtn = new Guna.UI2.WinForms.Guna2Button();
             this.AddModule = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteModuleBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -102,6 +96,10 @@ namespace e.Components
             this.ModuleName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.NextFormation = new Guna.UI2.WinForms.Guna2Button();
+            this.PreviousFormation = new Guna.UI2.WinForms.Guna2Button();
+            this.NextModule = new Guna.UI2.WinForms.Guna2Button();
+            this.PreviousModule = new Guna.UI2.WinForms.Guna2Button();
             this.Pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewFormation)).BeginInit();
@@ -246,6 +244,7 @@ namespace e.Components
             this.ViewFormation.ThemeStyle.RowsStyle.Height = 38;
             this.ViewFormation.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.ViewFormation.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ViewFormation.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewFormation_CellDoubleClick);
             // 
             // ID_Formation
             // 
@@ -321,7 +320,6 @@ namespace e.Components
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Controls.Add(this.NextFormation);
             this.panel4.Controls.Add(this.PreviousFormation);
-            this.panel4.Controls.Add(this.ModuleBtn);
             this.panel4.Controls.Add(this.UpdateFormationBtn);
             this.panel4.Controls.Add(this.AddFormation);
             this.panel4.Controls.Add(this.DeleteFormationBtn);
@@ -331,64 +329,6 @@ namespace e.Components
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(720, 55);
             this.panel4.TabIndex = 44;
-            // 
-            // NextFormation
-            // 
-            this.NextFormation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.NextFormation.BorderRadius = 2;
-            this.NextFormation.CheckedState.Parent = this.NextFormation;
-            this.NextFormation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NextFormation.CustomImages.Parent = this.NextFormation;
-            this.NextFormation.FillColor = System.Drawing.Color.SkyBlue;
-            this.NextFormation.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextFormation.ForeColor = System.Drawing.Color.White;
-            this.NextFormation.HoverState.Parent = this.NextFormation;
-            this.NextFormation.Location = new System.Drawing.Point(475, 12);
-            this.NextFormation.Name = "NextFormation";
-            this.NextFormation.ShadowDecoration.Parent = this.NextFormation;
-            this.NextFormation.Size = new System.Drawing.Size(40, 30);
-            this.NextFormation.TabIndex = 16;
-            this.NextFormation.Text = ">";
-            this.NextFormation.Click += new System.EventHandler(this.NextFormation_Click);
-            // 
-            // PreviousFormation
-            // 
-            this.PreviousFormation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PreviousFormation.BorderRadius = 2;
-            this.PreviousFormation.CheckedState.Parent = this.PreviousFormation;
-            this.PreviousFormation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PreviousFormation.CustomImages.Parent = this.PreviousFormation;
-            this.PreviousFormation.FillColor = System.Drawing.Color.SkyBlue;
-            this.PreviousFormation.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PreviousFormation.ForeColor = System.Drawing.Color.White;
-            this.PreviousFormation.HoverState.Parent = this.PreviousFormation;
-            this.PreviousFormation.Location = new System.Drawing.Point(429, 12);
-            this.PreviousFormation.Name = "PreviousFormation";
-            this.PreviousFormation.ShadowDecoration.Parent = this.PreviousFormation;
-            this.PreviousFormation.Size = new System.Drawing.Size(40, 30);
-            this.PreviousFormation.TabIndex = 17;
-            this.PreviousFormation.Text = "<";
-            this.PreviousFormation.Click += new System.EventHandler(this.PreviousFormation_Click);
-            // 
-            // ModuleBtn
-            // 
-            this.ModuleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ModuleBtn.BorderRadius = 2;
-            this.ModuleBtn.CheckedState.Parent = this.ModuleBtn;
-            this.ModuleBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ModuleBtn.CustomImages.Parent = this.ModuleBtn;
-            this.ModuleBtn.FillColor = System.Drawing.Color.SkyBlue;
-            this.ModuleBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModuleBtn.ForeColor = System.Drawing.Color.White;
-            this.ModuleBtn.HoverState.Parent = this.ModuleBtn;
-            this.ModuleBtn.ImageSize = new System.Drawing.Size(15, 15);
-            this.ModuleBtn.Location = new System.Drawing.Point(258, 13);
-            this.ModuleBtn.Name = "ModuleBtn";
-            this.ModuleBtn.ShadowDecoration.Parent = this.ModuleBtn;
-            this.ModuleBtn.Size = new System.Drawing.Size(104, 30);
-            this.ModuleBtn.TabIndex = 12;
-            this.ModuleBtn.Text = "Modules";
-            this.ModuleBtn.Click += new System.EventHandler(this.ModuleBtn_Click);
             // 
             // UpdateFormationBtn
             // 
@@ -870,7 +810,6 @@ namespace e.Components
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.NextModule);
             this.panel2.Controls.Add(this.PreviousModule);
-            this.panel2.Controls.Add(this.FormuleBtn);
             this.panel2.Controls.Add(this.UpdateModuleBtn);
             this.panel2.Controls.Add(this.AddModule);
             this.panel2.Controls.Add(this.DeleteModuleBtn);
@@ -880,64 +819,6 @@ namespace e.Components
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(720, 55);
             this.panel2.TabIndex = 47;
-            // 
-            // NextModule
-            // 
-            this.NextModule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.NextModule.BorderRadius = 2;
-            this.NextModule.CheckedState.Parent = this.NextModule;
-            this.NextModule.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NextModule.CustomImages.Parent = this.NextModule;
-            this.NextModule.FillColor = System.Drawing.Color.SkyBlue;
-            this.NextModule.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextModule.ForeColor = System.Drawing.Color.White;
-            this.NextModule.HoverState.Parent = this.NextModule;
-            this.NextModule.Location = new System.Drawing.Point(480, 13);
-            this.NextModule.Name = "NextModule";
-            this.NextModule.ShadowDecoration.Parent = this.NextModule;
-            this.NextModule.Size = new System.Drawing.Size(40, 30);
-            this.NextModule.TabIndex = 16;
-            this.NextModule.Text = ">";
-            this.NextModule.Click += new System.EventHandler(this.NextModule_Click);
-            // 
-            // PreviousModule
-            // 
-            this.PreviousModule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PreviousModule.BorderRadius = 2;
-            this.PreviousModule.CheckedState.Parent = this.PreviousModule;
-            this.PreviousModule.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PreviousModule.CustomImages.Parent = this.PreviousModule;
-            this.PreviousModule.FillColor = System.Drawing.Color.SkyBlue;
-            this.PreviousModule.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PreviousModule.ForeColor = System.Drawing.Color.White;
-            this.PreviousModule.HoverState.Parent = this.PreviousModule;
-            this.PreviousModule.Location = new System.Drawing.Point(434, 13);
-            this.PreviousModule.Name = "PreviousModule";
-            this.PreviousModule.ShadowDecoration.Parent = this.PreviousModule;
-            this.PreviousModule.Size = new System.Drawing.Size(40, 30);
-            this.PreviousModule.TabIndex = 17;
-            this.PreviousModule.Text = "<";
-            this.PreviousModule.Click += new System.EventHandler(this.PreviousModule_Click);
-            // 
-            // FormuleBtn
-            // 
-            this.FormuleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FormuleBtn.BorderRadius = 2;
-            this.FormuleBtn.CheckedState.Parent = this.FormuleBtn;
-            this.FormuleBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FormuleBtn.CustomImages.Parent = this.FormuleBtn;
-            this.FormuleBtn.FillColor = System.Drawing.Color.SkyBlue;
-            this.FormuleBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormuleBtn.ForeColor = System.Drawing.Color.White;
-            this.FormuleBtn.HoverState.Parent = this.FormuleBtn;
-            this.FormuleBtn.ImageSize = new System.Drawing.Size(15, 15);
-            this.FormuleBtn.Location = new System.Drawing.Point(232, 13);
-            this.FormuleBtn.Name = "FormuleBtn";
-            this.FormuleBtn.ShadowDecoration.Parent = this.FormuleBtn;
-            this.FormuleBtn.Size = new System.Drawing.Size(111, 30);
-            this.FormuleBtn.TabIndex = 13;
-            this.FormuleBtn.Text = "Formations";
-            this.FormuleBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
             // UpdateModuleBtn
             // 
@@ -1212,6 +1093,78 @@ namespace e.Components
             this.guna2HtmlToolTip1.AllowLinksHandling = true;
             this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
             // 
+            // NextFormation
+            // 
+            this.NextFormation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NextFormation.BorderRadius = 2;
+            this.NextFormation.CheckedState.Parent = this.NextFormation;
+            this.NextFormation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NextFormation.CustomImages.Parent = this.NextFormation;
+            this.NextFormation.FillColor = System.Drawing.Color.SkyBlue;
+            this.NextFormation.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextFormation.ForeColor = System.Drawing.Color.White;
+            this.NextFormation.HoverState.Parent = this.NextFormation;
+            this.NextFormation.Location = new System.Drawing.Point(363, 12);
+            this.NextFormation.Name = "NextFormation";
+            this.NextFormation.ShadowDecoration.Parent = this.NextFormation;
+            this.NextFormation.Size = new System.Drawing.Size(40, 30);
+            this.NextFormation.TabIndex = 18;
+            this.NextFormation.Text = ">";
+            // 
+            // PreviousFormation
+            // 
+            this.PreviousFormation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PreviousFormation.BorderRadius = 2;
+            this.PreviousFormation.CheckedState.Parent = this.PreviousFormation;
+            this.PreviousFormation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PreviousFormation.CustomImages.Parent = this.PreviousFormation;
+            this.PreviousFormation.FillColor = System.Drawing.Color.SkyBlue;
+            this.PreviousFormation.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreviousFormation.ForeColor = System.Drawing.Color.White;
+            this.PreviousFormation.HoverState.Parent = this.PreviousFormation;
+            this.PreviousFormation.Location = new System.Drawing.Point(317, 12);
+            this.PreviousFormation.Name = "PreviousFormation";
+            this.PreviousFormation.ShadowDecoration.Parent = this.PreviousFormation;
+            this.PreviousFormation.Size = new System.Drawing.Size(40, 30);
+            this.PreviousFormation.TabIndex = 19;
+            this.PreviousFormation.Text = "<";
+            // 
+            // NextModule
+            // 
+            this.NextModule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NextModule.BorderRadius = 2;
+            this.NextModule.CheckedState.Parent = this.NextModule;
+            this.NextModule.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NextModule.CustomImages.Parent = this.NextModule;
+            this.NextModule.FillColor = System.Drawing.Color.SkyBlue;
+            this.NextModule.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextModule.ForeColor = System.Drawing.Color.White;
+            this.NextModule.HoverState.Parent = this.NextModule;
+            this.NextModule.Location = new System.Drawing.Point(363, 12);
+            this.NextModule.Name = "NextModule";
+            this.NextModule.ShadowDecoration.Parent = this.NextModule;
+            this.NextModule.Size = new System.Drawing.Size(40, 30);
+            this.NextModule.TabIndex = 18;
+            this.NextModule.Text = ">";
+            // 
+            // PreviousModule
+            // 
+            this.PreviousModule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PreviousModule.BorderRadius = 2;
+            this.PreviousModule.CheckedState.Parent = this.PreviousModule;
+            this.PreviousModule.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PreviousModule.CustomImages.Parent = this.PreviousModule;
+            this.PreviousModule.FillColor = System.Drawing.Color.SkyBlue;
+            this.PreviousModule.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreviousModule.ForeColor = System.Drawing.Color.White;
+            this.PreviousModule.HoverState.Parent = this.PreviousModule;
+            this.PreviousModule.Location = new System.Drawing.Point(317, 12);
+            this.PreviousModule.Name = "PreviousModule";
+            this.PreviousModule.ShadowDecoration.Parent = this.PreviousModule;
+            this.PreviousModule.Size = new System.Drawing.Size(40, 30);
+            this.PreviousModule.TabIndex = 19;
+            this.PreviousModule.Text = "<";
+            // 
             // Formations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1277,11 +1230,9 @@ namespace e.Components
         private Guna.UI2.WinForms.Guna2ComboBox ModuleFormationName;
         private Guna.UI2.WinForms.Guna2TextBox ModuleName;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2Button ModuleBtn;
         private Guna.UI2.WinForms.Guna2DataGridView ViewModule;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button FormuleBtn;
         private Guna.UI2.WinForms.Guna2Button UpdateModuleBtn;
         private Guna.UI2.WinForms.Guna2Button AddModule;
         private Guna.UI2.WinForms.Guna2Button DeleteModuleBtn;
@@ -1309,10 +1260,10 @@ namespace e.Components
         private Guna.UI2.WinForms.Guna2Button UpdateModule;
         private Guna.UI2.WinForms.Guna2TextBox FormationDuration;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
         private Guna.UI2.WinForms.Guna2Button NextFormation;
         private Guna.UI2.WinForms.Guna2Button PreviousFormation;
         private Guna.UI2.WinForms.Guna2Button NextModule;
         private Guna.UI2.WinForms.Guna2Button PreviousModule;
-        private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
     }
 }

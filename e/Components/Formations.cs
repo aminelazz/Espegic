@@ -530,16 +530,25 @@ namespace e.Components
         }
 
         //
-        // Data source formation
+        // Data source module
         //
         private void ModuleSource()
         {
-            //ViewFormation.DataSource = (from m in db.MODULES
-            //                            where m.ARCHIVE == false
-            //                            where m.NAME.Contains(SearchModule.Text)
-            //                            orderby m.UPDATED_AT descending
-            //                            join FORMATIONS
-            //                            select new { m.ID, m.NAME }).Take(10).ToList();
+            DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
+
+            ViewModule.DataSource = (from m in db.MODULES
+                                        join f in db.FORMATIONS
+                                        on m.FORMATION_ID equals f.ID
+                                        where m.ARCHIVE == false
+                                        && m.FORMATION_ID == DID
+                                        orderby m.UPDATED_AT descending
+                                        select new { m.ID, m.NAME }).Take(10).ToList();
+        }
+
+        private void ViewFormation_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Pages.PageName = "tabPage3";
+            ModuleSource();
         }
     }
 }
