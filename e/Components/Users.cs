@@ -14,7 +14,7 @@ namespace e.Components
 {
     public partial class Users : UserControl
     {
-        // Constructor test
+        // Constructor
         public Users()
         {
             InitializeComponent();
