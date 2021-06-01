@@ -551,6 +551,15 @@ namespace e.Components
             }
         }
 
+        //
+        // Show modules of formation
+        //
+        private void ViewFormation_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Pages.PageName = "tabPage3";
+            ModuleSource();
+        }
+
         ///////////////////////////////////////////////////////////////////////////////////
 
         //
@@ -578,12 +587,6 @@ namespace e.Components
                                      && m.FORMATION_ID == DID
                                      orderby m.UPDATED_AT descending
                                      select new { m.ID, m.NAME, formationName = f.NAME }).Take(10).ToList();
-        }
-
-        private void ViewFormation_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Pages.PageName = "tabPage3";
-            ModuleSource();
         }
     }
 }
