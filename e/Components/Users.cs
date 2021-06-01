@@ -91,7 +91,7 @@ namespace e.Components
         //
         private void UpdateUserBtn_Click(object sender, EventArgs e)
         {
-            DID = Convert.ToInt32(View.CurrentRow.Cells["ID_Formation"].Value);
+            DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
             USER user = db.USERS.Find(DID);
             // Fill input
             CIN.Text        = user.CIN;
@@ -210,7 +210,7 @@ namespace e.Components
         //
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
-            DID = Convert.ToInt32(View.CurrentRow.Cells["ID_Formation"].Value);
+            DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
             // Input text
             USER user = new USER()
             {
@@ -222,9 +222,9 @@ namespace e.Components
                 EMAIL       = Email.Text.ToLower(),
                 PASSWORD    = Password.Text,
                 ARCHIVE     = false,
-                CREATED_BY  = help.Connected,
+                CREATED_BY  = db.USERS.Where(u => u.ID == DID).Select(u => u.CREATED_BY).First(),
+                CREATED_AT  = db.USERS.Where(u => u.ID == DID).Select(u => u.CREATED_AT).First(),
                 UPDATED_BY  = help.Connected,
-                CREATED_AT  = DateTime.Now,
                 UPDATED_AT  = DateTime.Now
             };
 

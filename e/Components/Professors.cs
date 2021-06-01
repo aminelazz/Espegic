@@ -184,6 +184,8 @@ namespace e.Components
                 ADRESS          = Address.Text.ToUpper(),
                 BIRTH           = Birth.Value,
                 ARCHIVE         = false,
+                CREATED_BY      = db.PROFESSORS.Where(p => p.ID == DID).Select(p => p.CREATED_BY).First(),
+                CREATED_AT      = db.PROFESSORS.Where(p => p.ID == DID).Select(p => p.CREATED_AT).First(),
                 UPDATED_BY      = help.Connected,
                 UPDATED_AT      = DateTime.Now
             };

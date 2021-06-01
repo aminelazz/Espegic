@@ -77,10 +77,10 @@ namespace e
             this.FormationsBtn,
             this.Plus});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(277, 27);
+            this.menuStrip1.Location = new System.Drawing.Point(295, 27);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(436, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(418, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -96,8 +96,8 @@ namespace e
             // 
             this.UsersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsersBtn.Name = "UsersBtn";
-            this.UsersBtn.Size = new System.Drawing.Size(98, 20);
-            this.UsersBtn.Text = "Administrateur";
+            this.UsersBtn.Size = new System.Drawing.Size(80, 20);
+            this.UsersBtn.Text = "Utilisateurs";
             this.UsersBtn.Click += new System.EventHandler(this.UsersBtn_Click);
             // 
             // ProfessorsBtn

@@ -27,6 +27,7 @@ namespace e.Components
         readonly    Espegic db          = new Espegic();
         protected   int     pageCount   = 0;
         protected   int     DID;
+        protected   int     DID2;
 
         //
         // Load
@@ -36,6 +37,12 @@ namespace e.Components
             // Selected ID on data grid view
             FormationSource();
             ModuleSource();
+
+            ModuleFormationName.DataSource = (from f in db.FORMATIONS
+                                              where f.ARCHIVE == false
+                                              select new { f.NAME }).ToList();
+
+            ModuleFormationName.DisplayMember = "NAME";
         }
 
         //
@@ -86,8 +93,16 @@ namespace e.Components
         //
         private void AddModule_Click(object sender, EventArgs e)
         {
+            DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
+
             ModuleName.Clear();
-            ModuleFormationName.SelectedIndex = -1;
+            ModuleFormationName.DataSource = (from f in db.FORMATIONS
+                                              where f.ARCHIVE == false
+                                              && f.ID == DID
+                                              select new { f.NAME }).ToList();
+
+            ModuleFormationName.DisplayMember = "NAME";
+            ModuleFormationName.Enabled = false;
 
             Pages.PageName = "tabPage4";
             CreateModule.BringToFront();
@@ -99,9 +114,16 @@ namespace e.Components
         private void UpdateModuleBtn_Click(object sender, EventArgs e)
         {
             DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
-            MODULE module = db.MODULES.Find(DID);
+            DID2 = Convert.ToInt32(ViewModule.CurrentRow.Cells["ID_MODULE"].Value);
+            MODULE module = db.MODULES.Find(DID2);
             ModuleName.Text         = module.NAME;
-            FormationDuration.Text  = db.FORMATIONS.Where(f => f.ID == module.FORMATION_ID).Select(f => f.NAME).First();
+            ModuleFormationName.DataSource = (from f in db.FORMATIONS
+                                              where f.ARCHIVE == false
+                                              && f.ID == DID
+                                              select new { f.NAME }).ToList();
+
+            ModuleFormationName.DisplayMember = "NAME";
+            ModuleFormationName.Enabled = false;
 
             Pages.PageName = "tabPage4";
             UpdateModule.BringToFront();
@@ -175,6 +197,8 @@ namespace e.Components
                 DURATION    = int.Parse(FormationDuration.Text),
                 PRICE       = FormationPrice.Text,
                 ARCHIVE     = false,
+                CREATED_BY  = db.FORMATIONS.Where(f => f.ID == DID2).Select(f => f.CREATED_BY).First(),
+                CREATED_AT  = db.FORMATIONS.Where(f => f.ID == DID2).Select(f => f.CREATED_AT).First(),
                 UPDATED_BY  = help.Connected,
                 UPDATED_AT  = DateTime.Now
             };
@@ -248,7 +272,7 @@ namespace e.Components
         private void CreateModule_Click(object sender, EventArgs e)
         {
             // Extract Formation ID
-            int FormationID = db.FORMATIONS.Where(f => f.NAME == FormationName.Text).Select(f => f.ID).First();
+            int FormationID = db.FORMATIONS.Where(f => f.NAME == ModuleFormationName.Text).Select(f => f.ID).First();
 
             // Input text
             MODULE module = new MODULE()
@@ -282,7 +306,7 @@ namespace e.Components
                     ModuleSource();
 
                     MessageBox.Show("Le module ajouté avec succés");
-                    Pages.PageName = "tabPage1";
+                    Pages.PageName = "tabPage3";
                 }
                 else
                 {
@@ -305,17 +329,19 @@ namespace e.Components
         private void UpdateModule_Click(object sender, EventArgs e)
         {
             // Extract Formation ID
-            int FormationID = db.FORMATIONS.Where(f => f.NAME == FormationName.Text).Select(f => f.ID).First();
+            int FormationID = db.FORMATIONS.Where(f => f.NAME == ModuleFormationName.Text).Select(f => f.ID).First();
 
-            DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
+            DID2 = Convert.ToInt32(ViewModule.CurrentRow.Cells["ID_MODULE"].Value);
 
             // Input text
             MODULE module = new MODULE()
             {
-                ID              = DID,
+                ID              = DID2,
                 FORMATION_ID    = FormationID,
                 NAME            = ModuleName.Text,
                 ARCHIVE         = false,
+                CREATED_BY      = db.MODULES.Where(m => m.ID == DID2).Select(m => m.CREATED_BY).First(),
+                CREATED_AT      = db.MODULES.Where(m => m.ID == DID2).Select(m => m.CREATED_AT).First(),
                 UPDATED_BY      = help.Connected,
                 UPDATED_AT      = DateTime.Now
             };
@@ -340,7 +366,7 @@ namespace e.Components
                     ModuleSource();
 
                     MessageBox.Show("Le module modifié avec succés");
-                    Pages.PageName = "tabPage1";
+                    Pages.PageName = "tabPage3";
                 }
                 else
                 {
@@ -395,12 +421,12 @@ namespace e.Components
             else
             {
                 ViewFormation.DataSource = (from f in db.FORMATIONS
-                                   where f.ARCHIVE == false
-                                   where f.NAME.Contains(SearchFormation.Text)
-                                   || f.DURATION.ToString().Contains(SearchFormation.Text)
-                                   || f.PRICE.Contains(SearchFormation.Text)
-                                   orderby f.UPDATED_AT descending
-                                   select new { f.ID, f.NAME, f.DURATION, f.PRICE }).Take(10).ToList();
+                                           where f.ARCHIVE == false
+                                           where f.NAME.Contains(SearchFormation.Text)
+                                           || f.DURATION.ToString().Contains(SearchFormation.Text)
+                                           || f.PRICE.Contains(SearchFormation.Text)
+                                           orderby f.UPDATED_AT descending
+                                           select new { f.ID, f.NAME, f.DURATION, f.PRICE }).Take(10).ToList();
             }
         }
 
@@ -415,9 +441,9 @@ namespace e.Components
                 {
                     pageCount += 10;
                     ViewFormation.DataSource = (from f in db.FORMATIONS
-                                       where f.ARCHIVE == false
-                                       orderby f.UPDATED_AT descending
-                                       select new { f.ID, f.NAME, f.DURATION, f.PRICE }).Skip(pageCount).Take(10).ToList();
+                                               where f.ARCHIVE == false
+                                               orderby f.UPDATED_AT descending
+                                               select new { f.ID, f.NAME, f.DURATION, f.PRICE }).Skip(pageCount).Take(10).ToList();
                 }
             }
             catch (Exception ex)
@@ -437,9 +463,9 @@ namespace e.Components
                 {
                     pageCount -= 10;
                     ViewFormation.DataSource = (from f in db.FORMATIONS
-                                       where f.ARCHIVE == false
-                                       orderby f.UPDATED_AT descending
-                                       select new { f.ID, f.NAME, f.DURATION, f.PRICE }).Skip(pageCount).Take(10).ToList();
+                                               where f.ARCHIVE == false
+                                               orderby f.UPDATED_AT descending
+                                               select new { f.ID, f.NAME, f.DURATION, f.PRICE }).Skip(pageCount).Take(10).ToList();
                 }
             }
             catch (Exception ex)
@@ -459,12 +485,16 @@ namespace e.Components
             }
             else
             {
-                //ViewFormation.DataSource = (from m in db.MODULES
-                //                            where m.ARCHIVE == false
-                //                            where m.NAME.Contains(SearchModule.Text)
-                //                            orderby m.UPDATED_AT descending
-                //                            join FORMATIONS
-                //                            select new { m.ID, m.NAME }).Take(10).ToList();
+                DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
+
+                ViewModule.DataSource = (from m in db.MODULES
+                                         join f in db.FORMATIONS
+                                         on m.FORMATION_ID equals f.ID
+                                         where m.ARCHIVE == false
+                                         && m.FORMATION_ID == DID
+                                         where m.NAME.Contains(SearchModule.Text)
+                                         orderby m.UPDATED_AT descending
+                                         select new { m.ID, m.NAME, formationName = f.NAME }).Take(10).ToList();
             }
         }
 
@@ -473,17 +503,19 @@ namespace e.Components
         //
         private void NextModule_Click(object sender, EventArgs e)
         {
+            DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
             try
             {
                 if ((db.MODULES.Count() - pageCount) > 10)
                 {
                     pageCount += 10;
-                    //ViewFormation.DataSource = (from m in db.MODULES
-                    //                            where m.ARCHIVE == false
-                    //                            where m.NAME.Contains(SearchModule.Text)
-                    //                            orderby m.UPDATED_AT descending
-                    //                            join FORMATIONS
-                    //                            select new { m.ID, m.NAME }).Skip(pageCount).Take(10).ToList();
+                    ViewModule.DataSource = (from m in db.MODULES
+                                             join f in db.FORMATIONS
+                                             on m.FORMATION_ID equals f.ID
+                                             where m.ARCHIVE == false
+                                             && m.FORMATION_ID == DID
+                                             orderby m.UPDATED_AT descending
+                                             select new { m.ID, m.NAME, formationName = f.NAME }).Skip(pageCount).Take(10).ToList();
                 }
             }
             catch (Exception ex)
@@ -497,17 +529,20 @@ namespace e.Components
         //
         private void PreviousModule_Click(object sender, EventArgs e)
         {
+            DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
             try
             {
                 if (pageCount > 0)
                 {
+
                     pageCount -= 10;
-                    //ViewFormation.DataSource = (from m in db.MODULES
-                    //                            where m.ARCHIVE == false
-                    //                            where m.NAME.Contains(SearchModule.Text)
-                    //                            orderby m.UPDATED_AT descending
-                    //                            join FORMATIONS
-                    //                            select new { m.ID, m.NAME }).Skip(pageCount).Take(10).ToList();
+                    ViewModule.DataSource = (from m in db.MODULES
+                                             join f in db.FORMATIONS
+                                             on m.FORMATION_ID equals f.ID
+                                             where m.ARCHIVE == false
+                                             && m.FORMATION_ID == DID
+                                             orderby m.UPDATED_AT descending
+                                             select new { m.ID, m.NAME, formationName = f.NAME }).Skip(pageCount).Take(10).ToList();
                 }
             }
             catch (Exception ex)
@@ -537,12 +572,12 @@ namespace e.Components
             DID = Convert.ToInt32(ViewFormation.CurrentRow.Cells["ID_Formation"].Value);
 
             ViewModule.DataSource = (from m in db.MODULES
-                                        join f in db.FORMATIONS
-                                        on m.FORMATION_ID equals f.ID
-                                        where m.ARCHIVE == false
-                                        && m.FORMATION_ID == DID
-                                        orderby m.UPDATED_AT descending
-                                        select new { m.ID, m.NAME }).Take(10).ToList();
+                                     join f in db.FORMATIONS
+                                     on m.FORMATION_ID equals f.ID
+                                     where m.ARCHIVE == false
+                                     && m.FORMATION_ID == DID
+                                     orderby m.UPDATED_AT descending
+                                     select new { m.ID, m.NAME, formationName = f.NAME }).Take(10).ToList();
         }
 
         private void ViewFormation_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

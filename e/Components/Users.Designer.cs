@@ -121,10 +121,10 @@ namespace e.Components
             this.Pages.Margin = new System.Windows.Forms.Padding(0);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.tabPage1;
-            this.Pages.PageIndex = 0;
-            this.Pages.PageName = "tabPage1";
-            this.Pages.PageTitle = "tabPage1";
+            this.Pages.Page = this.tabPage2;
+            this.Pages.PageIndex = 1;
+            this.Pages.PageName = "tabPage2";
+            this.Pages.PageTitle = "tabPage2";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(734, 483);
             this.Pages.TabIndex = 0;
@@ -415,9 +415,9 @@ namespace e.Components
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(13, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 19);
+            this.label3.Size = new System.Drawing.Size(102, 19);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Administrateurs";
+            this.label3.Text = "Utilisateurs";
             // 
             // guna2Panel1
             // 
@@ -1192,9 +1192,9 @@ namespace e.Components
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 19);
+            this.label1.Size = new System.Drawing.Size(246, 19);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Ajouter un nouvelle administrateur";
+            this.label1.Text = "Ajouter un nouvel utilisateur";
             // 
             // UpdateBtn
             // 

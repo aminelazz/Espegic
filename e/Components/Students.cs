@@ -184,24 +184,26 @@ namespace e.Components
             // Input text
             STUDENT student = new STUDENT()
             {
-                ID = DID,
-                //FORMATION_ID = FormationID,
-                CIN = CIN.Text.ToUpper(),
-                F_NAME = L_Name.Text.ToUpper(),
-                L_NAME = F_Name.Text.ToUpper(),
-                PHONE = Phone.Text,
-                EMAIL = Email.Text.ToLower(),
-                SEX = Sex.Text.ToUpper(),
-                ESTABLISHEMENT = Establishment.Text.ToUpper(),
-                NATIONALITY = Nationality.Text.ToUpper(),
-                PROVINCE = Province.Text.ToUpper(),
-                COMMUN = Commune.Text.ToUpper(),
-                MASSAR = Massar_ID.Text.ToUpper(),
-                ADRESS = Address.Text.ToUpper(),
-                BIRTH = Birth.Value,
-                ARCHIVE = false,
-                UPDATED_BY = help.Connected,
-                UPDATED_AT = DateTime.Now
+                ID                = DID,
+                FORMATION_ID      = FormationID,
+                CIN               = CIN.Text.ToUpper(),
+                F_NAME            = L_Name.Text.ToUpper(),
+                L_NAME            = F_Name.Text.ToUpper(),
+                PHONE             = Phone.Text,
+                EMAIL             = Email.Text.ToLower(),
+                SEX               = Sex.Text.ToUpper(),
+                ESTABLISHEMENT    = Establishment.Text.ToUpper(),
+                NATIONALITY       = Nationality.Text.ToUpper(),
+                PROVINCE          = Province.Text.ToUpper(),
+                COMMUN            = Commune.Text.ToUpper(),
+                MASSAR            = Massar_ID.Text.ToUpper(),
+                ADRESS            = Address.Text.ToUpper(),
+                BIRTH             = Birth.Value,
+                ARCHIVE           = false,
+                CREATED_BY        = db.STUDENTS.Where(s => s.ID == DID).Select(s => s.CREATED_BY).First(),
+                CREATED_AT        = db.STUDENTS.Where(s => s.ID == DID).Select(s => s.CREATED_AT).First(),
+                UPDATED_BY        = help.Connected,
+                UPDATED_AT        = DateTime.Now
             };
           
 

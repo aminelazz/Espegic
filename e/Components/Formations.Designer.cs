@@ -40,17 +40,10 @@ namespace e.Components
             this.Pages = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.ViewFormation = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ID_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Archive_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Created_By_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Created_At_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Updated_By_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Updated_At_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.NextFormation = new Guna.UI2.WinForms.Guna2Button();
+            this.PreviousFormation = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateFormationBtn = new Guna.UI2.WinForms.Guna2Button();
             this.AddFormation = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteFormationBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -80,6 +73,8 @@ namespace e.Components
             this.Updated_At_Module = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.NextModule = new Guna.UI2.WinForms.Guna2Button();
+            this.PreviousModule = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateModuleBtn = new Guna.UI2.WinForms.Guna2Button();
             this.AddModule = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteModuleBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -96,10 +91,15 @@ namespace e.Components
             this.ModuleName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.NextFormation = new Guna.UI2.WinForms.Guna2Button();
-            this.PreviousFormation = new Guna.UI2.WinForms.Guna2Button();
-            this.NextModule = new Guna.UI2.WinForms.Guna2Button();
-            this.PreviousModule = new Guna.UI2.WinForms.Guna2Button();
+            this.ID_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Archive_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Created_By_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Created_At_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Updated_By_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Updated_At_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewFormation)).BeginInit();
@@ -130,10 +130,10 @@ namespace e.Components
             this.Pages.Margin = new System.Windows.Forms.Padding(0);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.tabPage1;
-            this.Pages.PageIndex = 0;
-            this.Pages.PageName = "tabPage1";
-            this.Pages.PageTitle = "tabPage1";
+            this.Pages.Page = this.tabPage3;
+            this.Pages.PageIndex = 2;
+            this.Pages.PageName = "tabPage3";
+            this.Pages.PageTitle = "tabPage3";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(734, 483);
             this.Pages.TabIndex = 1;
@@ -246,65 +246,6 @@ namespace e.Components
             this.ViewFormation.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.ViewFormation.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewFormation_CellDoubleClick);
             // 
-            // ID_Formation
-            // 
-            this.ID_Formation.DataPropertyName = "ID";
-            this.ID_Formation.HeaderText = "ID";
-            this.ID_Formation.Name = "ID_Formation";
-            // 
-            // Name_Formation
-            // 
-            this.Name_Formation.DataPropertyName = "NAME";
-            this.Name_Formation.HeaderText = "Nom";
-            this.Name_Formation.Name = "Name_Formation";
-            // 
-            // Duration
-            // 
-            this.Duration.DataPropertyName = "DURATION";
-            this.Duration.HeaderText = "Durée";
-            this.Duration.Name = "Duration";
-            // 
-            // Price
-            // 
-            this.Price.DataPropertyName = "PRICE";
-            this.Price.HeaderText = "Prix";
-            this.Price.Name = "Price";
-            // 
-            // Archive_Formation
-            // 
-            this.Archive_Formation.DataPropertyName = "ARCHIVE";
-            this.Archive_Formation.HeaderText = "Archive";
-            this.Archive_Formation.Name = "Archive_Formation";
-            this.Archive_Formation.Visible = false;
-            // 
-            // Created_By_Formation
-            // 
-            this.Created_By_Formation.DataPropertyName = "CREATED_BY";
-            this.Created_By_Formation.HeaderText = "Créé par";
-            this.Created_By_Formation.Name = "Created_By_Formation";
-            this.Created_By_Formation.Visible = false;
-            // 
-            // Created_At_Formation
-            // 
-            this.Created_At_Formation.DataPropertyName = "CREATED_AT";
-            this.Created_At_Formation.HeaderText = "Créé le";
-            this.Created_At_Formation.Name = "Created_At_Formation";
-            this.Created_At_Formation.Visible = false;
-            // 
-            // Updated_By_Formation
-            // 
-            this.Updated_By_Formation.DataPropertyName = "UPDATED_BY";
-            this.Updated_By_Formation.HeaderText = "Modifié par";
-            this.Updated_By_Formation.Name = "Updated_By_Formation";
-            this.Updated_By_Formation.Visible = false;
-            // 
-            // Updated_At_Formation
-            // 
-            this.Updated_At_Formation.DataPropertyName = "UPDATED_AT";
-            this.Updated_At_Formation.HeaderText = "Modifié le";
-            this.Updated_At_Formation.Name = "Updated_At_Formation";
-            this.Updated_At_Formation.Visible = false;
-            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.panel4);
@@ -329,6 +270,44 @@ namespace e.Components
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(720, 55);
             this.panel4.TabIndex = 44;
+            // 
+            // NextFormation
+            // 
+            this.NextFormation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NextFormation.BorderRadius = 2;
+            this.NextFormation.CheckedState.Parent = this.NextFormation;
+            this.NextFormation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NextFormation.CustomImages.Parent = this.NextFormation;
+            this.NextFormation.FillColor = System.Drawing.Color.SkyBlue;
+            this.NextFormation.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextFormation.ForeColor = System.Drawing.Color.White;
+            this.NextFormation.HoverState.Parent = this.NextFormation;
+            this.NextFormation.Location = new System.Drawing.Point(363, 12);
+            this.NextFormation.Name = "NextFormation";
+            this.NextFormation.ShadowDecoration.Parent = this.NextFormation;
+            this.NextFormation.Size = new System.Drawing.Size(40, 30);
+            this.NextFormation.TabIndex = 18;
+            this.NextFormation.Text = ">";
+            this.NextFormation.Click += new System.EventHandler(this.NextFormation_Click);
+            // 
+            // PreviousFormation
+            // 
+            this.PreviousFormation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PreviousFormation.BorderRadius = 2;
+            this.PreviousFormation.CheckedState.Parent = this.PreviousFormation;
+            this.PreviousFormation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PreviousFormation.CustomImages.Parent = this.PreviousFormation;
+            this.PreviousFormation.FillColor = System.Drawing.Color.SkyBlue;
+            this.PreviousFormation.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreviousFormation.ForeColor = System.Drawing.Color.White;
+            this.PreviousFormation.HoverState.Parent = this.PreviousFormation;
+            this.PreviousFormation.Location = new System.Drawing.Point(317, 12);
+            this.PreviousFormation.Name = "PreviousFormation";
+            this.PreviousFormation.ShadowDecoration.Parent = this.PreviousFormation;
+            this.PreviousFormation.Size = new System.Drawing.Size(40, 30);
+            this.PreviousFormation.TabIndex = 19;
+            this.PreviousFormation.Text = "<";
+            this.PreviousFormation.Click += new System.EventHandler(this.PreviousFormation_Click);
             // 
             // UpdateFormationBtn
             // 
@@ -820,6 +799,44 @@ namespace e.Components
             this.panel2.Size = new System.Drawing.Size(720, 55);
             this.panel2.TabIndex = 47;
             // 
+            // NextModule
+            // 
+            this.NextModule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NextModule.BorderRadius = 2;
+            this.NextModule.CheckedState.Parent = this.NextModule;
+            this.NextModule.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NextModule.CustomImages.Parent = this.NextModule;
+            this.NextModule.FillColor = System.Drawing.Color.SkyBlue;
+            this.NextModule.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextModule.ForeColor = System.Drawing.Color.White;
+            this.NextModule.HoverState.Parent = this.NextModule;
+            this.NextModule.Location = new System.Drawing.Point(363, 12);
+            this.NextModule.Name = "NextModule";
+            this.NextModule.ShadowDecoration.Parent = this.NextModule;
+            this.NextModule.Size = new System.Drawing.Size(40, 30);
+            this.NextModule.TabIndex = 18;
+            this.NextModule.Text = ">";
+            this.NextModule.Click += new System.EventHandler(this.NextModule_Click);
+            // 
+            // PreviousModule
+            // 
+            this.PreviousModule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PreviousModule.BorderRadius = 2;
+            this.PreviousModule.CheckedState.Parent = this.PreviousModule;
+            this.PreviousModule.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PreviousModule.CustomImages.Parent = this.PreviousModule;
+            this.PreviousModule.FillColor = System.Drawing.Color.SkyBlue;
+            this.PreviousModule.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreviousModule.ForeColor = System.Drawing.Color.White;
+            this.PreviousModule.HoverState.Parent = this.PreviousModule;
+            this.PreviousModule.Location = new System.Drawing.Point(317, 12);
+            this.PreviousModule.Name = "PreviousModule";
+            this.PreviousModule.ShadowDecoration.Parent = this.PreviousModule;
+            this.PreviousModule.Size = new System.Drawing.Size(40, 30);
+            this.PreviousModule.TabIndex = 19;
+            this.PreviousModule.Text = "<";
+            this.PreviousModule.Click += new System.EventHandler(this.PreviousModule_Click);
+            // 
             // UpdateModuleBtn
             // 
             this.UpdateModuleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1093,77 +1110,65 @@ namespace e.Components
             this.guna2HtmlToolTip1.AllowLinksHandling = true;
             this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
             // 
-            // NextFormation
+            // ID_Formation
             // 
-            this.NextFormation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.NextFormation.BorderRadius = 2;
-            this.NextFormation.CheckedState.Parent = this.NextFormation;
-            this.NextFormation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NextFormation.CustomImages.Parent = this.NextFormation;
-            this.NextFormation.FillColor = System.Drawing.Color.SkyBlue;
-            this.NextFormation.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextFormation.ForeColor = System.Drawing.Color.White;
-            this.NextFormation.HoverState.Parent = this.NextFormation;
-            this.NextFormation.Location = new System.Drawing.Point(363, 12);
-            this.NextFormation.Name = "NextFormation";
-            this.NextFormation.ShadowDecoration.Parent = this.NextFormation;
-            this.NextFormation.Size = new System.Drawing.Size(40, 30);
-            this.NextFormation.TabIndex = 18;
-            this.NextFormation.Text = ">";
+            this.ID_Formation.DataPropertyName = "ID";
+            this.ID_Formation.HeaderText = "ID";
+            this.ID_Formation.Name = "ID_Formation";
+            this.ID_Formation.Visible = false;
             // 
-            // PreviousFormation
+            // Name_Formation
             // 
-            this.PreviousFormation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PreviousFormation.BorderRadius = 2;
-            this.PreviousFormation.CheckedState.Parent = this.PreviousFormation;
-            this.PreviousFormation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PreviousFormation.CustomImages.Parent = this.PreviousFormation;
-            this.PreviousFormation.FillColor = System.Drawing.Color.SkyBlue;
-            this.PreviousFormation.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PreviousFormation.ForeColor = System.Drawing.Color.White;
-            this.PreviousFormation.HoverState.Parent = this.PreviousFormation;
-            this.PreviousFormation.Location = new System.Drawing.Point(317, 12);
-            this.PreviousFormation.Name = "PreviousFormation";
-            this.PreviousFormation.ShadowDecoration.Parent = this.PreviousFormation;
-            this.PreviousFormation.Size = new System.Drawing.Size(40, 30);
-            this.PreviousFormation.TabIndex = 19;
-            this.PreviousFormation.Text = "<";
+            this.Name_Formation.DataPropertyName = "NAME";
+            this.Name_Formation.HeaderText = "Nom";
+            this.Name_Formation.Name = "Name_Formation";
             // 
-            // NextModule
+            // Duration
             // 
-            this.NextModule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.NextModule.BorderRadius = 2;
-            this.NextModule.CheckedState.Parent = this.NextModule;
-            this.NextModule.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NextModule.CustomImages.Parent = this.NextModule;
-            this.NextModule.FillColor = System.Drawing.Color.SkyBlue;
-            this.NextModule.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextModule.ForeColor = System.Drawing.Color.White;
-            this.NextModule.HoverState.Parent = this.NextModule;
-            this.NextModule.Location = new System.Drawing.Point(363, 12);
-            this.NextModule.Name = "NextModule";
-            this.NextModule.ShadowDecoration.Parent = this.NextModule;
-            this.NextModule.Size = new System.Drawing.Size(40, 30);
-            this.NextModule.TabIndex = 18;
-            this.NextModule.Text = ">";
+            this.Duration.DataPropertyName = "DURATION";
+            this.Duration.HeaderText = "Durée";
+            this.Duration.Name = "Duration";
             // 
-            // PreviousModule
+            // Price
             // 
-            this.PreviousModule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PreviousModule.BorderRadius = 2;
-            this.PreviousModule.CheckedState.Parent = this.PreviousModule;
-            this.PreviousModule.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PreviousModule.CustomImages.Parent = this.PreviousModule;
-            this.PreviousModule.FillColor = System.Drawing.Color.SkyBlue;
-            this.PreviousModule.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PreviousModule.ForeColor = System.Drawing.Color.White;
-            this.PreviousModule.HoverState.Parent = this.PreviousModule;
-            this.PreviousModule.Location = new System.Drawing.Point(317, 12);
-            this.PreviousModule.Name = "PreviousModule";
-            this.PreviousModule.ShadowDecoration.Parent = this.PreviousModule;
-            this.PreviousModule.Size = new System.Drawing.Size(40, 30);
-            this.PreviousModule.TabIndex = 19;
-            this.PreviousModule.Text = "<";
+            this.Price.DataPropertyName = "PRICE";
+            this.Price.HeaderText = "Prix";
+            this.Price.Name = "Price";
+            // 
+            // Archive_Formation
+            // 
+            this.Archive_Formation.DataPropertyName = "ARCHIVE";
+            this.Archive_Formation.HeaderText = "Archive";
+            this.Archive_Formation.Name = "Archive_Formation";
+            this.Archive_Formation.Visible = false;
+            // 
+            // Created_By_Formation
+            // 
+            this.Created_By_Formation.DataPropertyName = "CREATED_BY";
+            this.Created_By_Formation.HeaderText = "Créé par";
+            this.Created_By_Formation.Name = "Created_By_Formation";
+            this.Created_By_Formation.Visible = false;
+            // 
+            // Created_At_Formation
+            // 
+            this.Created_At_Formation.DataPropertyName = "CREATED_AT";
+            this.Created_At_Formation.HeaderText = "Créé le";
+            this.Created_At_Formation.Name = "Created_At_Formation";
+            this.Created_At_Formation.Visible = false;
+            // 
+            // Updated_By_Formation
+            // 
+            this.Updated_By_Formation.DataPropertyName = "UPDATED_BY";
+            this.Updated_By_Formation.HeaderText = "Modifié par";
+            this.Updated_By_Formation.Name = "Updated_By_Formation";
+            this.Updated_By_Formation.Visible = false;
+            // 
+            // Updated_At_Formation
+            // 
+            this.Updated_At_Formation.DataPropertyName = "UPDATED_AT";
+            this.Updated_At_Formation.HeaderText = "Modifié le";
+            this.Updated_At_Formation.Name = "Updated_At_Formation";
+            this.Updated_At_Formation.Visible = false;
             // 
             // Formations
             // 
@@ -1239,15 +1244,6 @@ namespace e.Components
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2TextBox SearchModule;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Formation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name_Formation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Archive_Formation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Created_By_Formation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Created_At_Formation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Updated_By_Formation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Updated_At_Formation;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_MODULE;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name_Module;
         private System.Windows.Forms.DataGridViewTextBoxColumn ModuleFormation;
@@ -1265,5 +1261,14 @@ namespace e.Components
         private Guna.UI2.WinForms.Guna2Button PreviousFormation;
         private Guna.UI2.WinForms.Guna2Button NextModule;
         private Guna.UI2.WinForms.Guna2Button PreviousModule;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Formation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name_Formation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Archive_Formation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Created_By_Formation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Created_At_Formation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Updated_By_Formation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Updated_At_Formation;
     }
 }
