@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace e.Components
 {
@@ -369,7 +370,7 @@ namespace e.Components
             AddressShow.Text        = student.ADRESS;
             EmailShow.Text          = student.EMAIL;
             BirthShow.Text          = student.BIRTH.ToString();
-            //FormationNameShow.Text  = db.FORMATIONS.Where(f => f.ID == student.FORMATION_ID).Select(f => f.NAME).First();
+            FormationNameShow.Text  = db.FORMATIONS.Where(f => f.ID == student.FORMATION_ID).Select(f => f.NAME).First();
             Pages.PageName = "tabPage3";
         }
 
@@ -385,5 +386,87 @@ namespace e.Components
                                orderby s.UPDATED_AT descending
                                select new { s.ID, s.CIN, s.L_NAME, s.F_NAME, s.PHONE, s.EMAIL }).Take(10).ToList();
         }
+
+        private void Month_Click(object sender, EventArgs e)
+        {
+            // Button btn = sender as Button;
+            Guna.UI2.WinForms.Guna2Button btn = (Guna.UI2.WinForms.Guna2Button)sender;
+
+            switch (btn.Text)
+            {
+                case "Janvier":
+                    CheckPayment(1);
+                    break;
+
+                case "Fevrier":
+                    CheckPayment(2);
+                    break;
+
+                case "Mars":
+                    CheckPayment(3);
+                    break;
+
+                case "Avril":
+                    CheckPayment(4);
+                    break;
+
+                case "Mai":
+                    CheckPayment(5);
+                    break;
+
+                case "Juin":
+                    CheckPayment(6);
+                    break;
+
+                case "Juillet":
+                    CheckPayment(7);
+                    break;
+
+                case "Aout":
+                    CheckPayment(8);
+                    break;
+
+                case "Septembre":
+                    CheckPayment(9);
+                    break;
+
+                case "Octobre":
+                    CheckPayment(10);
+                    break;
+
+                case "Novembre":
+                    CheckPayment(11);
+                    break;
+
+                case "Decembre":
+                    CheckPayment(12);
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+        private void CheckPayment (int month)
+        {
+            DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
+            int YearToInt = Convert.ToInt32(Year.Text);
+            var pay = db.PAYMENTs.Where(p => p.MONTH == month && p.YEAR == YearToInt && p.STUDENT_ID == DID);
+            
+            if (pay.Count() > 0)
+            {
+                MonthShow.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month);
+                PriceShow.Text = pay.Select(p => p.PRICE).First().ToString() + " DH";
+                PayedAtShow.Text = pay.Select(p => p.CREATED_AT).First().ToString();
+                PayedShow.Text = pay.Select(p => p.PAYED).First().ToString();
+                StillShow.Text = pay.Select(p => p.STILL).First().ToString();
+
+                Pages.PageName = "tabPage4";
+            }
+            else
+            {
+                Pages.PageName = "tabPage5";
+            }
+        }
     }
-}
+}   

@@ -74,7 +74,7 @@ namespace e.Components
             FORMATION formation = db.FORMATIONS.Find(DID);
             FormationName.Text = formation.NAME;
             FormationDuration.Text = formation.DURATION.ToString();
-            FormationPrice.Text = formation.PRICE;
+            FormationPrice.Text = formation.PRICE.ToString();
 
             Pages.PageName = "tabPage2";
             UpdateFormation.BringToFront();
@@ -139,7 +139,7 @@ namespace e.Components
             {
                 NAME        = FormationName.Text,
                 DURATION    = int.Parse(FormationDuration.Text),
-                PRICE       = FormationPrice.Text,
+                PRICE       = int.Parse(FormationPrice.Text),
                 ARCHIVE     = false,
                 CREATED_BY  = help.Connected,
                 UPDATED_BY  = help.Connected,
@@ -195,7 +195,7 @@ namespace e.Components
                 ID          = DID,
                 NAME        = FormationName.Text,
                 DURATION    = int.Parse(FormationDuration.Text),
-                PRICE       = FormationPrice.Text,
+                PRICE       = int.Parse(FormationPrice.Text),
                 ARCHIVE     = false,
                 CREATED_BY  = db.FORMATIONS.Where(f => f.ID == DID2).Select(f => f.CREATED_BY).First(),
                 CREATED_AT  = db.FORMATIONS.Where(f => f.ID == DID2).Select(f => f.CREATED_AT).First(),
@@ -424,7 +424,6 @@ namespace e.Components
                                            where f.ARCHIVE == false
                                            where f.NAME.Contains(SearchFormation.Text)
                                            || f.DURATION.ToString().Contains(SearchFormation.Text)
-                                           || f.PRICE.Contains(SearchFormation.Text)
                                            orderby f.UPDATED_AT descending
                                            select new { f.ID, f.NAME, f.DURATION, f.PRICE }).Take(10).ToList();
             }

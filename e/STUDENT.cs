@@ -29,6 +29,7 @@ namespace e
         public string PROVINCE { get; set; }
         public string COMMUN { get; set; }
         public string ADRESS { get; set; }
+        public Nullable<int> REDUCTION { get; set; }
         public bool ARCHIVE { get; set; }
         public int CREATED_BY { get; set; }
         public System.DateTime CREATED_AT { get; set; }

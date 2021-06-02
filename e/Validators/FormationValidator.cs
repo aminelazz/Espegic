@@ -28,9 +28,9 @@ namespace e.Validators
             // Validate formation price
             RuleFor(p => p.PRICE)
                 .Cascade(CascadeMode.Stop)
-                .NotEmpty().WithMessage("Le prix est vide")
-                .Length(3, 5).WithMessage("Le prix plus petit ou grand")
-                .Must(BeValideNumber).WithMessage("La forme du prix incorrect");
+                .NotEmpty().WithMessage("Le prix est vide");
+                //.Length(3, 5).WithMessage("Le prix plus petit ou grand")
+                //.Must(BeValideNumber).WithMessage("La forme du prix incorrect");
         }
 
         //

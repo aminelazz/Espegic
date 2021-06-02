@@ -15,9 +15,12 @@ namespace e
     public partial class PAYMENT
     {
         public int ID { get; set; }
-        public string STUDENT_ID { get; set; }
+        public Nullable<int> STUDENT_ID { get; set; }
         public Nullable<int> MONTH { get; set; }
         public Nullable<int> PRICE { get; set; }
         public Nullable<int> YEAR { get; set; }
+        public Nullable<System.DateTime> CREATED_AT { get; set; }
+        public Nullable<int> PAYED { get; set; }
+        public Nullable<int> STILL { get; set; }
     }
 }

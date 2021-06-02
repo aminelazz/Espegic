@@ -12,7 +12,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NAME" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="DURATION" Type="int" Nullable="false" />
-          <Property Name="PRICE" Type="nchar" MaxLength="10" />
+          <Property Name="PRICE" Type="int" />
           <Property Name="ARCHIVE" Type="bit" Nullable="false" />
           <Property Name="CREATED_BY" Type="int" Nullable="false" />
           <Property Name="CREATED_AT" Type="datetime" Nullable="false" />
@@ -53,10 +53,13 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="STUDENT_ID" Type="nchar" MaxLength="10" />
+          <Property Name="STUDENT_ID" Type="int" />
           <Property Name="MONTH" Type="int" />
           <Property Name="PRICE" Type="int" />
           <Property Name="YEAR" Type="int" />
+          <Property Name="CREATED_AT" Type="datetime" />
+          <Property Name="PAYED" Type="int" />
+          <Property Name="STILL" Type="int" />
         </EntityType>
         <EntityType Name="PERMISSIONS">
           <Key>
@@ -113,6 +116,7 @@
           <Property Name="PROVINCE" Type="varchar" MaxLength="45" />
           <Property Name="COMMUN" Type="varchar" MaxLength="20" />
           <Property Name="ADRESS" Type="varchar" MaxLength="70" />
+          <Property Name="REDUCTION" Type="int" />
           <Property Name="ARCHIVE" Type="bit" Nullable="false" />
           <Property Name="CREATED_BY" Type="int" Nullable="false" />
           <Property Name="CREATED_AT" Type="datetime" Nullable="false" />
@@ -211,7 +215,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DURATION" Type="Int32" Nullable="false" />
-          <Property Name="PRICE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="PRICE" Type="Int32" />
           <Property Name="ARCHIVE" Type="Boolean" Nullable="false" />
           <Property Name="CREATED_BY" Type="Int32" Nullable="false" />
           <Property Name="CREATED_AT" Type="DateTime" Nullable="false" Precision="3" />
@@ -255,10 +259,13 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="STUDENT_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="STUDENT_ID" Type="Int32" />
           <Property Name="MONTH" Type="Int32" />
           <Property Name="PRICE" Type="Int32" />
           <Property Name="YEAR" Type="Int32" />
+          <Property Name="CREATED_AT" Type="DateTime" Precision="3" />
+          <Property Name="PAYED" Type="Int32" />
+          <Property Name="STILL" Type="Int32" />
         </EntityType>
         <EntityType Name="PERMISSION">
           <Key>
@@ -315,6 +322,7 @@
           <Property Name="PROVINCE" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="COMMUN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="ADRESS" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="REDUCTION" Type="Int32" />
           <Property Name="ARCHIVE" Type="Boolean" Nullable="false" />
           <Property Name="CREATED_BY" Type="Int32" Nullable="false" />
           <Property Name="CREATED_AT" Type="DateTime" Nullable="false" Precision="3" />
@@ -463,6 +471,9 @@
                 <ScalarProperty Name="MONTH" ColumnName="MONTH" />
                 <ScalarProperty Name="PRICE" ColumnName="PRICE" />
                 <ScalarProperty Name="YEAR" ColumnName="YEAR" />
+                <ScalarProperty Name="CREATED_AT" ColumnName="CREATED_AT" />
+                <ScalarProperty Name="PAYED" ColumnName="PAYED" />
+                <ScalarProperty Name="STILL" ColumnName="STILL" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -522,6 +533,7 @@
                 <ScalarProperty Name="PROVINCE" ColumnName="PROVINCE" />
                 <ScalarProperty Name="COMMUN" ColumnName="COMMUN" />
                 <ScalarProperty Name="ADRESS" ColumnName="ADRESS" />
+                <ScalarProperty Name="REDUCTION" ColumnName="REDUCTION" />
                 <ScalarProperty Name="ARCHIVE" ColumnName="ARCHIVE" />
                 <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
                 <ScalarProperty Name="CREATED_AT" ColumnName="CREATED_AT" />

@@ -24,7 +24,7 @@ namespace e
         public int ID { get; set; }
         public string NAME { get; set; }
         public int DURATION { get; set; }
-        public string PRICE { get; set; }
+        public Nullable<int> PRICE { get; set; }
         public bool ARCHIVE { get; set; }
         public int CREATED_BY { get; set; }
         public System.DateTime CREATED_AT { get; set; }
