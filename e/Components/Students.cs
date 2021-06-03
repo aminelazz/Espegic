@@ -394,6 +394,10 @@ namespace e.Components
 
             switch (btn.Text)
             {
+                // mois => combobox
+                // change color when year changed
+                // print recu after buying
+
                 case "Janvier":
                     CheckPayment(1);
                     break;
