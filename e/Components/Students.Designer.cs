@@ -124,13 +124,15 @@ namespace e.Components
             this.label19 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.MonthShow = new System.Windows.Forms.Label();
             this.PriceShow = new System.Windows.Forms.Label();
             this.PayedAtShow = new System.Windows.Forms.Label();
-            this.StillShow = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.PayedShow = new System.Windows.Forms.Label();
+            this.StillShow = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
@@ -144,8 +146,7 @@ namespace e.Components
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.label20 = new System.Windows.Forms.Label();
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.label18 = new System.Windows.Forms.Label();
-            this.PayedShow = new System.Windows.Forms.Label();
+            this.PayBtn = new Guna.UI2.WinForms.Guna2Button();
             this.Pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.View)).BeginInit();
@@ -178,10 +179,10 @@ namespace e.Components
             this.Pages.Margin = new System.Windows.Forms.Padding(0);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.tabPage4;
-            this.Pages.PageIndex = 3;
-            this.Pages.PageName = "tabPage4";
-            this.Pages.PageTitle = "tabPage4";
+            this.Pages.Page = this.tabPage3;
+            this.Pages.PageIndex = 2;
+            this.Pages.PageName = "tabPage3";
+            this.Pages.PageTitle = "tabPage3";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(734, 483);
             this.Pages.TabIndex = 2;
@@ -1286,7 +1287,9 @@ namespace e.Components
             this.Year.Name = "Year";
             this.Year.ShadowDecoration.Parent = this.Year;
             this.Year.Size = new System.Drawing.Size(140, 36);
+            this.Year.StartIndex = 2;
             this.Year.TabIndex = 50;
+            this.Year.SelectionChangeCommitted += new System.EventHandler(this.Year_SelectionChangeCommitted);
             // 
             // tableLayoutPanel1
             // 
@@ -1691,6 +1694,7 @@ namespace e.Components
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.PayBtn);
             this.panel2.Controls.Add(this.ReturnBtn1);
             this.panel2.Controls.Add(this.FullName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1712,7 +1716,7 @@ namespace e.Components
             this.ReturnBtn1.HoverState.Parent = this.ReturnBtn1;
             this.ReturnBtn1.Image = global::e.Properties.Resources.back_arrow;
             this.ReturnBtn1.ImageSize = new System.Drawing.Size(15, 15);
-            this.ReturnBtn1.Location = new System.Drawing.Point(663, 13);
+            this.ReturnBtn1.Location = new System.Drawing.Point(571, 11);
             this.ReturnBtn1.Name = "ReturnBtn1";
             this.ReturnBtn1.ShadowDecoration.Parent = this.ReturnBtn1;
             this.ReturnBtn1.Size = new System.Drawing.Size(40, 30);
@@ -1801,20 +1805,6 @@ namespace e.Components
             this.label10.Text = "Le";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label12.Location = new System.Drawing.Point(4, 141);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(315, 37);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Reste à payer";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label17
             // 
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1871,20 +1861,6 @@ namespace e.Components
             this.PayedAtShow.Text = "02/06/2021";
             this.PayedAtShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // StillShow
-            // 
-            this.StillShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.StillShow.AutoSize = true;
-            this.StillShow.BackColor = System.Drawing.Color.White;
-            this.StillShow.Location = new System.Drawing.Point(326, 141);
-            this.StillShow.Name = "StillShow";
-            this.StillShow.Size = new System.Drawing.Size(356, 37);
-            this.StillShow.TabIndex = 0;
-            this.StillShow.Text = "6800 DH";
-            this.StillShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label55
             // 
             this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1898,6 +1874,61 @@ namespace e.Components
             this.label55.TabIndex = 0;
             this.label55.Text = "Mois";
             this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label12.Location = new System.Drawing.Point(4, 141);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(315, 37);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Reste à payer";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label18.Location = new System.Drawing.Point(4, 106);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(315, 34);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Total payé";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // PayedShow
+            // 
+            this.PayedShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PayedShow.AutoSize = true;
+            this.PayedShow.BackColor = System.Drawing.Color.White;
+            this.PayedShow.Location = new System.Drawing.Point(326, 106);
+            this.PayedShow.Name = "PayedShow";
+            this.PayedShow.Size = new System.Drawing.Size(356, 34);
+            this.PayedShow.TabIndex = 0;
+            this.PayedShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // StillShow
+            // 
+            this.StillShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.StillShow.AutoSize = true;
+            this.StillShow.BackColor = System.Drawing.Color.White;
+            this.StillShow.Location = new System.Drawing.Point(326, 141);
+            this.StillShow.Name = "StillShow";
+            this.StillShow.Size = new System.Drawing.Size(356, 37);
+            this.StillShow.TabIndex = 0;
+            this.StillShow.Text = "6800 DH";
+            this.StillShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel3
             // 
@@ -1929,6 +1960,7 @@ namespace e.Components
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(40, 30);
             this.guna2Button3.TabIndex = 14;
+            this.guna2Button3.Click += new System.EventHandler(this.ReturnProfileBtn_Click);
             // 
             // guna2Button4
             // 
@@ -2076,6 +2108,7 @@ namespace e.Components
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(40, 30);
             this.guna2Button1.TabIndex = 14;
+            this.guna2Button1.Click += new System.EventHandler(this.ReturnProfileBtn_Click);
             // 
             // guna2Button2
             // 
@@ -2111,32 +2144,25 @@ namespace e.Components
             this.guna2HtmlToolTip1.AllowLinksHandling = true;
             this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
             // 
-            // label18
+            // PayBtn
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label18.Location = new System.Drawing.Point(4, 106);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(315, 34);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Total payé";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // PayedShow
-            // 
-            this.PayedShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PayedShow.AutoSize = true;
-            this.PayedShow.BackColor = System.Drawing.Color.White;
-            this.PayedShow.Location = new System.Drawing.Point(326, 106);
-            this.PayedShow.Name = "PayedShow";
-            this.PayedShow.Size = new System.Drawing.Size(356, 34);
-            this.PayedShow.TabIndex = 0;
-            this.PayedShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PayBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PayBtn.BorderRadius = 2;
+            this.PayBtn.CheckedState.Parent = this.PayBtn;
+            this.PayBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PayBtn.CustomImages.Parent = this.PayBtn;
+            this.PayBtn.FillColor = System.Drawing.Color.Plum;
+            this.PayBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PayBtn.ForeColor = System.Drawing.Color.White;
+            this.PayBtn.HoverState.Parent = this.PayBtn;
+            this.PayBtn.ImageSize = new System.Drawing.Size(15, 15);
+            this.PayBtn.Location = new System.Drawing.Point(617, 11);
+            this.PayBtn.Name = "PayBtn";
+            this.PayBtn.ShadowDecoration.Parent = this.PayBtn;
+            this.PayBtn.Size = new System.Drawing.Size(86, 30);
+            this.PayBtn.TabIndex = 52;
+            this.PayBtn.Text = "Payer";
+            this.PayBtn.Click += new System.EventHandler(this.PayBtn_Click);
             // 
             // Students
             // 
@@ -2292,5 +2318,6 @@ namespace e.Components
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label PayedShow;
+        private Guna.UI2.WinForms.Guna2Button PayBtn;
     }
 }

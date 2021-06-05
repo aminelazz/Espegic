@@ -20,6 +20,7 @@ namespace e.Components
             InitializeComponent();
             this.Dock = DockStyle.Fill;
         }
+
         //
         // Properties
         //
@@ -38,6 +39,7 @@ namespace e.Components
                                         select new { f.NAME }).ToList();
 
             FormationName.DisplayMember = "NAME";
+
         }
 
         //
@@ -69,6 +71,14 @@ namespace e.Components
         private void ReturnBtn_Click(object sender, EventArgs e)
         {
             Pages.PageName = "tabPage1";
+        }
+
+        //
+        // Return to profile page
+        //
+        private void ReturnProfileBtn_Click(object sender, EventArgs e)
+        {
+            Pages.PageName = "tabPage3";
         }
 
         //
@@ -371,7 +381,93 @@ namespace e.Components
             EmailShow.Text          = student.EMAIL;
             BirthShow.Text          = student.BIRTH.ToString();
             FormationNameShow.Text  = db.FORMATIONS.Where(f => f.ID == student.FORMATION_ID).Select(f => f.NAME).First();
+
+            IsEnabled();
+
             Pages.PageName = "tabPage3";
+        }
+
+        //
+        // Show payment informations
+        //
+        private void Month_Click(object sender, EventArgs e)
+        {
+            // Button btn = sender as Button;
+            Guna.UI2.WinForms.Guna2Button btn = (Guna.UI2.WinForms.Guna2Button)sender;
+
+            switch (btn.Text)
+            {
+                // mois => combobox
+                // change color when year changed
+                // print recu after buying
+
+                case "Janvier":
+                    Payment(1);
+                    break;
+
+                case "Fevrier":
+                    Payment(2);
+                    break;
+
+                case "Mars":
+                    Payment(3);
+                    break;
+
+                case "Avril":
+                    Payment(4);
+                    break;
+
+                case "Mai":
+                    Payment(5);
+                    break;
+
+                case "Juin":
+                    Payment(6);
+                    break;
+
+                case "Juillet":
+                    Payment(7);
+                    break;
+
+                case "Aout":
+                    Payment(8);
+                    break;
+
+                case "Septembre":
+                    Payment(9);
+                    break;
+
+                case "Octobre":
+                    Payment(10);
+                    break;
+
+                case "Novembre":
+                    Payment(11);
+                    break;
+
+                case "Decembre":
+                    Payment(12);
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+        //
+        // Go to payment page
+        //
+        private void PayBtn_Click(object sender, EventArgs e)
+        {
+            Pages.PageName = "tabPage5";
+        }
+
+        //
+        // Enable / Disable buttons
+        //
+        private void Year_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            IsEnabled();
         }
 
         ///////////////////////////////////////////////////////////////////////////////////
@@ -387,90 +483,57 @@ namespace e.Components
                                select new { s.ID, s.CIN, s.L_NAME, s.F_NAME, s.PHONE, s.EMAIL }).Take(10).ToList();
         }
 
-        private void Month_Click(object sender, EventArgs e)
+        //
+        // Payment source
+        //
+        private void Payment (int month)
         {
-            // Button btn = sender as Button;
-            Guna.UI2.WinForms.Guna2Button btn = (Guna.UI2.WinForms.Guna2Button)sender;
 
-            switch (btn.Text)
+            if (IsPayed(month).Count() > 0)
             {
-                // mois => combobox
-                // change color when year changed
-                // print recu after buying
-
-                case "Janvier":
-                    CheckPayment(1);
-                    break;
-
-                case "Fevrier":
-                    CheckPayment(2);
-                    break;
-
-                case "Mars":
-                    CheckPayment(3);
-                    break;
-
-                case "Avril":
-                    CheckPayment(4);
-                    break;
-
-                case "Mai":
-                    CheckPayment(5);
-                    break;
-
-                case "Juin":
-                    CheckPayment(6);
-                    break;
-
-                case "Juillet":
-                    CheckPayment(7);
-                    break;
-
-                case "Aout":
-                    CheckPayment(8);
-                    break;
-
-                case "Septembre":
-                    CheckPayment(9);
-                    break;
-
-                case "Octobre":
-                    CheckPayment(10);
-                    break;
-
-                case "Novembre":
-                    CheckPayment(11);
-                    break;
-
-                case "Decembre":
-                    CheckPayment(12);
-                    break;
-                default:
-                    break;
-            }
-
-        }
-
-        private void CheckPayment (int month)
-        {
-            DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
-            int YearToInt = Convert.ToInt32(Year.Text);
-            var pay = db.PAYMENTs.Where(p => p.MONTH == month && p.YEAR == YearToInt && p.STUDENT_ID == DID);
-            
-            if (pay.Count() > 0)
-            {
-                MonthShow.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month);
-                PriceShow.Text = pay.Select(p => p.PRICE).First().ToString() + " DH";
-                PayedAtShow.Text = pay.Select(p => p.CREATED_AT).First().ToString();
-                PayedShow.Text = pay.Select(p => p.PAYED).First().ToString();
-                StillShow.Text = pay.Select(p => p.STILL).First().ToString();
+                MonthShow.Text      = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month);
+                PriceShow.Text      = IsPayed(month).Select(p => p.PRICE).First().ToString() + " DH";
+                PayedAtShow.Text    = IsPayed(month).Select(p => p.CREATED_AT).First().ToString();
+                PayedShow.Text      = IsPayed(month).Select(p => p.PAYED).First().ToString();
+                StillShow.Text      = IsPayed(month).Select(p => p.STILL).First().ToString();
 
                 Pages.PageName = "tabPage4";
             }
-            else
-            {
-                Pages.PageName = "tabPage5";
-            }
         }
+
+        //
+        // Check button
+        //
+        private void IsEnabled()
+        {
+            Janvier.Enabled     = IsPayed(1).Count() > 0;
+            Fevrier.Enabled     = IsPayed(2).Count() > 0;
+            Mars.Enabled        = IsPayed(3).Count() > 0;
+            Avril.Enabled       = IsPayed(4).Count() > 0;
+            Mai.Enabled         = IsPayed(5).Count() > 0;
+            Juin.Enabled        = IsPayed(6).Count() > 0;
+            Juillet.Enabled     = IsPayed(7).Count() > 0;
+            Aout.Enabled        = IsPayed(8).Count() > 0;
+            Septembre.Enabled   = IsPayed(9).Count() > 0;
+            Octobre.Enabled     = IsPayed(10).Count() > 0;
+            Novembre.Enabled    = IsPayed(11).Count() > 0;
+            Decembre.Enabled    = IsPayed(12).Count() > 0;
+        }
+
+        //
+        // Check if current month payed
+        //
+        public IQueryable<PAYMENT> IsPayed(int month = 0)
+        {
+            int YearToInt = Convert.ToInt32(Year.Text);
+            DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
+            return from p in db.PAYMENTs
+                   where p.MONTH == month
+                   where p.YEAR == YearToInt
+                   where p.STUDENT_ID == DID
+                   select p;
+        }
+
+
     }
 }   
