@@ -50,8 +50,8 @@ namespace e.Components
         private void AddStudentBtn_Click(object sender, EventArgs e)
         {
             CIN.Clear();
-            L_Name.Clear();
             F_Name.Clear();
+            L_Name.Clear();
             Establishment.Clear();
             Sex.SelectedIndex = -1;
             FormationName.SelectedIndex = -1;
@@ -92,8 +92,8 @@ namespace e.Components
             STUDENT student = db.STUDENTS.Find(DID);
             CIN.Text            = student.CIN;
             //FormationName.Text  = db.FORMATIONS.Where(f => f.ID == student.FORMATION_ID).Select(f => f.NAME).First();
-            L_Name.Text         = student.L_NAME;
             F_Name.Text         = student.F_NAME;
+            L_Name.Text         = student.L_NAME;
             Establishment.Text  = student.ESTABLISHEMENT;
             Sex.Text            = student.SEX;
             Nationality.Text    = student.NATIONALITY;
@@ -122,8 +122,8 @@ namespace e.Components
             {
                 //FORMATION_ID    = FormationID,
                 CIN             = CIN.Text.ToUpper(),
-                F_NAME          = L_Name.Text.ToUpper(),
-                L_NAME          = F_Name.Text.ToUpper(),
+                F_NAME          = F_Name.Text.ToUpper(),
+                L_NAME          = L_Name.Text.ToUpper(),
                 PHONE           = Phone.Text,
                 EMAIL           = Email.Text.ToLower(),
                 SEX             = Sex.Text.ToUpper(),
@@ -200,8 +200,8 @@ namespace e.Components
                 ID                = DID,
                 FORMATION_ID      = FormationID,
                 CIN               = CIN.Text.ToUpper(),
-                F_NAME            = L_Name.Text.ToUpper(),
-                L_NAME            = F_Name.Text.ToUpper(),
+                F_NAME            = F_Name.Text.ToUpper(),
+                L_NAME            = L_Name.Text.ToUpper(),
                 PHONE             = Phone.Text,
                 EMAIL             = Email.Text.ToLower(),
                 SEX               = Sex.Text.ToUpper(),
@@ -314,7 +314,7 @@ namespace e.Components
                                    || s.EMAIL.Contains(Search.Text)
                                    || s.PHONE.Contains(Search.Text)
                                    orderby s.UPDATED_AT descending
-                                   select new { s.ID, s.CIN, s.L_NAME, s.F_NAME, s.PHONE, s.EMAIL }).Take(10).ToList();
+                                   select new { s.ID, s.CIN, s.F_NAME, s.L_NAME, s.PHONE, s.EMAIL }).Take(10).ToList();
             }
         }
 
@@ -331,7 +331,7 @@ namespace e.Components
                     View.DataSource = (from s in db.STUDENTS
                                        where s.ARCHIVE == false
                                        orderby s.UPDATED_AT descending
-                                       select new { s.ID, s.CIN, s.L_NAME, s.F_NAME, s.PHONE, s.EMAIL }).Skip(pageCount).Take(10).ToList();
+                                       select new { s.ID, s.CIN, s.F_NAME, s.L_NAME, s.PHONE, s.EMAIL }).Skip(pageCount).Take(10).ToList();
                 }
             }
             catch (Exception ex)
@@ -353,7 +353,7 @@ namespace e.Components
                     View.DataSource = (from s in db.STUDENTS
                                        where s.ARCHIVE == false
                                        orderby s.UPDATED_AT descending
-                                       select new { s.ID, s.CIN, s.L_NAME, s.F_NAME, s.PHONE, s.EMAIL }).Skip(pageCount).Take(10).ToList();
+                                       select new { s.ID, s.CIN, s.F_NAME, s.L_NAME, s.PHONE, s.EMAIL }).Skip(pageCount).Take(10).ToList();
                 }
             }
             catch (Exception ex)
@@ -421,7 +421,7 @@ namespace e.Components
             View.DataSource = (from s in db.STUDENTS
                                where s.ARCHIVE == false
                                orderby s.UPDATED_AT descending
-                               select new { s.ID, s.CIN, s.L_NAME, s.F_NAME, s.PHONE, s.EMAIL }).Take(10).ToList();
+                               select new { s.ID, s.CIN, s.F_NAME, s.L_NAME, s.PHONE, s.EMAIL }).Take(10).ToList();
         }
 
         //

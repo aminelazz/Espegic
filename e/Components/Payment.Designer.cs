@@ -92,10 +92,10 @@ namespace e.Components
             this.Pages.Margin = new System.Windows.Forms.Padding(0);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.tabPage2;
-            this.Pages.PageIndex = 1;
-            this.Pages.PageName = "tabPage2";
-            this.Pages.PageTitle = "tabPage2";
+            this.Pages.Page = this.tabPage1;
+            this.Pages.PageIndex = 0;
+            this.Pages.PageName = "tabPage1";
+            this.Pages.PageTitle = "tabPage1";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(734, 483);
             this.Pages.TabIndex = 3;
@@ -210,9 +210,9 @@ namespace e.Components
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(16, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 19);
+            this.label1.Size = new System.Drawing.Size(142, 19);
             this.label1.TabIndex = 49;
-            this.label1.Text = "cc";
+            this.label1.Text = "Reçu de paiement";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // guna2Panel4
@@ -295,9 +295,9 @@ namespace e.Components
             this.label9.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(16, 30);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(115, 19);
+            this.label9.Size = new System.Drawing.Size(78, 19);
             this.label9.TabIndex = 49;
-            this.label9.Text = "Payer un mois";
+            this.label9.Text = "Paiement";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // price

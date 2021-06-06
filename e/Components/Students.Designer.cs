@@ -37,12 +37,6 @@ namespace e.Components
             this.Pages = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.View = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Next = new Guna.UI2.WinForms.Guna2Button();
@@ -78,7 +72,6 @@ namespace e.Components
             this.Label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.janvier = new Guna.UI2.WinForms.Guna2CheckBox();
             this.fevrier = new Guna.UI2.WinForms.Guna2CheckBox();
             this.mars = new Guna.UI2.WinForms.Guna2CheckBox();
             this.avril = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -122,6 +115,13 @@ namespace e.Components
             this.ReturnBtn1 = new Guna.UI2.WinForms.Guna2Button();
             this.FullName = new System.Windows.Forms.Label();
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.janvier = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.View)).BeginInit();
@@ -148,10 +148,10 @@ namespace e.Components
             this.Pages.Margin = new System.Windows.Forms.Padding(0);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.tabPage2;
-            this.Pages.PageIndex = 1;
-            this.Pages.PageName = "tabPage2";
-            this.Pages.PageTitle = "tabPage2";
+            this.Pages.Page = this.tabPage1;
+            this.Pages.PageIndex = 0;
+            this.Pages.PageName = "tabPage1";
+            this.Pages.PageTitle = "tabPage1";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(734, 483);
             this.Pages.TabIndex = 2;
@@ -212,8 +212,8 @@ namespace e.Components
             this.View.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Column2,
-            this.Column3,
             this.Column4,
+            this.Column3,
             this.Column5,
             this.Column6});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -260,53 +260,6 @@ namespace e.Components
             this.View.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.View.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.View.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.View_CellDoubleClick);
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column2.DataPropertyName = "CIN";
-            this.Column2.HeaderText = "CIN";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 85;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.DataPropertyName = "L_NAME";
-            this.Column3.HeaderText = "L_NAME";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 144;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.DataPropertyName = "F_NAME";
-            this.Column4.HeaderText = "F_NAME";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 144;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column5.DataPropertyName = "PHONE";
-            this.Column5.HeaderText = "PHONE";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 144;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.DataPropertyName = "EMAIL";
-            this.Column6.HeaderText = "EMAIL";
-            this.Column6.Name = "Column6";
             // 
             // guna2Panel2
             // 
@@ -1017,30 +970,6 @@ namespace e.Components
             this.tableLayoutPanel2.Size = new System.Drawing.Size(686, 81);
             this.tableLayoutPanel2.TabIndex = 52;
             // 
-            // janvier
-            // 
-            this.janvier.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.janvier.AutoSize = true;
-            this.janvier.BackColor = System.Drawing.Color.White;
-            this.janvier.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.janvier.CheckedState.BorderRadius = 2;
-            this.janvier.CheckedState.BorderThickness = 0;
-            this.janvier.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.janvier.Enabled = false;
-            this.janvier.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.janvier.Location = new System.Drawing.Point(4, 4);
-            this.janvier.Name = "janvier";
-            this.janvier.Size = new System.Drawing.Size(107, 33);
-            this.janvier.TabIndex = 1;
-            this.janvier.Text = "Janvier";
-            this.janvier.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.janvier.UncheckedState.BorderRadius = 2;
-            this.janvier.UncheckedState.BorderThickness = 0;
-            this.janvier.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.janvier.UseVisualStyleBackColor = false;
-            // 
             // fevrier
             // 
             this.fevrier.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1049,7 +978,7 @@ namespace e.Components
             this.fevrier.AutoSize = true;
             this.fevrier.BackColor = System.Drawing.Color.White;
             this.fevrier.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.fevrier.CheckedState.BorderRadius = 2;
+            this.fevrier.CheckedState.BorderRadius = 1;
             this.fevrier.CheckedState.BorderThickness = 0;
             this.fevrier.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.fevrier.Enabled = false;
@@ -1060,7 +989,7 @@ namespace e.Components
             this.fevrier.TabIndex = 1;
             this.fevrier.Text = "Fevrier";
             this.fevrier.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.fevrier.UncheckedState.BorderRadius = 2;
+            this.fevrier.UncheckedState.BorderRadius = 1;
             this.fevrier.UncheckedState.BorderThickness = 0;
             this.fevrier.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.fevrier.UseVisualStyleBackColor = false;
@@ -1073,7 +1002,7 @@ namespace e.Components
             this.mars.AutoSize = true;
             this.mars.BackColor = System.Drawing.Color.White;
             this.mars.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.mars.CheckedState.BorderRadius = 2;
+            this.mars.CheckedState.BorderRadius = 1;
             this.mars.CheckedState.BorderThickness = 0;
             this.mars.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.mars.Enabled = false;
@@ -1084,7 +1013,7 @@ namespace e.Components
             this.mars.TabIndex = 1;
             this.mars.Text = "Mars";
             this.mars.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.mars.UncheckedState.BorderRadius = 2;
+            this.mars.UncheckedState.BorderRadius = 1;
             this.mars.UncheckedState.BorderThickness = 0;
             this.mars.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.mars.UseVisualStyleBackColor = false;
@@ -1097,7 +1026,7 @@ namespace e.Components
             this.avril.AutoSize = true;
             this.avril.BackColor = System.Drawing.Color.White;
             this.avril.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.avril.CheckedState.BorderRadius = 2;
+            this.avril.CheckedState.BorderRadius = 1;
             this.avril.CheckedState.BorderThickness = 0;
             this.avril.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.avril.Enabled = false;
@@ -1108,7 +1037,7 @@ namespace e.Components
             this.avril.TabIndex = 1;
             this.avril.Text = "Avril";
             this.avril.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.avril.UncheckedState.BorderRadius = 2;
+            this.avril.UncheckedState.BorderRadius = 1;
             this.avril.UncheckedState.BorderThickness = 0;
             this.avril.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.avril.UseVisualStyleBackColor = false;
@@ -1121,7 +1050,7 @@ namespace e.Components
             this.mai.AutoSize = true;
             this.mai.BackColor = System.Drawing.Color.White;
             this.mai.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.mai.CheckedState.BorderRadius = 2;
+            this.mai.CheckedState.BorderRadius = 1;
             this.mai.CheckedState.BorderThickness = 0;
             this.mai.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.mai.Enabled = false;
@@ -1132,7 +1061,7 @@ namespace e.Components
             this.mai.TabIndex = 1;
             this.mai.Text = "Mai";
             this.mai.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.mai.UncheckedState.BorderRadius = 2;
+            this.mai.UncheckedState.BorderRadius = 1;
             this.mai.UncheckedState.BorderThickness = 0;
             this.mai.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.mai.UseVisualStyleBackColor = false;
@@ -1145,7 +1074,7 @@ namespace e.Components
             this.decembre.AutoSize = true;
             this.decembre.BackColor = System.Drawing.Color.White;
             this.decembre.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.decembre.CheckedState.BorderRadius = 2;
+            this.decembre.CheckedState.BorderRadius = 1;
             this.decembre.CheckedState.BorderThickness = 0;
             this.decembre.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.decembre.Enabled = false;
@@ -1156,7 +1085,7 @@ namespace e.Components
             this.decembre.TabIndex = 1;
             this.decembre.Text = "Decembre";
             this.decembre.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.decembre.UncheckedState.BorderRadius = 2;
+            this.decembre.UncheckedState.BorderRadius = 1;
             this.decembre.UncheckedState.BorderThickness = 0;
             this.decembre.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.decembre.UseVisualStyleBackColor = false;
@@ -1169,7 +1098,7 @@ namespace e.Components
             this.octobre.AutoSize = true;
             this.octobre.BackColor = System.Drawing.Color.White;
             this.octobre.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.octobre.CheckedState.BorderRadius = 2;
+            this.octobre.CheckedState.BorderRadius = 1;
             this.octobre.CheckedState.BorderThickness = 0;
             this.octobre.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.octobre.Enabled = false;
@@ -1180,7 +1109,7 @@ namespace e.Components
             this.octobre.TabIndex = 1;
             this.octobre.Text = "Octobre";
             this.octobre.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.octobre.UncheckedState.BorderRadius = 2;
+            this.octobre.UncheckedState.BorderRadius = 1;
             this.octobre.UncheckedState.BorderThickness = 0;
             this.octobre.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.octobre.UseVisualStyleBackColor = false;
@@ -1193,7 +1122,7 @@ namespace e.Components
             this.septembre.AutoSize = true;
             this.septembre.BackColor = System.Drawing.Color.White;
             this.septembre.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.septembre.CheckedState.BorderRadius = 2;
+            this.septembre.CheckedState.BorderRadius = 1;
             this.septembre.CheckedState.BorderThickness = 0;
             this.septembre.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.septembre.Enabled = false;
@@ -1204,7 +1133,7 @@ namespace e.Components
             this.septembre.TabIndex = 1;
             this.septembre.Text = "Septembre";
             this.septembre.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.septembre.UncheckedState.BorderRadius = 2;
+            this.septembre.UncheckedState.BorderRadius = 1;
             this.septembre.UncheckedState.BorderThickness = 0;
             this.septembre.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.septembre.UseVisualStyleBackColor = false;
@@ -1217,7 +1146,7 @@ namespace e.Components
             this.aout.AutoSize = true;
             this.aout.BackColor = System.Drawing.Color.White;
             this.aout.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.aout.CheckedState.BorderRadius = 2;
+            this.aout.CheckedState.BorderRadius = 1;
             this.aout.CheckedState.BorderThickness = 0;
             this.aout.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.aout.Enabled = false;
@@ -1228,7 +1157,7 @@ namespace e.Components
             this.aout.TabIndex = 1;
             this.aout.Text = "Aout";
             this.aout.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.aout.UncheckedState.BorderRadius = 2;
+            this.aout.UncheckedState.BorderRadius = 1;
             this.aout.UncheckedState.BorderThickness = 0;
             this.aout.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.aout.UseVisualStyleBackColor = false;
@@ -1241,7 +1170,7 @@ namespace e.Components
             this.juilet.AutoSize = true;
             this.juilet.BackColor = System.Drawing.Color.White;
             this.juilet.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.juilet.CheckedState.BorderRadius = 2;
+            this.juilet.CheckedState.BorderRadius = 1;
             this.juilet.CheckedState.BorderThickness = 0;
             this.juilet.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.juilet.Enabled = false;
@@ -1252,7 +1181,7 @@ namespace e.Components
             this.juilet.TabIndex = 1;
             this.juilet.Text = "Juilet";
             this.juilet.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.juilet.UncheckedState.BorderRadius = 2;
+            this.juilet.UncheckedState.BorderRadius = 1;
             this.juilet.UncheckedState.BorderThickness = 0;
             this.juilet.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.juilet.UseVisualStyleBackColor = false;
@@ -1265,7 +1194,7 @@ namespace e.Components
             this.novembre.AutoSize = true;
             this.novembre.BackColor = System.Drawing.Color.White;
             this.novembre.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.novembre.CheckedState.BorderRadius = 2;
+            this.novembre.CheckedState.BorderRadius = 1;
             this.novembre.CheckedState.BorderThickness = 0;
             this.novembre.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.novembre.Enabled = false;
@@ -1276,7 +1205,7 @@ namespace e.Components
             this.novembre.TabIndex = 1;
             this.novembre.Text = "Novembre";
             this.novembre.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.novembre.UncheckedState.BorderRadius = 2;
+            this.novembre.UncheckedState.BorderRadius = 1;
             this.novembre.UncheckedState.BorderThickness = 0;
             this.novembre.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.novembre.UseVisualStyleBackColor = false;
@@ -1289,7 +1218,7 @@ namespace e.Components
             this.juin.AutoSize = true;
             this.juin.BackColor = System.Drawing.Color.White;
             this.juin.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.juin.CheckedState.BorderRadius = 2;
+            this.juin.CheckedState.BorderRadius = 1;
             this.juin.CheckedState.BorderThickness = 0;
             this.juin.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.juin.Enabled = false;
@@ -1300,7 +1229,7 @@ namespace e.Components
             this.juin.TabIndex = 1;
             this.juin.Text = "Juin";
             this.juin.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.juin.UncheckedState.BorderRadius = 2;
+            this.juin.UncheckedState.BorderRadius = 1;
             this.juin.UncheckedState.BorderThickness = 0;
             this.juin.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.juin.UseVisualStyleBackColor = false;
@@ -1437,7 +1366,6 @@ namespace e.Components
             this.CINShow.Name = "CINShow";
             this.CINShow.Size = new System.Drawing.Size(198, 26);
             this.CINShow.TabIndex = 0;
-            this.CINShow.Text = "XA86367";
             this.CINShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label13
@@ -1467,7 +1395,6 @@ namespace e.Components
             this.SexShow.Name = "SexShow";
             this.SexShow.Size = new System.Drawing.Size(198, 26);
             this.SexShow.TabIndex = 0;
-            this.SexShow.Text = "Masculin";
             this.SexShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // EstablishmentShow
@@ -1482,7 +1409,6 @@ namespace e.Components
             this.EstablishmentShow.Name = "EstablishmentShow";
             this.EstablishmentShow.Size = new System.Drawing.Size(198, 26);
             this.EstablishmentShow.TabIndex = 0;
-            this.EstablishmentShow.Text = "Tiflet";
             this.EstablishmentShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // NationalityShow
@@ -1497,7 +1423,6 @@ namespace e.Components
             this.NationalityShow.Name = "NationalityShow";
             this.NationalityShow.Size = new System.Drawing.Size(198, 26);
             this.NationalityShow.TabIndex = 0;
-            this.NationalityShow.Text = "Maroccain";
             this.NationalityShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ProvinceShow
@@ -1512,7 +1437,6 @@ namespace e.Components
             this.ProvinceShow.Name = "ProvinceShow";
             this.ProvinceShow.Size = new System.Drawing.Size(198, 26);
             this.ProvinceShow.TabIndex = 0;
-            this.ProvinceShow.Text = "Tiflet";
             this.ProvinceShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label11
@@ -1541,7 +1465,6 @@ namespace e.Components
             this.CommuneShow.Name = "CommuneShow";
             this.CommuneShow.Size = new System.Drawing.Size(199, 26);
             this.CommuneShow.TabIndex = 0;
-            this.CommuneShow.Text = "Commune";
             this.CommuneShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PhoneShow
@@ -1556,7 +1479,6 @@ namespace e.Components
             this.PhoneShow.Name = "PhoneShow";
             this.PhoneShow.Size = new System.Drawing.Size(199, 26);
             this.PhoneShow.TabIndex = 0;
-            this.PhoneShow.Text = "0670758085";
             this.PhoneShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label22
@@ -1599,7 +1521,6 @@ namespace e.Components
             this.EmailShow.Name = "EmailShow";
             this.EmailShow.Size = new System.Drawing.Size(199, 26);
             this.EmailShow.TabIndex = 0;
-            this.EmailShow.Text = "dv.hamham@gmail.com";
             this.EmailShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // AddressShow
@@ -1614,7 +1535,6 @@ namespace e.Components
             this.AddressShow.Name = "AddressShow";
             this.AddressShow.Size = new System.Drawing.Size(199, 26);
             this.AddressShow.TabIndex = 0;
-            this.AddressShow.Text = "Mkam tolba tiflet";
             this.AddressShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label26
@@ -1657,7 +1577,6 @@ namespace e.Components
             this.BirthShow.Name = "BirthShow";
             this.BirthShow.Size = new System.Drawing.Size(199, 26);
             this.BirthShow.TabIndex = 0;
-            this.BirthShow.Text = "30.09.1989";
             this.BirthShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label53
@@ -1687,7 +1606,6 @@ namespace e.Components
             this.MassarShow.Name = "MassarShow";
             this.MassarShow.Size = new System.Drawing.Size(198, 31);
             this.MassarShow.TabIndex = 0;
-            this.MassarShow.Text = "JD54655";
             this.MassarShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label14
@@ -1716,7 +1634,6 @@ namespace e.Components
             this.FormationNameShow.Name = "FormationNameShow";
             this.FormationNameShow.Size = new System.Drawing.Size(199, 31);
             this.FormationNameShow.TabIndex = 0;
-            this.FormationNameShow.Text = "Developement";
             this.FormationNameShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label15
@@ -1790,17 +1707,88 @@ namespace e.Components
             // FullName
             // 
             this.FullName.AutoSize = true;
-            this.FullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullName.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FullName.Location = new System.Drawing.Point(13, 17);
             this.FullName.Name = "FullName";
-            this.FullName.Size = new System.Drawing.Size(168, 18);
+            this.FullName.Size = new System.Drawing.Size(80, 16);
             this.FullName.TabIndex = 11;
-            this.FullName.Text = "Mohammed Hamham";
+            this.FullName.Text = "Full Name";
             // 
             // guna2HtmlToolTip1
             // 
             this.guna2HtmlToolTip1.AllowLinksHandling = true;
             this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
+            // 
+            // janvier
+            // 
+            this.janvier.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.janvier.AutoSize = true;
+            this.janvier.BackColor = System.Drawing.Color.White;
+            this.janvier.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.janvier.CheckedState.BorderRadius = 1;
+            this.janvier.CheckedState.BorderThickness = 0;
+            this.janvier.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.janvier.Enabled = false;
+            this.janvier.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.janvier.Location = new System.Drawing.Point(4, 4);
+            this.janvier.Name = "janvier";
+            this.janvier.Size = new System.Drawing.Size(107, 33);
+            this.janvier.TabIndex = 1;
+            this.janvier.Text = "Janvier";
+            this.janvier.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.janvier.UncheckedState.BorderRadius = 1;
+            this.janvier.UncheckedState.BorderThickness = 0;
+            this.janvier.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.janvier.UseVisualStyleBackColor = false;
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.DataPropertyName = "CIN";
+            this.Column2.HeaderText = "CIN";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 85;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.DataPropertyName = "F_NAME";
+            this.Column4.HeaderText = "F_NAME";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 144;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.DataPropertyName = "L_NAME";
+            this.Column3.HeaderText = "L_NAME";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 144;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column5.DataPropertyName = "PHONE";
+            this.Column5.HeaderText = "PHONE";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 144;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.DataPropertyName = "EMAIL";
+            this.Column6.HeaderText = "EMAIL";
+            this.Column6.Name = "Column6";
             // 
             // Students
             // 
@@ -1905,15 +1893,8 @@ namespace e.Components
         private Guna.UI2.WinForms.Guna2Button UpdateBtn;
         private Guna.UI2.WinForms.Guna2Button Next;
         private Guna.UI2.WinForms.Guna2Button Previous;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private Guna.UI2.WinForms.Guna2CheckBox janvier;
         private Guna.UI2.WinForms.Guna2CheckBox fevrier;
         private Guna.UI2.WinForms.Guna2CheckBox mars;
         private Guna.UI2.WinForms.Guna2CheckBox avril;
@@ -1925,5 +1906,12 @@ namespace e.Components
         private Guna.UI2.WinForms.Guna2CheckBox aout;
         private Guna.UI2.WinForms.Guna2CheckBox juilet;
         private Guna.UI2.WinForms.Guna2CheckBox novembre;
+        private Guna.UI2.WinForms.Guna2CheckBox janvier;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
