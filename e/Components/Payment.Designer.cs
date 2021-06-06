@@ -34,30 +34,51 @@ namespace e.Components
             this.Pages = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.showBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.year2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.month2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.PayBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.year = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.month = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.price = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.fullName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.email = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Cin = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.Search = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.MonthShow = new System.Windows.Forms.Label();
+            this.PriceShow = new System.Windows.Forms.Label();
+            this.PayedAtShow = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.PayedShow = new System.Windows.Forms.Label();
+            this.StillShow = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.yearShow = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ReturnBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.printBtn = new Guna.UI2.WinForms.Guna2Button();
             this.Pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pages
@@ -65,15 +86,16 @@ namespace e.Components
             this.Pages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.Pages.AllowTransitions = true;
             this.Pages.Controls.Add(this.tabPage1);
+            this.Pages.Controls.Add(this.tabPage2);
             this.Pages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pages.Location = new System.Drawing.Point(0, 0);
             this.Pages.Margin = new System.Windows.Forms.Padding(0);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.tabPage1;
-            this.Pages.PageIndex = 0;
-            this.Pages.PageName = "tabPage1";
-            this.Pages.PageTitle = "tabPage1";
+            this.Pages.Page = this.tabPage2;
+            this.Pages.PageIndex = 1;
+            this.Pages.PageName = "tabPage2";
+            this.Pages.PageTitle = "tabPage2";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(734, 483);
             this.Pages.TabIndex = 3;
@@ -112,10 +134,9 @@ namespace e.Components
             // guna2Panel5
             // 
             this.guna2Panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel5.Controls.Add(this.guna2Button2);
-            this.guna2Panel5.Controls.Add(this.guna2ComboBox3);
-            this.guna2Panel5.Controls.Add(this.guna2Button1);
-            this.guna2Panel5.Controls.Add(this.guna2ComboBox4);
+            this.guna2Panel5.Controls.Add(this.showBtn);
+            this.guna2Panel5.Controls.Add(this.year2);
+            this.guna2Panel5.Controls.Add(this.month2);
             this.guna2Panel5.Controls.Add(this.label1);
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel5.Location = new System.Drawing.Point(3, 295);
@@ -124,62 +145,64 @@ namespace e.Components
             this.guna2Panel5.Size = new System.Drawing.Size(720, 159);
             this.guna2Panel5.TabIndex = 21;
             // 
-            // guna2Button2
+            // showBtn
             // 
-            this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button2.BorderRadius = 2;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.DarkCyan;
-            this.guna2Button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button2.Location = new System.Drawing.Point(463, 78);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(103, 36);
-            this.guna2Button2.TabIndex = 53;
-            this.guna2Button2.Text = "Consulter";
+            this.showBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showBtn.BorderRadius = 2;
+            this.showBtn.CheckedState.Parent = this.showBtn;
+            this.showBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showBtn.CustomImages.Parent = this.showBtn;
+            this.showBtn.Enabled = false;
+            this.showBtn.FillColor = System.Drawing.Color.DarkCyan;
+            this.showBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showBtn.ForeColor = System.Drawing.Color.White;
+            this.showBtn.HoverState.Parent = this.showBtn;
+            this.showBtn.ImageSize = new System.Drawing.Size(15, 15);
+            this.showBtn.Location = new System.Drawing.Point(353, 78);
+            this.showBtn.Name = "showBtn";
+            this.showBtn.ShadowDecoration.Parent = this.showBtn;
+            this.showBtn.Size = new System.Drawing.Size(103, 36);
+            this.showBtn.TabIndex = 53;
+            this.showBtn.Text = "Consulter";
+            this.showBtn.Click += new System.EventHandler(this.showBtn_Click);
             // 
-            // guna2Button1
+            // year2
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button1.BorderRadius = 2;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.guna2Button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button1.Location = new System.Drawing.Point(353, 78);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(103, 36);
-            this.guna2Button1.TabIndex = 53;
-            this.guna2Button1.Text = "Imprimer";
+            this.year2.BackColor = System.Drawing.Color.Transparent;
+            this.year2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.year2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.year2.FocusedColor = System.Drawing.Color.Empty;
+            this.year2.FocusedState.Parent = this.year2;
+            this.year2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.year2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.year2.FormattingEnabled = true;
+            this.year2.HoverState.Parent = this.year2;
+            this.year2.ItemHeight = 30;
+            this.year2.ItemsAppearance.Parent = this.year2;
+            this.year2.Location = new System.Drawing.Point(219, 78);
+            this.year2.Name = "year2";
+            this.year2.ShadowDecoration.Parent = this.year2;
+            this.year2.Size = new System.Drawing.Size(111, 36);
+            this.year2.TabIndex = 50;
             // 
-            // guna2ComboBox4
+            // month2
             // 
-            this.guna2ComboBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox4.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox4.FocusedState.Parent = this.guna2ComboBox4;
-            this.guna2ComboBox4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox4.FormattingEnabled = true;
-            this.guna2ComboBox4.HoverState.Parent = this.guna2ComboBox4;
-            this.guna2ComboBox4.ItemHeight = 30;
-            this.guna2ComboBox4.ItemsAppearance.Parent = this.guna2ComboBox4;
-            this.guna2ComboBox4.Location = new System.Drawing.Point(20, 78);
-            this.guna2ComboBox4.Name = "guna2ComboBox4";
-            this.guna2ComboBox4.ShadowDecoration.Parent = this.guna2ComboBox4;
-            this.guna2ComboBox4.Size = new System.Drawing.Size(176, 36);
-            this.guna2ComboBox4.TabIndex = 50;
+            this.month2.BackColor = System.Drawing.Color.Transparent;
+            this.month2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.month2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.month2.FocusedColor = System.Drawing.Color.Empty;
+            this.month2.FocusedState.Parent = this.month2;
+            this.month2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.month2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.month2.FormattingEnabled = true;
+            this.month2.HoverState.Parent = this.month2;
+            this.month2.ItemHeight = 30;
+            this.month2.ItemsAppearance.Parent = this.month2;
+            this.month2.Location = new System.Drawing.Point(20, 78);
+            this.month2.Name = "month2";
+            this.month2.ShadowDecoration.Parent = this.month2;
+            this.month2.Size = new System.Drawing.Size(176, 36);
+            this.month2.TabIndex = 50;
             // 
             // label1
             // 
@@ -196,10 +219,10 @@ namespace e.Components
             // 
             this.guna2Panel4.BackColor = System.Drawing.Color.White;
             this.guna2Panel4.Controls.Add(this.PayBtn);
-            this.guna2Panel4.Controls.Add(this.guna2ComboBox2);
-            this.guna2Panel4.Controls.Add(this.guna2ComboBox1);
+            this.guna2Panel4.Controls.Add(this.year);
+            this.guna2Panel4.Controls.Add(this.month);
             this.guna2Panel4.Controls.Add(this.label9);
-            this.guna2Panel4.Controls.Add(this.guna2TextBox5);
+            this.guna2Panel4.Controls.Add(this.price);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel4.Location = new System.Drawing.Point(3, 128);
             this.guna2Panel4.Name = "guna2Panel4";
@@ -214,6 +237,7 @@ namespace e.Components
             this.PayBtn.CheckedState.Parent = this.PayBtn;
             this.PayBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PayBtn.CustomImages.Parent = this.PayBtn;
+            this.PayBtn.Enabled = false;
             this.PayBtn.FillColor = System.Drawing.Color.PaleVioletRed;
             this.PayBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PayBtn.ForeColor = System.Drawing.Color.White;
@@ -225,44 +249,45 @@ namespace e.Components
             this.PayBtn.Size = new System.Drawing.Size(103, 36);
             this.PayBtn.TabIndex = 53;
             this.PayBtn.Text = "Payer";
+            this.PayBtn.Click += new System.EventHandler(this.PayBtn_Click);
             // 
-            // guna2ComboBox2
+            // year
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox2.FocusedState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.FormattingEnabled = true;
-            this.guna2ComboBox2.HoverState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.ItemsAppearance.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(219, 78);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.ShadowDecoration.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Size = new System.Drawing.Size(111, 36);
-            this.guna2ComboBox2.TabIndex = 50;
+            this.year.BackColor = System.Drawing.Color.Transparent;
+            this.year.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.year.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.year.FocusedColor = System.Drawing.Color.Empty;
+            this.year.FocusedState.Parent = this.year;
+            this.year.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.year.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.year.FormattingEnabled = true;
+            this.year.HoverState.Parent = this.year;
+            this.year.ItemHeight = 30;
+            this.year.ItemsAppearance.Parent = this.year;
+            this.year.Location = new System.Drawing.Point(219, 78);
+            this.year.Name = "year";
+            this.year.ShadowDecoration.Parent = this.year;
+            this.year.Size = new System.Drawing.Size(111, 36);
+            this.year.TabIndex = 50;
             // 
-            // guna2ComboBox1
+            // month
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(20, 78);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(176, 36);
-            this.guna2ComboBox1.TabIndex = 50;
+            this.month.BackColor = System.Drawing.Color.Transparent;
+            this.month.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.month.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.month.FocusedColor = System.Drawing.Color.Empty;
+            this.month.FocusedState.Parent = this.month;
+            this.month.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.month.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.month.FormattingEnabled = true;
+            this.month.HoverState.Parent = this.month;
+            this.month.ItemHeight = 30;
+            this.month.ItemsAppearance.Parent = this.month;
+            this.month.Location = new System.Drawing.Point(20, 78);
+            this.month.Name = "month";
+            this.month.ShadowDecoration.Parent = this.month;
+            this.month.Size = new System.Drawing.Size(176, 36);
+            this.month.TabIndex = 50;
             // 
             // label9
             // 
@@ -275,35 +300,35 @@ namespace e.Components
             this.label9.Text = "Payer un mois";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2TextBox5
+            // price
             // 
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.FocusedState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.HoverState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Location = new System.Drawing.Point(353, 78);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderText = "Montant";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.ShadowDecoration.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Size = new System.Drawing.Size(144, 36);
-            this.guna2TextBox5.TabIndex = 4;
+            this.price.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.price.DefaultText = "";
+            this.price.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.price.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.price.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.price.DisabledState.Parent = this.price;
+            this.price.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.price.FocusedState.Parent = this.price;
+            this.price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.price.HoverState.Parent = this.price;
+            this.price.Location = new System.Drawing.Point(353, 78);
+            this.price.Name = "price";
+            this.price.PasswordChar = '\0';
+            this.price.PlaceholderText = "Montant";
+            this.price.SelectedText = "";
+            this.price.ShadowDecoration.Parent = this.price;
+            this.price.Size = new System.Drawing.Size(144, 36);
+            this.price.TabIndex = 4;
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel3.Controls.Add(this.guna2TextBox1);
-            this.guna2Panel3.Controls.Add(this.guna2TextBox4);
-            this.guna2Panel3.Controls.Add(this.guna2TextBox3);
-            this.guna2Panel3.Controls.Add(this.guna2TextBox2);
+            this.guna2Panel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.guna2Panel3.Controls.Add(this.fullName);
+            this.guna2Panel3.Controls.Add(this.ID);
+            this.guna2Panel3.Controls.Add(this.email);
+            this.guna2Panel3.Controls.Add(this.Cin);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.Location = new System.Drawing.Point(3, 58);
             this.guna2Panel3.Name = "guna2Panel3";
@@ -311,97 +336,97 @@ namespace e.Components
             this.guna2Panel3.Size = new System.Drawing.Size(720, 70);
             this.guna2Panel3.TabIndex = 19;
             // 
-            // guna2TextBox1
+            // fullName
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.Enabled = false;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(249, 16);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Nom et prenom";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(214, 36);
-            this.guna2TextBox1.TabIndex = 6;
+            this.fullName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.fullName.DefaultText = "";
+            this.fullName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.fullName.DisabledState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.fullName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.fullName.DisabledState.Parent = this.fullName;
+            this.fullName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.fullName.Enabled = false;
+            this.fullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.fullName.FocusedState.Parent = this.fullName;
+            this.fullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.fullName.HoverState.Parent = this.fullName;
+            this.fullName.Location = new System.Drawing.Point(241, 16);
+            this.fullName.Name = "fullName";
+            this.fullName.PasswordChar = '\0';
+            this.fullName.PlaceholderText = "Nom et prenom";
+            this.fullName.SelectedText = "";
+            this.fullName.ShadowDecoration.Parent = this.fullName;
+            this.fullName.Size = new System.Drawing.Size(211, 36);
+            this.fullName.TabIndex = 6;
             // 
-            // guna2TextBox4
+            // ID
             // 
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.Enabled = false;
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Location = new System.Drawing.Point(20, 16);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "ID";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Size = new System.Drawing.Size(75, 36);
-            this.guna2TextBox4.TabIndex = 3;
+            this.ID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ID.DefaultText = "";
+            this.ID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.ID.DisabledState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.ID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ID.DisabledState.Parent = this.ID;
+            this.ID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ID.Enabled = false;
+            this.ID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ID.FocusedState.Parent = this.ID;
+            this.ID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ID.HoverState.Parent = this.ID;
+            this.ID.Location = new System.Drawing.Point(20, 16);
+            this.ID.Name = "ID";
+            this.ID.PasswordChar = '\0';
+            this.ID.PlaceholderText = "ID";
+            this.ID.SelectedText = "";
+            this.ID.ShadowDecoration.Parent = this.ID;
+            this.ID.Size = new System.Drawing.Size(75, 36);
+            this.ID.TabIndex = 3;
             // 
-            // guna2TextBox3
+            // email
             // 
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.Enabled = false;
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(477, 16);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "Email";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(220, 36);
-            this.guna2TextBox3.TabIndex = 5;
+            this.email.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.email.DefaultText = "";
+            this.email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.email.DisabledState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.email.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.email.DisabledState.Parent = this.email;
+            this.email.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.email.Enabled = false;
+            this.email.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.email.FocusedState.Parent = this.email;
+            this.email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.email.HoverState.Parent = this.email;
+            this.email.Location = new System.Drawing.Point(464, 16);
+            this.email.Name = "email";
+            this.email.PasswordChar = '\0';
+            this.email.PlaceholderText = "Email";
+            this.email.SelectedText = "";
+            this.email.ShadowDecoration.Parent = this.email;
+            this.email.Size = new System.Drawing.Size(237, 36);
+            this.email.TabIndex = 5;
             // 
-            // guna2TextBox2
+            // Cin
             // 
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.Enabled = false;
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(109, 16);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "CIN";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(126, 36);
-            this.guna2TextBox2.TabIndex = 4;
+            this.Cin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Cin.DefaultText = "";
+            this.Cin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.Cin.DisabledState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.Cin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Cin.DisabledState.Parent = this.Cin;
+            this.Cin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Cin.Enabled = false;
+            this.Cin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Cin.FocusedState.Parent = this.Cin;
+            this.Cin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Cin.HoverState.Parent = this.Cin;
+            this.Cin.Location = new System.Drawing.Point(107, 16);
+            this.Cin.Name = "Cin";
+            this.Cin.PasswordChar = '\0';
+            this.Cin.PlaceholderText = "CIN";
+            this.Cin.SelectedText = "";
+            this.Cin.ShadowDecoration.Parent = this.Cin;
+            this.Cin.Size = new System.Drawing.Size(122, 36);
+            this.Cin.TabIndex = 4;
             // 
             // guna2Panel2
             // 
@@ -445,25 +470,293 @@ namespace e.Components
             this.Search.Size = new System.Drawing.Size(686, 37);
             this.Search.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.Search.TabIndex = 1;
+            this.Search.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Search_KeyUp);
             // 
-            // guna2ComboBox3
+            // tabPage2
             // 
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox3.FocusedState.Parent = this.guna2ComboBox3;
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox3.FormattingEnabled = true;
-            this.guna2ComboBox3.HoverState.Parent = this.guna2ComboBox3;
-            this.guna2ComboBox3.ItemHeight = 30;
-            this.guna2ComboBox3.ItemsAppearance.Parent = this.guna2ComboBox3;
-            this.guna2ComboBox3.Location = new System.Drawing.Point(219, 78);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.ShadowDecoration.Parent = this.guna2ComboBox3;
-            this.guna2ComboBox3.Size = new System.Drawing.Size(111, 36);
-            this.guna2ComboBox3.TabIndex = 50;
+            this.tabPage2.Controls.Add(this.printBtn);
+            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Controls.Add(this.label19);
+            this.tabPage2.Controls.Add(this.tableLayoutPanel3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(726, 457);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(23, 93);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(0, 19);
+            this.label19.TabIndex = 53;
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.AutoSize = true;
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.07602F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.92398F));
+            this.tableLayoutPanel3.Controls.Add(this.StillShow, 1, 5);
+            this.tableLayoutPanel3.Controls.Add(this.PayedShow, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.PayedAtShow, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.PriceShow, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.MonthShow, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.label12, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.label18, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.label10, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.label17, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label55, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.yearShow, 1, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(20, 115);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 6;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66611F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66611F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66611F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66611F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66611F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66944F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(686, 179);
+            this.tableLayoutPanel3.TabIndex = 52;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label10.Location = new System.Drawing.Point(4, 88);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(315, 28);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Le";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label17.Location = new System.Drawing.Point(4, 59);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(315, 28);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Montant payé";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // MonthShow
+            // 
+            this.MonthShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MonthShow.AutoSize = true;
+            this.MonthShow.BackColor = System.Drawing.Color.White;
+            this.MonthShow.Location = new System.Drawing.Point(326, 30);
+            this.MonthShow.Name = "MonthShow";
+            this.MonthShow.Size = new System.Drawing.Size(356, 28);
+            this.MonthShow.TabIndex = 0;
+            this.MonthShow.Text = "Janvier";
+            this.MonthShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // PriceShow
+            // 
+            this.PriceShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PriceShow.AutoSize = true;
+            this.PriceShow.BackColor = System.Drawing.Color.White;
+            this.PriceShow.Location = new System.Drawing.Point(326, 59);
+            this.PriceShow.Name = "PriceShow";
+            this.PriceShow.Size = new System.Drawing.Size(356, 28);
+            this.PriceShow.TabIndex = 0;
+            this.PriceShow.Text = "700 DH";
+            this.PriceShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // PayedAtShow
+            // 
+            this.PayedAtShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PayedAtShow.AutoSize = true;
+            this.PayedAtShow.BackColor = System.Drawing.Color.White;
+            this.PayedAtShow.Location = new System.Drawing.Point(326, 88);
+            this.PayedAtShow.Name = "PayedAtShow";
+            this.PayedAtShow.Size = new System.Drawing.Size(356, 28);
+            this.PayedAtShow.TabIndex = 0;
+            this.PayedAtShow.Text = "02/06/2021";
+            this.PayedAtShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label55
+            // 
+            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label55.AutoSize = true;
+            this.label55.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label55.Location = new System.Drawing.Point(4, 30);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(315, 28);
+            this.label55.TabIndex = 0;
+            this.label55.Text = "Mois";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label12.Location = new System.Drawing.Point(4, 146);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(315, 32);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Reste à payer";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label18.Location = new System.Drawing.Point(4, 117);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(315, 28);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Total payé";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // PayedShow
+            // 
+            this.PayedShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PayedShow.AutoSize = true;
+            this.PayedShow.BackColor = System.Drawing.Color.White;
+            this.PayedShow.Location = new System.Drawing.Point(326, 117);
+            this.PayedShow.Name = "PayedShow";
+            this.PayedShow.Size = new System.Drawing.Size(356, 28);
+            this.PayedShow.TabIndex = 0;
+            this.PayedShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // StillShow
+            // 
+            this.StillShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.StillShow.AutoSize = true;
+            this.StillShow.BackColor = System.Drawing.Color.White;
+            this.StillShow.Location = new System.Drawing.Point(326, 146);
+            this.StillShow.Name = "StillShow";
+            this.StillShow.Size = new System.Drawing.Size(356, 32);
+            this.StillShow.TabIndex = 0;
+            this.StillShow.Text = "6800 DH";
+            this.StillShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(4, 1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(315, 28);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Annee";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // yearShow
+            // 
+            this.yearShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.yearShow.AutoSize = true;
+            this.yearShow.BackColor = System.Drawing.Color.White;
+            this.yearShow.Location = new System.Drawing.Point(326, 1);
+            this.yearShow.Name = "yearShow";
+            this.yearShow.Size = new System.Drawing.Size(356, 28);
+            this.yearShow.TabIndex = 0;
+            this.yearShow.Text = "Janvier";
+            this.yearShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.ReturnBtn);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(720, 55);
+            this.panel2.TabIndex = 55;
+            // 
+            // ReturnBtn
+            // 
+            this.ReturnBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ReturnBtn.BorderRadius = 2;
+            this.ReturnBtn.CheckedState.Parent = this.ReturnBtn;
+            this.ReturnBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReturnBtn.CustomImages.Parent = this.ReturnBtn;
+            this.ReturnBtn.FillColor = System.Drawing.Color.SkyBlue;
+            this.ReturnBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnBtn.ForeColor = System.Drawing.Color.White;
+            this.ReturnBtn.HoverState.Parent = this.ReturnBtn;
+            this.ReturnBtn.Image = global::e.Properties.Resources.back_arrow;
+            this.ReturnBtn.ImageSize = new System.Drawing.Size(15, 15);
+            this.ReturnBtn.Location = new System.Drawing.Point(665, 12);
+            this.ReturnBtn.Name = "ReturnBtn";
+            this.ReturnBtn.ShadowDecoration.Parent = this.ReturnBtn;
+            this.ReturnBtn.Size = new System.Drawing.Size(40, 30);
+            this.ReturnBtn.TabIndex = 1;
+            this.ReturnBtn.Click += new System.EventHandler(this.returnBtn_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 19);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Recu de paiment";
+            // 
+            // printBtn
+            // 
+            this.printBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.printBtn.BorderRadius = 2;
+            this.printBtn.CheckedState.Parent = this.printBtn;
+            this.printBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.printBtn.CustomImages.Parent = this.printBtn;
+            this.printBtn.Enabled = false;
+            this.printBtn.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.printBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printBtn.ForeColor = System.Drawing.Color.White;
+            this.printBtn.HoverState.Parent = this.printBtn;
+            this.printBtn.ImageSize = new System.Drawing.Size(15, 15);
+            this.printBtn.Location = new System.Drawing.Point(605, 352);
+            this.printBtn.Name = "printBtn";
+            this.printBtn.ShadowDecoration.Parent = this.printBtn;
+            this.printBtn.Size = new System.Drawing.Size(103, 36);
+            this.printBtn.TabIndex = 56;
+            this.printBtn.Text = "Imprimer";
             // 
             // Payment
             // 
@@ -481,6 +774,12 @@ namespace e.Components
             this.guna2Panel4.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -490,23 +789,41 @@ namespace e.Components
         private Bunifu.UI.WinForms.BunifuPages Pages;
         private System.Windows.Forms.TabPage tabPage1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
+        private Guna.UI2.WinForms.Guna2Button showBtn;
+        private Guna.UI2.WinForms.Guna2ComboBox month2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Button PayBtn;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox year;
+        private Guna.UI2.WinForms.Guna2ComboBox month;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox price;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox fullName;
+        private Guna.UI2.WinForms.Guna2TextBox ID;
+        private Guna.UI2.WinForms.Guna2TextBox email;
+        private Guna.UI2.WinForms.Guna2TextBox Cin;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox Search;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
+        private Guna.UI2.WinForms.Guna2ComboBox year2;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label MonthShow;
+        private System.Windows.Forms.Label PriceShow;
+        private System.Windows.Forms.Label PayedAtShow;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label PayedShow;
+        private System.Windows.Forms.Label StillShow;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label yearShow;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2Button ReturnBtn;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Button printBtn;
     }
 }
