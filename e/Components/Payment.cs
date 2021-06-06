@@ -172,21 +172,21 @@ namespace e.Components
             if (priceT <= still && still > 0)
             {
                 // Check if selected month payed or no
-                bool isPayed = db.PAYMENTs.Where(p => p.MONTH == monthT && p.YEAR == yearT).Count() > 0;
+                bool isPayed = db.PAYMENTs.Where(p => p.STUDENT_ID == id && p.MONTH == monthT && p.YEAR == yearT).Count() > 0;
                 if (isPayed)
                 {
-                    MessageBox.Show($"Le mois { month.Text } est deja payer");
+                    MessageBox.Show($"Le mois { month.Text } est deja payer", "ESPEGIC", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     db.PAYMENTs.Add(payment);
                     db.SaveChanges();
-                    MessageBox.Show($"le moit { month.Text } Payer avec success");
+                    MessageBox.Show($"le mois { month.Text } payer avec success", "ESPEGIC", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show($"Montant inccorect il reste { formationPrice - payed } a payer");
+                MessageBox.Show($"Montant inccorect il reste { formationPrice - payed } DH a payer", "ESPEGIC", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -205,14 +205,14 @@ namespace e.Components
                 yearShow.Text = year2.Text;
                 MonthShow.Text = month2.Text;
                 PriceShow.Text = p.PRICE + " DH";
-                PayedAtShow.Text = p.CREATED_AT.ToString();
+                PayedAtShow.Text = string.Format("{0:MM.dd.yyyy HH:mm}", p.CREATED_AT);
                 PayedShow.Text = p.PAYED.ToString();
                 StillShow.Text = p.STILL.ToString();
                 Pages.PageName = "tabPage2";
             }
             else
             {
-                MessageBox.Show($"Le mois { month2.Text } n'a pas encore payer");
+                MessageBox.Show($"Le mois { month2.Text } n'a pas encore payer", "ESPEGIC", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -230,7 +230,7 @@ namespace e.Components
         //
         private void price_KeyUp(object sender, KeyEventArgs e)
         {
-            PayBtn.Enabled = price.Text != "";
+            PayBtn.Enabled = price.Text != "" && ID.Text != "";
         }
     }
 }

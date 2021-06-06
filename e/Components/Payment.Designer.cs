@@ -92,10 +92,10 @@ namespace e.Components
             this.Pages.Margin = new System.Windows.Forms.Padding(0);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.tabPage1;
-            this.Pages.PageIndex = 0;
-            this.Pages.PageName = "tabPage1";
-            this.Pages.PageTitle = "tabPage1";
+            this.Pages.Page = this.tabPage2;
+            this.Pages.PageIndex = 1;
+            this.Pages.PageName = "tabPage2";
+            this.Pages.PageTitle = "tabPage2";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(734, 483);
             this.Pages.TabIndex = 3;
@@ -153,7 +153,7 @@ namespace e.Components
             this.showBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showBtn.CustomImages.Parent = this.showBtn;
             this.showBtn.Enabled = false;
-            this.showBtn.FillColor = System.Drawing.Color.DarkCyan;
+            this.showBtn.FillColor = System.Drawing.Color.CadetBlue;
             this.showBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showBtn.ForeColor = System.Drawing.Color.White;
             this.showBtn.HoverState.Parent = this.showBtn;
@@ -210,9 +210,9 @@ namespace e.Components
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(16, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 19);
+            this.label1.Size = new System.Drawing.Size(25, 19);
             this.label1.TabIndex = 49;
-            this.label1.Text = "Imprimer ou consulter un recu";
+            this.label1.Text = "cc";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // guna2Panel4
@@ -238,7 +238,7 @@ namespace e.Components
             this.PayBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PayBtn.CustomImages.Parent = this.PayBtn;
             this.PayBtn.Enabled = false;
-            this.PayBtn.FillColor = System.Drawing.Color.PaleVioletRed;
+            this.PayBtn.FillColor = System.Drawing.Color.CornflowerBlue;
             this.PayBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PayBtn.ForeColor = System.Drawing.Color.White;
             this.PayBtn.HoverState.Parent = this.PayBtn;
@@ -351,13 +351,13 @@ namespace e.Components
             this.fullName.FocusedState.Parent = this.fullName;
             this.fullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.fullName.HoverState.Parent = this.fullName;
-            this.fullName.Location = new System.Drawing.Point(241, 16);
+            this.fullName.Location = new System.Drawing.Point(237, 16);
             this.fullName.Name = "fullName";
             this.fullName.PasswordChar = '\0';
             this.fullName.PlaceholderText = "Nom et prenom";
             this.fullName.SelectedText = "";
             this.fullName.ShadowDecoration.Parent = this.fullName;
-            this.fullName.Size = new System.Drawing.Size(211, 36);
+            this.fullName.Size = new System.Drawing.Size(222, 36);
             this.fullName.TabIndex = 6;
             // 
             // ID
@@ -374,13 +374,13 @@ namespace e.Components
             this.ID.FocusedState.Parent = this.ID;
             this.ID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ID.HoverState.Parent = this.ID;
-            this.ID.Location = new System.Drawing.Point(20, 16);
+            this.ID.Location = new System.Drawing.Point(17, 16);
             this.ID.Name = "ID";
             this.ID.PasswordChar = '\0';
             this.ID.PlaceholderText = "ID";
             this.ID.SelectedText = "";
             this.ID.ShadowDecoration.Parent = this.ID;
-            this.ID.Size = new System.Drawing.Size(75, 36);
+            this.ID.Size = new System.Drawing.Size(78, 36);
             this.ID.TabIndex = 3;
             // 
             // email
@@ -397,7 +397,7 @@ namespace e.Components
             this.email.FocusedState.Parent = this.email;
             this.email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.email.HoverState.Parent = this.email;
-            this.email.Location = new System.Drawing.Point(464, 16);
+            this.email.Location = new System.Drawing.Point(469, 16);
             this.email.Name = "email";
             this.email.PasswordChar = '\0';
             this.email.PlaceholderText = "Email";
@@ -420,7 +420,7 @@ namespace e.Components
             this.Cin.FocusedState.Parent = this.Cin;
             this.Cin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Cin.HoverState.Parent = this.Cin;
-            this.Cin.Location = new System.Drawing.Point(107, 16);
+            this.Cin.Location = new System.Drawing.Point(105, 16);
             this.Cin.Name = "Cin";
             this.Cin.PasswordChar = '\0';
             this.Cin.PlaceholderText = "CIN";
@@ -544,9 +544,9 @@ namespace e.Components
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(13, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 19);
+            this.label3.Size = new System.Drawing.Size(158, 19);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Recu de paiment";
+            this.label3.Text = "Reçu de paiement";
             // 
             // label19
             // 
@@ -696,7 +696,7 @@ namespace e.Components
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(315, 28);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Le";
+            this.label10.Text = "Date de paiment";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label17
