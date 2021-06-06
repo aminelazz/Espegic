@@ -77,18 +77,6 @@ namespace e.Components
             this.label4 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.Juillet = new Guna.UI2.WinForms.Guna2Button();
-            this.Janvier = new Guna.UI2.WinForms.Guna2Button();
-            this.Aout = new Guna.UI2.WinForms.Guna2Button();
-            this.Septembre = new Guna.UI2.WinForms.Guna2Button();
-            this.Fevrier = new Guna.UI2.WinForms.Guna2Button();
-            this.Decembre = new Guna.UI2.WinForms.Guna2Button();
-            this.Mars = new Guna.UI2.WinForms.Guna2Button();
-            this.Octobre = new Guna.UI2.WinForms.Guna2Button();
-            this.Juin = new Guna.UI2.WinForms.Guna2Button();
-            this.Novembre = new Guna.UI2.WinForms.Guna2Button();
-            this.Avril = new Guna.UI2.WinForms.Guna2Button();
-            this.Mai = new Guna.UI2.WinForms.Guna2Button();
             this.Year = new Guna.UI2.WinForms.Guna2ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
@@ -118,6 +106,7 @@ namespace e.Components
             this.label16 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PayBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ReturnBtn1 = new Guna.UI2.WinForms.Guna2Button();
             this.FullName = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -146,7 +135,32 @@ namespace e.Components
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.label20 = new System.Windows.Forms.Label();
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.PayBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBox3 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBox4 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBox5 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBox6 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBox7 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBox8 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBox9 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBox10 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBox11 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBox12 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.Juillet = new Guna.UI2.WinForms.Guna2Button();
+            this.Janvier = new Guna.UI2.WinForms.Guna2Button();
+            this.Aout = new Guna.UI2.WinForms.Guna2Button();
+            this.Septembre = new Guna.UI2.WinForms.Guna2Button();
+            this.Fevrier = new Guna.UI2.WinForms.Guna2Button();
+            this.Decembre = new Guna.UI2.WinForms.Guna2Button();
+            this.Mars = new Guna.UI2.WinForms.Guna2Button();
+            this.Octobre = new Guna.UI2.WinForms.Guna2Button();
+            this.Juin = new Guna.UI2.WinForms.Guna2Button();
+            this.Novembre = new Guna.UI2.WinForms.Guna2Button();
+            this.Avril = new Guna.UI2.WinForms.Guna2Button();
+            this.Mai = new Guna.UI2.WinForms.Guna2Button();
             this.Pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.View)).BeginInit();
@@ -163,6 +177,8 @@ namespace e.Components
             this.panel3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pages
@@ -174,6 +190,7 @@ namespace e.Components
             this.Pages.Controls.Add(this.tabPage3);
             this.Pages.Controls.Add(this.tabPage4);
             this.Pages.Controls.Add(this.tabPage5);
+            this.Pages.Controls.Add(this.tabPage6);
             this.Pages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pages.Location = new System.Drawing.Point(0, 0);
             this.Pages.Margin = new System.Windows.Forms.Padding(0);
@@ -999,18 +1016,7 @@ namespace e.Components
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.Juillet);
-            this.tabPage3.Controls.Add(this.Janvier);
-            this.tabPage3.Controls.Add(this.Aout);
-            this.tabPage3.Controls.Add(this.Septembre);
-            this.tabPage3.Controls.Add(this.Fevrier);
-            this.tabPage3.Controls.Add(this.Decembre);
-            this.tabPage3.Controls.Add(this.Mars);
-            this.tabPage3.Controls.Add(this.Octobre);
-            this.tabPage3.Controls.Add(this.Juin);
-            this.tabPage3.Controls.Add(this.Novembre);
-            this.tabPage3.Controls.Add(this.Avril);
-            this.tabPage3.Controls.Add(this.Mai);
+            this.tabPage3.Controls.Add(this.tableLayoutPanel2);
             this.tabPage3.Controls.Add(this.Year);
             this.tabPage3.Controls.Add(this.tableLayoutPanel1);
             this.tabPage3.Controls.Add(this.label16);
@@ -1023,246 +1029,6 @@ namespace e.Components
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // Juillet
-            // 
-            this.Juillet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Juillet.BorderRadius = 15;
-            this.Juillet.CheckedState.Parent = this.Juillet;
-            this.Juillet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Juillet.CustomImages.Parent = this.Juillet;
-            this.Juillet.FillColor = System.Drawing.Color.LightSlateGray;
-            this.Juillet.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Juillet.ForeColor = System.Drawing.Color.White;
-            this.Juillet.HoverState.Parent = this.Juillet;
-            this.Juillet.ImageSize = new System.Drawing.Size(15, 15);
-            this.Juillet.Location = new System.Drawing.Point(27, 396);
-            this.Juillet.Name = "Juillet";
-            this.Juillet.ShadowDecoration.Parent = this.Juillet;
-            this.Juillet.Size = new System.Drawing.Size(86, 30);
-            this.Juillet.TabIndex = 51;
-            this.Juillet.Text = "Juillet";
-            this.Juillet.Click += new System.EventHandler(this.Month_Click);
-            // 
-            // Janvier
-            // 
-            this.Janvier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Janvier.BorderRadius = 15;
-            this.Janvier.CheckedState.Parent = this.Janvier;
-            this.Janvier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Janvier.CustomImages.Parent = this.Janvier;
-            this.Janvier.FillColor = System.Drawing.Color.LightSlateGray;
-            this.Janvier.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Janvier.ForeColor = System.Drawing.Color.White;
-            this.Janvier.HoverState.Parent = this.Janvier;
-            this.Janvier.ImageSize = new System.Drawing.Size(15, 15);
-            this.Janvier.Location = new System.Drawing.Point(27, 356);
-            this.Janvier.Name = "Janvier";
-            this.Janvier.ShadowDecoration.Parent = this.Janvier;
-            this.Janvier.Size = new System.Drawing.Size(86, 30);
-            this.Janvier.TabIndex = 51;
-            this.Janvier.Text = "Janvier";
-            this.Janvier.Click += new System.EventHandler(this.Month_Click);
-            // 
-            // Aout
-            // 
-            this.Aout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Aout.BorderRadius = 15;
-            this.Aout.CheckedState.Parent = this.Aout;
-            this.Aout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Aout.CustomImages.Parent = this.Aout;
-            this.Aout.FillColor = System.Drawing.Color.LightSlateGray;
-            this.Aout.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Aout.ForeColor = System.Drawing.Color.White;
-            this.Aout.HoverState.Parent = this.Aout;
-            this.Aout.ImageSize = new System.Drawing.Size(15, 15);
-            this.Aout.Location = new System.Drawing.Point(145, 396);
-            this.Aout.Name = "Aout";
-            this.Aout.ShadowDecoration.Parent = this.Aout;
-            this.Aout.Size = new System.Drawing.Size(86, 30);
-            this.Aout.TabIndex = 51;
-            this.Aout.Text = "Aout";
-            this.Aout.Click += new System.EventHandler(this.Month_Click);
-            // 
-            // Septembre
-            // 
-            this.Septembre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Septembre.BorderRadius = 15;
-            this.Septembre.CheckedState.Parent = this.Septembre;
-            this.Septembre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Septembre.CustomImages.Parent = this.Septembre;
-            this.Septembre.FillColor = System.Drawing.Color.LightSlateGray;
-            this.Septembre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Septembre.ForeColor = System.Drawing.Color.White;
-            this.Septembre.HoverState.Parent = this.Septembre;
-            this.Septembre.ImageSize = new System.Drawing.Size(15, 15);
-            this.Septembre.Location = new System.Drawing.Point(263, 396);
-            this.Septembre.Name = "Septembre";
-            this.Septembre.ShadowDecoration.Parent = this.Septembre;
-            this.Septembre.Size = new System.Drawing.Size(86, 30);
-            this.Septembre.TabIndex = 51;
-            this.Septembre.Text = "Septembre";
-            this.Septembre.Click += new System.EventHandler(this.Month_Click);
-            // 
-            // Fevrier
-            // 
-            this.Fevrier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Fevrier.BorderRadius = 15;
-            this.Fevrier.CheckedState.Parent = this.Fevrier;
-            this.Fevrier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Fevrier.CustomImages.Parent = this.Fevrier;
-            this.Fevrier.FillColor = System.Drawing.Color.LightSlateGray;
-            this.Fevrier.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fevrier.ForeColor = System.Drawing.Color.White;
-            this.Fevrier.HoverState.Parent = this.Fevrier;
-            this.Fevrier.ImageSize = new System.Drawing.Size(15, 15);
-            this.Fevrier.Location = new System.Drawing.Point(145, 356);
-            this.Fevrier.Name = "Fevrier";
-            this.Fevrier.ShadowDecoration.Parent = this.Fevrier;
-            this.Fevrier.Size = new System.Drawing.Size(86, 30);
-            this.Fevrier.TabIndex = 51;
-            this.Fevrier.Text = "Fevrier";
-            this.Fevrier.Click += new System.EventHandler(this.Month_Click);
-            // 
-            // Decembre
-            // 
-            this.Decembre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Decembre.BorderRadius = 15;
-            this.Decembre.CheckedState.Parent = this.Decembre;
-            this.Decembre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Decembre.CustomImages.Parent = this.Decembre;
-            this.Decembre.FillColor = System.Drawing.Color.LightSlateGray;
-            this.Decembre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Decembre.ForeColor = System.Drawing.Color.White;
-            this.Decembre.HoverState.Parent = this.Decembre;
-            this.Decembre.ImageSize = new System.Drawing.Size(15, 15);
-            this.Decembre.Location = new System.Drawing.Point(617, 396);
-            this.Decembre.Name = "Decembre";
-            this.Decembre.ShadowDecoration.Parent = this.Decembre;
-            this.Decembre.Size = new System.Drawing.Size(86, 30);
-            this.Decembre.TabIndex = 51;
-            this.Decembre.Text = "Decembre";
-            this.Decembre.Click += new System.EventHandler(this.Month_Click);
-            // 
-            // Mars
-            // 
-            this.Mars.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Mars.BorderRadius = 15;
-            this.Mars.CheckedState.Parent = this.Mars;
-            this.Mars.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Mars.CustomImages.Parent = this.Mars;
-            this.Mars.FillColor = System.Drawing.Color.LightSlateGray;
-            this.Mars.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mars.ForeColor = System.Drawing.Color.White;
-            this.Mars.HoverState.Parent = this.Mars;
-            this.Mars.ImageSize = new System.Drawing.Size(15, 15);
-            this.Mars.Location = new System.Drawing.Point(263, 356);
-            this.Mars.Name = "Mars";
-            this.Mars.ShadowDecoration.Parent = this.Mars;
-            this.Mars.Size = new System.Drawing.Size(86, 30);
-            this.Mars.TabIndex = 51;
-            this.Mars.Text = "Mars";
-            this.Mars.Click += new System.EventHandler(this.Month_Click);
-            // 
-            // Octobre
-            // 
-            this.Octobre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Octobre.BorderRadius = 15;
-            this.Octobre.CheckedState.Parent = this.Octobre;
-            this.Octobre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Octobre.CustomImages.Parent = this.Octobre;
-            this.Octobre.FillColor = System.Drawing.Color.LightSlateGray;
-            this.Octobre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Octobre.ForeColor = System.Drawing.Color.White;
-            this.Octobre.HoverState.Parent = this.Octobre;
-            this.Octobre.ImageSize = new System.Drawing.Size(15, 15);
-            this.Octobre.Location = new System.Drawing.Point(381, 396);
-            this.Octobre.Name = "Octobre";
-            this.Octobre.ShadowDecoration.Parent = this.Octobre;
-            this.Octobre.Size = new System.Drawing.Size(86, 30);
-            this.Octobre.TabIndex = 51;
-            this.Octobre.Text = "Octobre";
-            this.Octobre.Click += new System.EventHandler(this.Month_Click);
-            // 
-            // Juin
-            // 
-            this.Juin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Juin.BorderRadius = 15;
-            this.Juin.CheckedState.Parent = this.Juin;
-            this.Juin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Juin.CustomImages.Parent = this.Juin;
-            this.Juin.FillColor = System.Drawing.Color.LightSlateGray;
-            this.Juin.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Juin.ForeColor = System.Drawing.Color.White;
-            this.Juin.HoverState.Parent = this.Juin;
-            this.Juin.ImageSize = new System.Drawing.Size(15, 15);
-            this.Juin.Location = new System.Drawing.Point(617, 356);
-            this.Juin.Name = "Juin";
-            this.Juin.ShadowDecoration.Parent = this.Juin;
-            this.Juin.Size = new System.Drawing.Size(86, 30);
-            this.Juin.TabIndex = 51;
-            this.Juin.Text = "Juin";
-            this.Juin.Click += new System.EventHandler(this.Month_Click);
-            // 
-            // Novembre
-            // 
-            this.Novembre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Novembre.BorderRadius = 15;
-            this.Novembre.CheckedState.Parent = this.Novembre;
-            this.Novembre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Novembre.CustomImages.Parent = this.Novembre;
-            this.Novembre.FillColor = System.Drawing.Color.LightSlateGray;
-            this.Novembre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Novembre.ForeColor = System.Drawing.Color.White;
-            this.Novembre.HoverState.Parent = this.Novembre;
-            this.Novembre.ImageSize = new System.Drawing.Size(15, 15);
-            this.Novembre.Location = new System.Drawing.Point(499, 396);
-            this.Novembre.Name = "Novembre";
-            this.Novembre.ShadowDecoration.Parent = this.Novembre;
-            this.Novembre.Size = new System.Drawing.Size(86, 30);
-            this.Novembre.TabIndex = 51;
-            this.Novembre.Text = "Novembre";
-            this.Novembre.Click += new System.EventHandler(this.Month_Click);
-            // 
-            // Avril
-            // 
-            this.Avril.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Avril.BorderRadius = 15;
-            this.Avril.CheckedState.Parent = this.Avril;
-            this.Avril.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Avril.CustomImages.Parent = this.Avril;
-            this.Avril.FillColor = System.Drawing.Color.LightSlateGray;
-            this.Avril.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Avril.ForeColor = System.Drawing.Color.White;
-            this.Avril.HoverState.Parent = this.Avril;
-            this.Avril.ImageSize = new System.Drawing.Size(15, 15);
-            this.Avril.Location = new System.Drawing.Point(381, 356);
-            this.Avril.Name = "Avril";
-            this.Avril.ShadowDecoration.Parent = this.Avril;
-            this.Avril.Size = new System.Drawing.Size(86, 30);
-            this.Avril.TabIndex = 51;
-            this.Avril.Text = "Avril";
-            this.Avril.Click += new System.EventHandler(this.Month_Click);
-            // 
-            // Mai
-            // 
-            this.Mai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Mai.BorderRadius = 15;
-            this.Mai.CheckedState.Parent = this.Mai;
-            this.Mai.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Mai.CustomImages.Parent = this.Mai;
-            this.Mai.FillColor = System.Drawing.Color.LightSlateGray;
-            this.Mai.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mai.ForeColor = System.Drawing.Color.White;
-            this.Mai.HoverState.Parent = this.Mai;
-            this.Mai.ImageSize = new System.Drawing.Size(15, 15);
-            this.Mai.Location = new System.Drawing.Point(499, 356);
-            this.Mai.Name = "Mai";
-            this.Mai.ShadowDecoration.Parent = this.Mai;
-            this.Mai.Size = new System.Drawing.Size(86, 30);
-            this.Mai.TabIndex = 51;
-            this.Mai.Text = "Mai";
-            this.Mai.Click += new System.EventHandler(this.Month_Click);
             // 
             // Year
             // 
@@ -1283,7 +1049,7 @@ namespace e.Components
             "2021",
             "2022"});
             this.Year.ItemsAppearance.Parent = this.Year;
-            this.Year.Location = new System.Drawing.Point(566, 290);
+            this.Year.Location = new System.Drawing.Point(566, 309);
             this.Year.Name = "Year";
             this.Year.ShadowDecoration.Parent = this.Year;
             this.Year.Size = new System.Drawing.Size(140, 36);
@@ -1336,7 +1102,7 @@ namespace e.Components
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(686, 148);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(686, 168);
             this.tableLayoutPanel1.TabIndex = 49;
             // 
             // label7
@@ -1346,9 +1112,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(4, 49);
+            this.label7.Location = new System.Drawing.Point(4, 55);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 23);
+            this.label7.Size = new System.Drawing.Size(130, 26);
             this.label7.TabIndex = 0;
             this.label7.Text = "Etablissement";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1360,9 +1126,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(4, 73);
+            this.label8.Location = new System.Drawing.Point(4, 82);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 23);
+            this.label8.Size = new System.Drawing.Size(130, 26);
             this.label8.TabIndex = 0;
             this.label8.Text = "Nationalité";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1374,9 +1140,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(4, 25);
+            this.label6.Location = new System.Drawing.Point(4, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 23);
+            this.label6.Size = new System.Drawing.Size(130, 26);
             this.label6.TabIndex = 0;
             this.label6.Text = "Sexe";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1390,7 +1156,7 @@ namespace e.Components
             this.CINShow.BackColor = System.Drawing.Color.White;
             this.CINShow.Location = new System.Drawing.Point(141, 1);
             this.CINShow.Name = "CINShow";
-            this.CINShow.Size = new System.Drawing.Size(198, 23);
+            this.CINShow.Size = new System.Drawing.Size(198, 26);
             this.CINShow.TabIndex = 0;
             this.CINShow.Text = "XA86367";
             this.CINShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1402,9 +1168,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label13.Location = new System.Drawing.Point(4, 97);
+            this.label13.Location = new System.Drawing.Point(4, 109);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 23);
+            this.label13.Size = new System.Drawing.Size(130, 26);
             this.label13.TabIndex = 0;
             this.label13.Text = "Province";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1416,9 +1182,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SexShow.AutoSize = true;
             this.SexShow.BackColor = System.Drawing.Color.White;
-            this.SexShow.Location = new System.Drawing.Point(141, 25);
+            this.SexShow.Location = new System.Drawing.Point(141, 28);
             this.SexShow.Name = "SexShow";
-            this.SexShow.Size = new System.Drawing.Size(198, 23);
+            this.SexShow.Size = new System.Drawing.Size(198, 26);
             this.SexShow.TabIndex = 0;
             this.SexShow.Text = "Masculin";
             this.SexShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1430,9 +1196,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EstablishmentShow.AutoSize = true;
             this.EstablishmentShow.BackColor = System.Drawing.Color.White;
-            this.EstablishmentShow.Location = new System.Drawing.Point(141, 49);
+            this.EstablishmentShow.Location = new System.Drawing.Point(141, 55);
             this.EstablishmentShow.Name = "EstablishmentShow";
-            this.EstablishmentShow.Size = new System.Drawing.Size(198, 23);
+            this.EstablishmentShow.Size = new System.Drawing.Size(198, 26);
             this.EstablishmentShow.TabIndex = 0;
             this.EstablishmentShow.Text = "Tiflet";
             this.EstablishmentShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1444,9 +1210,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NationalityShow.AutoSize = true;
             this.NationalityShow.BackColor = System.Drawing.Color.White;
-            this.NationalityShow.Location = new System.Drawing.Point(141, 73);
+            this.NationalityShow.Location = new System.Drawing.Point(141, 82);
             this.NationalityShow.Name = "NationalityShow";
-            this.NationalityShow.Size = new System.Drawing.Size(198, 23);
+            this.NationalityShow.Size = new System.Drawing.Size(198, 26);
             this.NationalityShow.TabIndex = 0;
             this.NationalityShow.Text = "Maroccain";
             this.NationalityShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1458,9 +1224,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ProvinceShow.AutoSize = true;
             this.ProvinceShow.BackColor = System.Drawing.Color.White;
-            this.ProvinceShow.Location = new System.Drawing.Point(141, 97);
+            this.ProvinceShow.Location = new System.Drawing.Point(141, 109);
             this.ProvinceShow.Name = "ProvinceShow";
-            this.ProvinceShow.Size = new System.Drawing.Size(198, 23);
+            this.ProvinceShow.Size = new System.Drawing.Size(198, 26);
             this.ProvinceShow.TabIndex = 0;
             this.ProvinceShow.Text = "Tiflet";
             this.ProvinceShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1473,7 +1239,7 @@ namespace e.Components
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(346, 1);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(130, 23);
+            this.label11.Size = new System.Drawing.Size(130, 26);
             this.label11.TabIndex = 0;
             this.label11.Text = "Commune";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1487,7 +1253,7 @@ namespace e.Components
             this.CommuneShow.BackColor = System.Drawing.Color.White;
             this.CommuneShow.Location = new System.Drawing.Point(483, 1);
             this.CommuneShow.Name = "CommuneShow";
-            this.CommuneShow.Size = new System.Drawing.Size(199, 23);
+            this.CommuneShow.Size = new System.Drawing.Size(199, 26);
             this.CommuneShow.TabIndex = 0;
             this.CommuneShow.Text = "Commune";
             this.CommuneShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1499,9 +1265,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PhoneShow.AutoSize = true;
             this.PhoneShow.BackColor = System.Drawing.Color.White;
-            this.PhoneShow.Location = new System.Drawing.Point(483, 25);
+            this.PhoneShow.Location = new System.Drawing.Point(483, 28);
             this.PhoneShow.Name = "PhoneShow";
-            this.PhoneShow.Size = new System.Drawing.Size(199, 23);
+            this.PhoneShow.Size = new System.Drawing.Size(199, 26);
             this.PhoneShow.TabIndex = 0;
             this.PhoneShow.Text = "0670758085";
             this.PhoneShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1512,9 +1278,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(346, 25);
+            this.label22.Location = new System.Drawing.Point(346, 28);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(130, 23);
+            this.label22.Size = new System.Drawing.Size(130, 26);
             this.label22.TabIndex = 0;
             this.label22.Text = "Téléphone";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1525,9 +1291,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(346, 49);
+            this.label23.Location = new System.Drawing.Point(346, 55);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(130, 23);
+            this.label23.Size = new System.Drawing.Size(130, 26);
             this.label23.TabIndex = 0;
             this.label23.Text = "Email";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1539,9 +1305,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EmailShow.AutoSize = true;
             this.EmailShow.BackColor = System.Drawing.Color.White;
-            this.EmailShow.Location = new System.Drawing.Point(483, 49);
+            this.EmailShow.Location = new System.Drawing.Point(483, 55);
             this.EmailShow.Name = "EmailShow";
-            this.EmailShow.Size = new System.Drawing.Size(199, 23);
+            this.EmailShow.Size = new System.Drawing.Size(199, 26);
             this.EmailShow.TabIndex = 0;
             this.EmailShow.Text = "dv.hamham@gmail.com";
             this.EmailShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1553,9 +1319,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AddressShow.AutoSize = true;
             this.AddressShow.BackColor = System.Drawing.Color.White;
-            this.AddressShow.Location = new System.Drawing.Point(483, 73);
+            this.AddressShow.Location = new System.Drawing.Point(483, 82);
             this.AddressShow.Name = "AddressShow";
-            this.AddressShow.Size = new System.Drawing.Size(199, 23);
+            this.AddressShow.Size = new System.Drawing.Size(199, 26);
             this.AddressShow.TabIndex = 0;
             this.AddressShow.Text = "Mkam tolba tiflet";
             this.AddressShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1566,9 +1332,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(346, 73);
+            this.label26.Location = new System.Drawing.Point(346, 82);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(130, 23);
+            this.label26.Size = new System.Drawing.Size(130, 26);
             this.label26.TabIndex = 0;
             this.label26.Text = "Adresse";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1579,9 +1345,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(346, 97);
+            this.label27.Location = new System.Drawing.Point(346, 109);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(130, 23);
+            this.label27.Size = new System.Drawing.Size(130, 26);
             this.label27.TabIndex = 0;
             this.label27.Text = "Date de naissance";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1593,9 +1359,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BirthShow.AutoSize = true;
             this.BirthShow.BackColor = System.Drawing.Color.White;
-            this.BirthShow.Location = new System.Drawing.Point(483, 97);
+            this.BirthShow.Location = new System.Drawing.Point(483, 109);
             this.BirthShow.Name = "BirthShow";
-            this.BirthShow.Size = new System.Drawing.Size(199, 23);
+            this.BirthShow.Size = new System.Drawing.Size(199, 26);
             this.BirthShow.TabIndex = 0;
             this.BirthShow.Text = "30.09.1989";
             this.BirthShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1607,9 +1373,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label53.AutoSize = true;
             this.label53.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label53.Location = new System.Drawing.Point(4, 121);
+            this.label53.Location = new System.Drawing.Point(4, 136);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(130, 26);
+            this.label53.Size = new System.Drawing.Size(130, 31);
             this.label53.TabIndex = 0;
             this.label53.Text = "Massar";
             this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1621,9 +1387,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MassarShow.AutoSize = true;
             this.MassarShow.BackColor = System.Drawing.Color.White;
-            this.MassarShow.Location = new System.Drawing.Point(141, 121);
+            this.MassarShow.Location = new System.Drawing.Point(141, 136);
             this.MassarShow.Name = "MassarShow";
-            this.MassarShow.Size = new System.Drawing.Size(198, 26);
+            this.MassarShow.Size = new System.Drawing.Size(198, 31);
             this.MassarShow.TabIndex = 0;
             this.MassarShow.Text = "JD54655";
             this.MassarShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1634,9 +1400,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(346, 121);
+            this.label14.Location = new System.Drawing.Point(346, 136);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(130, 26);
+            this.label14.Size = new System.Drawing.Size(130, 31);
             this.label14.TabIndex = 0;
             this.label14.Text = "Formation";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1648,9 +1414,9 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FormationNameShow.AutoSize = true;
             this.FormationNameShow.BackColor = System.Drawing.Color.White;
-            this.FormationNameShow.Location = new System.Drawing.Point(483, 121);
+            this.FormationNameShow.Location = new System.Drawing.Point(483, 136);
             this.FormationNameShow.Name = "FormationNameShow";
-            this.FormationNameShow.Size = new System.Drawing.Size(199, 26);
+            this.FormationNameShow.Size = new System.Drawing.Size(199, 31);
             this.FormationNameShow.TabIndex = 0;
             this.FormationNameShow.Text = "Developement";
             this.FormationNameShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1664,7 +1430,7 @@ namespace e.Components
             this.label15.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label15.Location = new System.Drawing.Point(4, 1);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(130, 23);
+            this.label15.Size = new System.Drawing.Size(130, 26);
             this.label15.TabIndex = 0;
             this.label15.Text = "CIN";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1673,7 +1439,7 @@ namespace e.Components
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(20, 293);
+            this.label16.Location = new System.Drawing.Point(16, 311);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(75, 19);
             this.label16.TabIndex = 48;
@@ -1684,7 +1450,7 @@ namespace e.Components
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(23, 78);
+            this.label9.Location = new System.Drawing.Point(16, 75);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(176, 19);
             this.label9.TabIndex = 48;
@@ -1702,6 +1468,26 @@ namespace e.Components
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(720, 55);
             this.panel2.TabIndex = 46;
+            // 
+            // PayBtn
+            // 
+            this.PayBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PayBtn.BorderRadius = 2;
+            this.PayBtn.CheckedState.Parent = this.PayBtn;
+            this.PayBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PayBtn.CustomImages.Parent = this.PayBtn;
+            this.PayBtn.FillColor = System.Drawing.Color.Plum;
+            this.PayBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PayBtn.ForeColor = System.Drawing.Color.White;
+            this.PayBtn.HoverState.Parent = this.PayBtn;
+            this.PayBtn.ImageSize = new System.Drawing.Size(15, 15);
+            this.PayBtn.Location = new System.Drawing.Point(617, 11);
+            this.PayBtn.Name = "PayBtn";
+            this.PayBtn.ShadowDecoration.Parent = this.PayBtn;
+            this.PayBtn.Size = new System.Drawing.Size(86, 30);
+            this.PayBtn.TabIndex = 52;
+            this.PayBtn.Text = "Payer";
+            this.PayBtn.Click += new System.EventHandler(this.PayBtn_Click);
             // 
             // ReturnBtn1
             // 
@@ -2144,25 +1930,571 @@ namespace e.Components
             this.guna2HtmlToolTip1.AllowLinksHandling = true;
             this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
             // 
-            // PayBtn
+            // tableLayoutPanel2
             // 
-            this.PayBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PayBtn.BorderRadius = 2;
-            this.PayBtn.CheckedState.Parent = this.PayBtn;
-            this.PayBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PayBtn.CustomImages.Parent = this.PayBtn;
-            this.PayBtn.FillColor = System.Drawing.Color.Plum;
-            this.PayBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PayBtn.ForeColor = System.Drawing.Color.White;
-            this.PayBtn.HoverState.Parent = this.PayBtn;
-            this.PayBtn.ImageSize = new System.Drawing.Size(15, 15);
-            this.PayBtn.Location = new System.Drawing.Point(617, 11);
-            this.PayBtn.Name = "PayBtn";
-            this.PayBtn.ShadowDecoration.Parent = this.PayBtn;
-            this.PayBtn.Size = new System.Drawing.Size(86, 30);
-            this.PayBtn.TabIndex = 52;
-            this.PayBtn.Text = "Payer";
-            this.PayBtn.Click += new System.EventHandler(this.PayBtn_Click);
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.AutoSize = true;
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel2.ColumnCount = 6;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.Controls.Add(this.guna2CheckBox1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.guna2CheckBox2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.guna2CheckBox3, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.guna2CheckBox4, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.guna2CheckBox5, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.guna2CheckBox7, 5, 1);
+            this.tableLayoutPanel2.Controls.Add(this.guna2CheckBox9, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.guna2CheckBox10, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.guna2CheckBox11, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.guna2CheckBox12, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.guna2CheckBox8, 4, 1);
+            this.tableLayoutPanel2.Controls.Add(this.guna2CheckBox6, 5, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(20, 361);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(686, 81);
+            this.tableLayoutPanel2.TabIndex = 52;
+            // 
+            // guna2CheckBox1
+            // 
+            this.guna2CheckBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CheckBox1.AutoSize = true;
+            this.guna2CheckBox1.BackColor = System.Drawing.Color.White;
+            this.guna2CheckBox1.Checked = true;
+            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox1.CheckedState.BorderRadius = 2;
+            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.guna2CheckBox1.Enabled = false;
+            this.guna2CheckBox1.Location = new System.Drawing.Point(4, 4);
+            this.guna2CheckBox1.Name = "guna2CheckBox1";
+            this.guna2CheckBox1.Size = new System.Drawing.Size(107, 33);
+            this.guna2CheckBox1.TabIndex = 1;
+            this.guna2CheckBox1.Text = "Janvier";
+            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox1.UncheckedState.BorderRadius = 2;
+            this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox1.UseVisualStyleBackColor = false;
+            // 
+            // guna2CheckBox2
+            // 
+            this.guna2CheckBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CheckBox2.AutoSize = true;
+            this.guna2CheckBox2.BackColor = System.Drawing.Color.White;
+            this.guna2CheckBox2.Checked = true;
+            this.guna2CheckBox2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox2.CheckedState.BorderRadius = 2;
+            this.guna2CheckBox2.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.guna2CheckBox2.Enabled = false;
+            this.guna2CheckBox2.Location = new System.Drawing.Point(118, 4);
+            this.guna2CheckBox2.Name = "guna2CheckBox2";
+            this.guna2CheckBox2.Size = new System.Drawing.Size(107, 33);
+            this.guna2CheckBox2.TabIndex = 1;
+            this.guna2CheckBox2.Text = "Fevrier";
+            this.guna2CheckBox2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox2.UncheckedState.BorderRadius = 2;
+            this.guna2CheckBox2.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox2.UseVisualStyleBackColor = false;
+            // 
+            // guna2CheckBox3
+            // 
+            this.guna2CheckBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CheckBox3.AutoSize = true;
+            this.guna2CheckBox3.BackColor = System.Drawing.Color.White;
+            this.guna2CheckBox3.Checked = true;
+            this.guna2CheckBox3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox3.CheckedState.BorderRadius = 2;
+            this.guna2CheckBox3.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.guna2CheckBox3.Enabled = false;
+            this.guna2CheckBox3.Location = new System.Drawing.Point(232, 4);
+            this.guna2CheckBox3.Name = "guna2CheckBox3";
+            this.guna2CheckBox3.Size = new System.Drawing.Size(107, 33);
+            this.guna2CheckBox3.TabIndex = 1;
+            this.guna2CheckBox3.Text = "Mars";
+            this.guna2CheckBox3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox3.UncheckedState.BorderRadius = 2;
+            this.guna2CheckBox3.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox3.UseVisualStyleBackColor = false;
+            // 
+            // guna2CheckBox4
+            // 
+            this.guna2CheckBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CheckBox4.AutoSize = true;
+            this.guna2CheckBox4.BackColor = System.Drawing.Color.White;
+            this.guna2CheckBox4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox4.CheckedState.BorderRadius = 2;
+            this.guna2CheckBox4.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox4.Enabled = false;
+            this.guna2CheckBox4.Location = new System.Drawing.Point(346, 4);
+            this.guna2CheckBox4.Name = "guna2CheckBox4";
+            this.guna2CheckBox4.Size = new System.Drawing.Size(107, 33);
+            this.guna2CheckBox4.TabIndex = 1;
+            this.guna2CheckBox4.Text = "Avril";
+            this.guna2CheckBox4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox4.UncheckedState.BorderRadius = 2;
+            this.guna2CheckBox4.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox4.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox4.UseVisualStyleBackColor = false;
+            // 
+            // guna2CheckBox5
+            // 
+            this.guna2CheckBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CheckBox5.AutoSize = true;
+            this.guna2CheckBox5.BackColor = System.Drawing.Color.White;
+            this.guna2CheckBox5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox5.CheckedState.BorderRadius = 2;
+            this.guna2CheckBox5.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox5.Enabled = false;
+            this.guna2CheckBox5.Location = new System.Drawing.Point(460, 4);
+            this.guna2CheckBox5.Name = "guna2CheckBox5";
+            this.guna2CheckBox5.Size = new System.Drawing.Size(107, 33);
+            this.guna2CheckBox5.TabIndex = 1;
+            this.guna2CheckBox5.Text = "Mai";
+            this.guna2CheckBox5.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox5.UncheckedState.BorderRadius = 2;
+            this.guna2CheckBox5.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox5.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox5.UseVisualStyleBackColor = false;
+            // 
+            // guna2CheckBox6
+            // 
+            this.guna2CheckBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CheckBox6.AutoSize = true;
+            this.guna2CheckBox6.BackColor = System.Drawing.Color.White;
+            this.guna2CheckBox6.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox6.CheckedState.BorderRadius = 2;
+            this.guna2CheckBox6.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox6.Enabled = false;
+            this.guna2CheckBox6.Location = new System.Drawing.Point(574, 4);
+            this.guna2CheckBox6.Name = "guna2CheckBox6";
+            this.guna2CheckBox6.Size = new System.Drawing.Size(108, 33);
+            this.guna2CheckBox6.TabIndex = 1;
+            this.guna2CheckBox6.Text = "Juin";
+            this.guna2CheckBox6.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox6.UncheckedState.BorderRadius = 2;
+            this.guna2CheckBox6.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox6.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox6.UseVisualStyleBackColor = false;
+            // 
+            // guna2CheckBox7
+            // 
+            this.guna2CheckBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CheckBox7.AutoSize = true;
+            this.guna2CheckBox7.BackColor = System.Drawing.Color.White;
+            this.guna2CheckBox7.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox7.CheckedState.BorderRadius = 2;
+            this.guna2CheckBox7.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox7.Enabled = false;
+            this.guna2CheckBox7.Location = new System.Drawing.Point(574, 44);
+            this.guna2CheckBox7.Name = "guna2CheckBox7";
+            this.guna2CheckBox7.Size = new System.Drawing.Size(108, 33);
+            this.guna2CheckBox7.TabIndex = 1;
+            this.guna2CheckBox7.Text = "Decembre";
+            this.guna2CheckBox7.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox7.UncheckedState.BorderRadius = 2;
+            this.guna2CheckBox7.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox7.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox7.UseVisualStyleBackColor = false;
+            // 
+            // guna2CheckBox8
+            // 
+            this.guna2CheckBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CheckBox8.AutoSize = true;
+            this.guna2CheckBox8.BackColor = System.Drawing.Color.White;
+            this.guna2CheckBox8.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox8.CheckedState.BorderRadius = 2;
+            this.guna2CheckBox8.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox8.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox8.Enabled = false;
+            this.guna2CheckBox8.Location = new System.Drawing.Point(460, 44);
+            this.guna2CheckBox8.Name = "guna2CheckBox8";
+            this.guna2CheckBox8.Size = new System.Drawing.Size(107, 33);
+            this.guna2CheckBox8.TabIndex = 1;
+            this.guna2CheckBox8.Text = "Novembre";
+            this.guna2CheckBox8.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox8.UncheckedState.BorderRadius = 2;
+            this.guna2CheckBox8.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox8.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox8.UseVisualStyleBackColor = false;
+            // 
+            // guna2CheckBox9
+            // 
+            this.guna2CheckBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CheckBox9.AutoSize = true;
+            this.guna2CheckBox9.BackColor = System.Drawing.Color.White;
+            this.guna2CheckBox9.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox9.CheckedState.BorderRadius = 2;
+            this.guna2CheckBox9.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox9.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox9.Enabled = false;
+            this.guna2CheckBox9.Location = new System.Drawing.Point(346, 44);
+            this.guna2CheckBox9.Name = "guna2CheckBox9";
+            this.guna2CheckBox9.Size = new System.Drawing.Size(107, 33);
+            this.guna2CheckBox9.TabIndex = 1;
+            this.guna2CheckBox9.Text = "Octobre";
+            this.guna2CheckBox9.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox9.UncheckedState.BorderRadius = 2;
+            this.guna2CheckBox9.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox9.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox9.UseVisualStyleBackColor = false;
+            // 
+            // guna2CheckBox10
+            // 
+            this.guna2CheckBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CheckBox10.AutoSize = true;
+            this.guna2CheckBox10.BackColor = System.Drawing.Color.White;
+            this.guna2CheckBox10.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox10.CheckedState.BorderRadius = 2;
+            this.guna2CheckBox10.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox10.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox10.Enabled = false;
+            this.guna2CheckBox10.Location = new System.Drawing.Point(232, 44);
+            this.guna2CheckBox10.Name = "guna2CheckBox10";
+            this.guna2CheckBox10.Size = new System.Drawing.Size(107, 33);
+            this.guna2CheckBox10.TabIndex = 1;
+            this.guna2CheckBox10.Text = "Septembre";
+            this.guna2CheckBox10.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox10.UncheckedState.BorderRadius = 2;
+            this.guna2CheckBox10.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox10.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox10.UseVisualStyleBackColor = false;
+            // 
+            // guna2CheckBox11
+            // 
+            this.guna2CheckBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CheckBox11.AutoSize = true;
+            this.guna2CheckBox11.BackColor = System.Drawing.Color.White;
+            this.guna2CheckBox11.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox11.CheckedState.BorderRadius = 2;
+            this.guna2CheckBox11.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox11.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox11.Enabled = false;
+            this.guna2CheckBox11.Location = new System.Drawing.Point(118, 44);
+            this.guna2CheckBox11.Name = "guna2CheckBox11";
+            this.guna2CheckBox11.Size = new System.Drawing.Size(107, 33);
+            this.guna2CheckBox11.TabIndex = 1;
+            this.guna2CheckBox11.Text = "Aout";
+            this.guna2CheckBox11.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox11.UncheckedState.BorderRadius = 2;
+            this.guna2CheckBox11.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox11.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox11.UseVisualStyleBackColor = false;
+            // 
+            // guna2CheckBox12
+            // 
+            this.guna2CheckBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CheckBox12.AutoSize = true;
+            this.guna2CheckBox12.BackColor = System.Drawing.Color.White;
+            this.guna2CheckBox12.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox12.CheckedState.BorderRadius = 2;
+            this.guna2CheckBox12.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox12.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox12.Enabled = false;
+            this.guna2CheckBox12.Location = new System.Drawing.Point(4, 44);
+            this.guna2CheckBox12.Name = "guna2CheckBox12";
+            this.guna2CheckBox12.Size = new System.Drawing.Size(107, 33);
+            this.guna2CheckBox12.TabIndex = 1;
+            this.guna2CheckBox12.Text = "Juilet";
+            this.guna2CheckBox12.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox12.UncheckedState.BorderRadius = 2;
+            this.guna2CheckBox12.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox12.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox12.UseVisualStyleBackColor = false;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.Juillet);
+            this.tabPage6.Controls.Add(this.Janvier);
+            this.tabPage6.Controls.Add(this.Aout);
+            this.tabPage6.Controls.Add(this.Septembre);
+            this.tabPage6.Controls.Add(this.Fevrier);
+            this.tabPage6.Controls.Add(this.Decembre);
+            this.tabPage6.Controls.Add(this.Mars);
+            this.tabPage6.Controls.Add(this.Octobre);
+            this.tabPage6.Controls.Add(this.Juin);
+            this.tabPage6.Controls.Add(this.Novembre);
+            this.tabPage6.Controls.Add(this.Avril);
+            this.tabPage6.Controls.Add(this.Mai);
+            this.tabPage6.Location = new System.Drawing.Point(4, 4);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(726, 455);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "tabPage6";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // Juillet
+            // 
+            this.Juillet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Juillet.BorderRadius = 15;
+            this.Juillet.CheckedState.Parent = this.Juillet;
+            this.Juillet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Juillet.CustomImages.Parent = this.Juillet;
+            this.Juillet.FillColor = System.Drawing.Color.LightSlateGray;
+            this.Juillet.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Juillet.ForeColor = System.Drawing.Color.White;
+            this.Juillet.HoverState.Parent = this.Juillet;
+            this.Juillet.ImageSize = new System.Drawing.Size(15, 15);
+            this.Juillet.Location = new System.Drawing.Point(25, 232);
+            this.Juillet.Name = "Juillet";
+            this.Juillet.ShadowDecoration.Parent = this.Juillet;
+            this.Juillet.Size = new System.Drawing.Size(86, 30);
+            this.Juillet.TabIndex = 52;
+            this.Juillet.Text = "Juillet";
+            // 
+            // Janvier
+            // 
+            this.Janvier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Janvier.BorderRadius = 15;
+            this.Janvier.CheckedState.Parent = this.Janvier;
+            this.Janvier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Janvier.CustomImages.Parent = this.Janvier;
+            this.Janvier.FillColor = System.Drawing.Color.LightSlateGray;
+            this.Janvier.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Janvier.ForeColor = System.Drawing.Color.White;
+            this.Janvier.HoverState.Parent = this.Janvier;
+            this.Janvier.ImageSize = new System.Drawing.Size(15, 15);
+            this.Janvier.Location = new System.Drawing.Point(25, 192);
+            this.Janvier.Name = "Janvier";
+            this.Janvier.ShadowDecoration.Parent = this.Janvier;
+            this.Janvier.Size = new System.Drawing.Size(86, 30);
+            this.Janvier.TabIndex = 53;
+            this.Janvier.Text = "Janvier";
+            // 
+            // Aout
+            // 
+            this.Aout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Aout.BorderRadius = 15;
+            this.Aout.CheckedState.Parent = this.Aout;
+            this.Aout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Aout.CustomImages.Parent = this.Aout;
+            this.Aout.FillColor = System.Drawing.Color.LightSlateGray;
+            this.Aout.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aout.ForeColor = System.Drawing.Color.White;
+            this.Aout.HoverState.Parent = this.Aout;
+            this.Aout.ImageSize = new System.Drawing.Size(15, 15);
+            this.Aout.Location = new System.Drawing.Point(143, 232);
+            this.Aout.Name = "Aout";
+            this.Aout.ShadowDecoration.Parent = this.Aout;
+            this.Aout.Size = new System.Drawing.Size(86, 30);
+            this.Aout.TabIndex = 54;
+            this.Aout.Text = "Aout";
+            // 
+            // Septembre
+            // 
+            this.Septembre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Septembre.BorderRadius = 15;
+            this.Septembre.CheckedState.Parent = this.Septembre;
+            this.Septembre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Septembre.CustomImages.Parent = this.Septembre;
+            this.Septembre.FillColor = System.Drawing.Color.LightSlateGray;
+            this.Septembre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Septembre.ForeColor = System.Drawing.Color.White;
+            this.Septembre.HoverState.Parent = this.Septembre;
+            this.Septembre.ImageSize = new System.Drawing.Size(15, 15);
+            this.Septembre.Location = new System.Drawing.Point(261, 232);
+            this.Septembre.Name = "Septembre";
+            this.Septembre.ShadowDecoration.Parent = this.Septembre;
+            this.Septembre.Size = new System.Drawing.Size(86, 30);
+            this.Septembre.TabIndex = 55;
+            this.Septembre.Text = "Septembre";
+            // 
+            // Fevrier
+            // 
+            this.Fevrier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Fevrier.BorderRadius = 15;
+            this.Fevrier.CheckedState.Parent = this.Fevrier;
+            this.Fevrier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Fevrier.CustomImages.Parent = this.Fevrier;
+            this.Fevrier.FillColor = System.Drawing.Color.LightSlateGray;
+            this.Fevrier.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fevrier.ForeColor = System.Drawing.Color.White;
+            this.Fevrier.HoverState.Parent = this.Fevrier;
+            this.Fevrier.ImageSize = new System.Drawing.Size(15, 15);
+            this.Fevrier.Location = new System.Drawing.Point(143, 192);
+            this.Fevrier.Name = "Fevrier";
+            this.Fevrier.ShadowDecoration.Parent = this.Fevrier;
+            this.Fevrier.Size = new System.Drawing.Size(86, 30);
+            this.Fevrier.TabIndex = 56;
+            this.Fevrier.Text = "Fevrier";
+            // 
+            // Decembre
+            // 
+            this.Decembre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Decembre.BorderRadius = 15;
+            this.Decembre.CheckedState.Parent = this.Decembre;
+            this.Decembre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Decembre.CustomImages.Parent = this.Decembre;
+            this.Decembre.FillColor = System.Drawing.Color.LightSlateGray;
+            this.Decembre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Decembre.ForeColor = System.Drawing.Color.White;
+            this.Decembre.HoverState.Parent = this.Decembre;
+            this.Decembre.ImageSize = new System.Drawing.Size(15, 15);
+            this.Decembre.Location = new System.Drawing.Point(615, 232);
+            this.Decembre.Name = "Decembre";
+            this.Decembre.ShadowDecoration.Parent = this.Decembre;
+            this.Decembre.Size = new System.Drawing.Size(86, 30);
+            this.Decembre.TabIndex = 57;
+            this.Decembre.Text = "Decembre";
+            // 
+            // Mars
+            // 
+            this.Mars.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Mars.BorderRadius = 15;
+            this.Mars.CheckedState.Parent = this.Mars;
+            this.Mars.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Mars.CustomImages.Parent = this.Mars;
+            this.Mars.FillColor = System.Drawing.Color.LightSlateGray;
+            this.Mars.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mars.ForeColor = System.Drawing.Color.White;
+            this.Mars.HoverState.Parent = this.Mars;
+            this.Mars.ImageSize = new System.Drawing.Size(15, 15);
+            this.Mars.Location = new System.Drawing.Point(261, 192);
+            this.Mars.Name = "Mars";
+            this.Mars.ShadowDecoration.Parent = this.Mars;
+            this.Mars.Size = new System.Drawing.Size(86, 30);
+            this.Mars.TabIndex = 58;
+            this.Mars.Text = "Mars";
+            // 
+            // Octobre
+            // 
+            this.Octobre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Octobre.BorderRadius = 15;
+            this.Octobre.CheckedState.Parent = this.Octobre;
+            this.Octobre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Octobre.CustomImages.Parent = this.Octobre;
+            this.Octobre.FillColor = System.Drawing.Color.LightSlateGray;
+            this.Octobre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Octobre.ForeColor = System.Drawing.Color.White;
+            this.Octobre.HoverState.Parent = this.Octobre;
+            this.Octobre.ImageSize = new System.Drawing.Size(15, 15);
+            this.Octobre.Location = new System.Drawing.Point(379, 232);
+            this.Octobre.Name = "Octobre";
+            this.Octobre.ShadowDecoration.Parent = this.Octobre;
+            this.Octobre.Size = new System.Drawing.Size(86, 30);
+            this.Octobre.TabIndex = 59;
+            this.Octobre.Text = "Octobre";
+            // 
+            // Juin
+            // 
+            this.Juin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Juin.BorderRadius = 15;
+            this.Juin.CheckedState.Parent = this.Juin;
+            this.Juin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Juin.CustomImages.Parent = this.Juin;
+            this.Juin.FillColor = System.Drawing.Color.LightSlateGray;
+            this.Juin.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Juin.ForeColor = System.Drawing.Color.White;
+            this.Juin.HoverState.Parent = this.Juin;
+            this.Juin.ImageSize = new System.Drawing.Size(15, 15);
+            this.Juin.Location = new System.Drawing.Point(615, 192);
+            this.Juin.Name = "Juin";
+            this.Juin.ShadowDecoration.Parent = this.Juin;
+            this.Juin.Size = new System.Drawing.Size(86, 30);
+            this.Juin.TabIndex = 60;
+            this.Juin.Text = "Juin";
+            // 
+            // Novembre
+            // 
+            this.Novembre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Novembre.BorderRadius = 15;
+            this.Novembre.CheckedState.Parent = this.Novembre;
+            this.Novembre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Novembre.CustomImages.Parent = this.Novembre;
+            this.Novembre.FillColor = System.Drawing.Color.LightSlateGray;
+            this.Novembre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Novembre.ForeColor = System.Drawing.Color.White;
+            this.Novembre.HoverState.Parent = this.Novembre;
+            this.Novembre.ImageSize = new System.Drawing.Size(15, 15);
+            this.Novembre.Location = new System.Drawing.Point(497, 232);
+            this.Novembre.Name = "Novembre";
+            this.Novembre.ShadowDecoration.Parent = this.Novembre;
+            this.Novembre.Size = new System.Drawing.Size(86, 30);
+            this.Novembre.TabIndex = 61;
+            this.Novembre.Text = "Novembre";
+            // 
+            // Avril
+            // 
+            this.Avril.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Avril.BorderRadius = 15;
+            this.Avril.CheckedState.Parent = this.Avril;
+            this.Avril.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Avril.CustomImages.Parent = this.Avril;
+            this.Avril.FillColor = System.Drawing.Color.LightSlateGray;
+            this.Avril.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Avril.ForeColor = System.Drawing.Color.White;
+            this.Avril.HoverState.Parent = this.Avril;
+            this.Avril.ImageSize = new System.Drawing.Size(15, 15);
+            this.Avril.Location = new System.Drawing.Point(379, 192);
+            this.Avril.Name = "Avril";
+            this.Avril.ShadowDecoration.Parent = this.Avril;
+            this.Avril.Size = new System.Drawing.Size(86, 30);
+            this.Avril.TabIndex = 62;
+            this.Avril.Text = "Avril";
+            // 
+            // Mai
+            // 
+            this.Mai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Mai.BorderRadius = 15;
+            this.Mai.CheckedState.Parent = this.Mai;
+            this.Mai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Mai.CustomImages.Parent = this.Mai;
+            this.Mai.FillColor = System.Drawing.Color.LightSlateGray;
+            this.Mai.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mai.ForeColor = System.Drawing.Color.White;
+            this.Mai.HoverState.Parent = this.Mai;
+            this.Mai.ImageSize = new System.Drawing.Size(15, 15);
+            this.Mai.Location = new System.Drawing.Point(497, 192);
+            this.Mai.Name = "Mai";
+            this.Mai.ShadowDecoration.Parent = this.Mai;
+            this.Mai.Size = new System.Drawing.Size(86, 30);
+            this.Mai.TabIndex = 63;
+            this.Mai.Text = "Mai";
             // 
             // Students
             // 
@@ -2200,6 +2532,9 @@ namespace e.Components
             this.tabPage5.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2296,6 +2631,31 @@ namespace e.Components
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TabPage tabPage5;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.Panel panel5;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private System.Windows.Forms.Label label20;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label PayedShow;
+        private Guna.UI2.WinForms.Guna2Button PayBtn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox2;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox3;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox4;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox5;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox6;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox7;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox9;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox10;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox11;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox12;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox8;
+        private System.Windows.Forms.TabPage tabPage6;
         private Guna.UI2.WinForms.Guna2Button Juillet;
         private Guna.UI2.WinForms.Guna2Button Janvier;
         private Guna.UI2.WinForms.Guna2Button Aout;
@@ -2308,16 +2668,5 @@ namespace e.Components
         private Guna.UI2.WinForms.Guna2Button Novembre;
         private Guna.UI2.WinForms.Guna2Button Avril;
         private Guna.UI2.WinForms.Guna2Button Mai;
-        private System.Windows.Forms.TabPage tabPage5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.Panel panel5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private System.Windows.Forms.Label label20;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label PayedShow;
-        private Guna.UI2.WinForms.Guna2Button PayBtn;
     }
 }

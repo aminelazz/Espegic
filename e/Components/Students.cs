@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Globalization;
+using Guna.UI2.WinForms;
 
 namespace e.Components
 {
@@ -393,7 +394,7 @@ namespace e.Components
         private void Month_Click(object sender, EventArgs e)
         {
             // Button btn = sender as Button;
-            Guna.UI2.WinForms.Guna2Button btn = (Guna.UI2.WinForms.Guna2Button)sender;
+            Guna2Button btn = (Guna2Button)sender;
 
             switch (btn.Text)
             {

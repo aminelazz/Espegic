@@ -80,5 +80,14 @@ namespace e
             Content.Controls.Clear();
             Content.Controls.Add(new Formations());
         }
+
+        //
+        // Navigate to Payment
+        //
+        private void paymentBtn_Click(object sender, EventArgs e)
+        {
+            Content.Controls.Clear();
+            Content.Controls.Add(new Payment());
+        }
     }
 }

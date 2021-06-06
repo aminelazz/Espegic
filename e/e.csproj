@@ -87,6 +87,12 @@
     <Compile Include="Components\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Payment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Professors.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Professors.resx">
       <DependentUpon>Professors.cs</DependentUpon>

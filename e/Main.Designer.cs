@@ -42,10 +42,11 @@ namespace e
             this.UserGuideBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.TechnicalGuideBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.Content = new Guna.UI2.WinForms.Guna2Panel();
+            this.paymentBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.Profile = new System.Windows.Forms.ToolStripMenuItem();
             this.ProfileBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.DisconnectBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.Content = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -75,12 +76,13 @@ namespace e
             this.ProfessorsBtn,
             this.StudentsBtn,
             this.FormationsBtn,
+            this.paymentBtn,
             this.Plus});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(295, 27);
+            this.menuStrip1.Location = new System.Drawing.Point(108, 27);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(418, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(605, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -162,6 +164,23 @@ namespace e
             this.menuStrip2.TabIndex = 5;
             this.menuStrip2.Text = "menuStrip2";
             // 
+            // Content
+            // 
+            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Content.Location = new System.Drawing.Point(0, 78);
+            this.Content.Name = "Content";
+            this.Content.ShadowDecoration.Parent = this.Content;
+            this.Content.Size = new System.Drawing.Size(734, 483);
+            this.Content.TabIndex = 3;
+            // 
+            // paymentBtn
+            // 
+            this.paymentBtn.Name = "paymentBtn";
+            this.paymentBtn.Size = new System.Drawing.Size(67, 20);
+            this.paymentBtn.Text = "Payment";
+            this.paymentBtn.Click += new System.EventHandler(this.paymentBtn_Click);
+            // 
             // Profile
             // 
             this.Profile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -184,16 +203,6 @@ namespace e
             this.DisconnectBtn.Name = "DisconnectBtn";
             this.DisconnectBtn.Size = new System.Drawing.Size(171, 22);
             this.DisconnectBtn.Text = "Se deconnecter";
-            // 
-            // Content
-            // 
-            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Content.Location = new System.Drawing.Point(0, 78);
-            this.Content.Name = "Content";
-            this.Content.ShadowDecoration.Parent = this.Content;
-            this.Content.Size = new System.Drawing.Size(734, 483);
-            this.Content.TabIndex = 3;
             // 
             // Main
             // 
@@ -240,6 +249,7 @@ namespace e
         private System.Windows.Forms.ToolStripMenuItem Profile;
         private System.Windows.Forms.ToolStripMenuItem ProfileBtn;
         private System.Windows.Forms.ToolStripMenuItem DisconnectBtn;
+        private System.Windows.Forms.ToolStripMenuItem paymentBtn;
     }
 }
 
