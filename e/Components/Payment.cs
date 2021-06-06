@@ -111,7 +111,7 @@ namespace e.Components
             // Manage buttons
             if (ID.Text != "")
             {
-                PayBtn.Enabled = true;
+                PayBtn.Enabled = price.Text != "";
                 printBtn.Enabled = true;
                 showBtn.Enabled = true;
             }
@@ -223,6 +223,14 @@ namespace e.Components
         private void returnBtn_Click(object sender, EventArgs e)
         {
             Pages.PageName = "tabPage1";
+        }
+
+        //
+        // Change statue of button
+        //
+        private void price_KeyUp(object sender, KeyEventArgs e)
+        {
+            PayBtn.Enabled = price.Text != "";
         }
     }
 }

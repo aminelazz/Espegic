@@ -395,6 +395,9 @@ namespace e.Components
             // Bind years to combobox
             year.DataSource = years;
 
+            // Default selected year
+            year.SelectedItem = DateTime.Now.Year;
+
             // Ckeck box
             CheckBox();
             Pages.PageName = "tabPage3";

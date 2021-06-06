@@ -148,10 +148,10 @@ namespace e.Components
             this.Pages.Margin = new System.Windows.Forms.Padding(0);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.tabPage3;
-            this.Pages.PageIndex = 2;
-            this.Pages.PageName = "tabPage3";
-            this.Pages.PageTitle = "tabPage3";
+            this.Pages.Page = this.tabPage2;
+            this.Pages.PageIndex = 1;
+            this.Pages.PageName = "tabPage2";
+            this.Pages.PageTitle = "tabPage2";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(734, 483);
             this.Pages.TabIndex = 2;
@@ -508,6 +508,7 @@ namespace e.Components
             this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.Label2);
+            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
@@ -1028,6 +1029,7 @@ namespace e.Components
             this.janvier.CheckedState.BorderThickness = 0;
             this.janvier.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.janvier.Enabled = false;
+            this.janvier.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.janvier.Location = new System.Drawing.Point(4, 4);
             this.janvier.Name = "janvier";
             this.janvier.Size = new System.Drawing.Size(107, 33);
@@ -1051,6 +1053,7 @@ namespace e.Components
             this.fevrier.CheckedState.BorderThickness = 0;
             this.fevrier.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.fevrier.Enabled = false;
+            this.fevrier.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fevrier.Location = new System.Drawing.Point(118, 4);
             this.fevrier.Name = "fevrier";
             this.fevrier.Size = new System.Drawing.Size(107, 33);
@@ -1074,6 +1077,7 @@ namespace e.Components
             this.mars.CheckedState.BorderThickness = 0;
             this.mars.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.mars.Enabled = false;
+            this.mars.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mars.Location = new System.Drawing.Point(232, 4);
             this.mars.Name = "mars";
             this.mars.Size = new System.Drawing.Size(107, 33);
@@ -1097,6 +1101,7 @@ namespace e.Components
             this.avril.CheckedState.BorderThickness = 0;
             this.avril.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.avril.Enabled = false;
+            this.avril.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.avril.Location = new System.Drawing.Point(346, 4);
             this.avril.Name = "avril";
             this.avril.Size = new System.Drawing.Size(107, 33);
@@ -1120,6 +1125,7 @@ namespace e.Components
             this.mai.CheckedState.BorderThickness = 0;
             this.mai.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.mai.Enabled = false;
+            this.mai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mai.Location = new System.Drawing.Point(460, 4);
             this.mai.Name = "mai";
             this.mai.Size = new System.Drawing.Size(107, 33);
@@ -1143,6 +1149,7 @@ namespace e.Components
             this.decembre.CheckedState.BorderThickness = 0;
             this.decembre.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.decembre.Enabled = false;
+            this.decembre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.decembre.Location = new System.Drawing.Point(574, 44);
             this.decembre.Name = "decembre";
             this.decembre.Size = new System.Drawing.Size(108, 33);
@@ -1166,6 +1173,7 @@ namespace e.Components
             this.octobre.CheckedState.BorderThickness = 0;
             this.octobre.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.octobre.Enabled = false;
+            this.octobre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.octobre.Location = new System.Drawing.Point(346, 44);
             this.octobre.Name = "octobre";
             this.octobre.Size = new System.Drawing.Size(107, 33);
@@ -1189,6 +1197,7 @@ namespace e.Components
             this.septembre.CheckedState.BorderThickness = 0;
             this.septembre.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.septembre.Enabled = false;
+            this.septembre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.septembre.Location = new System.Drawing.Point(232, 44);
             this.septembre.Name = "septembre";
             this.septembre.Size = new System.Drawing.Size(107, 33);
@@ -1212,6 +1221,7 @@ namespace e.Components
             this.aout.CheckedState.BorderThickness = 0;
             this.aout.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.aout.Enabled = false;
+            this.aout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aout.Location = new System.Drawing.Point(118, 44);
             this.aout.Name = "aout";
             this.aout.Size = new System.Drawing.Size(107, 33);
@@ -1235,6 +1245,7 @@ namespace e.Components
             this.juilet.CheckedState.BorderThickness = 0;
             this.juilet.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.juilet.Enabled = false;
+            this.juilet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.juilet.Location = new System.Drawing.Point(4, 44);
             this.juilet.Name = "juilet";
             this.juilet.Size = new System.Drawing.Size(107, 33);
@@ -1258,6 +1269,7 @@ namespace e.Components
             this.novembre.CheckedState.BorderThickness = 0;
             this.novembre.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.novembre.Enabled = false;
+            this.novembre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.novembre.Location = new System.Drawing.Point(460, 44);
             this.novembre.Name = "novembre";
             this.novembre.Size = new System.Drawing.Size(107, 33);
@@ -1281,6 +1293,7 @@ namespace e.Components
             this.juin.CheckedState.BorderThickness = 0;
             this.juin.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.juin.Enabled = false;
+            this.juin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.juin.Location = new System.Drawing.Point(574, 4);
             this.juin.Name = "juin";
             this.juin.Size = new System.Drawing.Size(108, 33);
@@ -1300,7 +1313,7 @@ namespace e.Components
             this.year.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.year.FocusedColor = System.Drawing.Color.Empty;
             this.year.FocusedState.Parent = this.year;
-            this.year.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.year.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.year.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.year.FormattingEnabled = true;
             this.year.HoverState.Parent = this.year;
@@ -1374,6 +1387,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(4, 55);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(130, 26);
@@ -1388,6 +1402,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(4, 82);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(130, 26);
@@ -1402,6 +1417,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(4, 28);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 26);
@@ -1416,6 +1432,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CINShow.AutoSize = true;
             this.CINShow.BackColor = System.Drawing.Color.White;
+            this.CINShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CINShow.Location = new System.Drawing.Point(141, 1);
             this.CINShow.Name = "CINShow";
             this.CINShow.Size = new System.Drawing.Size(198, 26);
@@ -1430,6 +1447,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(4, 109);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(130, 26);
@@ -1444,6 +1462,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SexShow.AutoSize = true;
             this.SexShow.BackColor = System.Drawing.Color.White;
+            this.SexShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SexShow.Location = new System.Drawing.Point(141, 28);
             this.SexShow.Name = "SexShow";
             this.SexShow.Size = new System.Drawing.Size(198, 26);
@@ -1458,6 +1477,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EstablishmentShow.AutoSize = true;
             this.EstablishmentShow.BackColor = System.Drawing.Color.White;
+            this.EstablishmentShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EstablishmentShow.Location = new System.Drawing.Point(141, 55);
             this.EstablishmentShow.Name = "EstablishmentShow";
             this.EstablishmentShow.Size = new System.Drawing.Size(198, 26);
@@ -1472,6 +1492,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NationalityShow.AutoSize = true;
             this.NationalityShow.BackColor = System.Drawing.Color.White;
+            this.NationalityShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NationalityShow.Location = new System.Drawing.Point(141, 82);
             this.NationalityShow.Name = "NationalityShow";
             this.NationalityShow.Size = new System.Drawing.Size(198, 26);
@@ -1486,6 +1507,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ProvinceShow.AutoSize = true;
             this.ProvinceShow.BackColor = System.Drawing.Color.White;
+            this.ProvinceShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProvinceShow.Location = new System.Drawing.Point(141, 109);
             this.ProvinceShow.Name = "ProvinceShow";
             this.ProvinceShow.Size = new System.Drawing.Size(198, 26);
@@ -1499,6 +1521,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(346, 1);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(130, 26);
@@ -1513,6 +1536,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CommuneShow.AutoSize = true;
             this.CommuneShow.BackColor = System.Drawing.Color.White;
+            this.CommuneShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CommuneShow.Location = new System.Drawing.Point(483, 1);
             this.CommuneShow.Name = "CommuneShow";
             this.CommuneShow.Size = new System.Drawing.Size(199, 26);
@@ -1527,6 +1551,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PhoneShow.AutoSize = true;
             this.PhoneShow.BackColor = System.Drawing.Color.White;
+            this.PhoneShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhoneShow.Location = new System.Drawing.Point(483, 28);
             this.PhoneShow.Name = "PhoneShow";
             this.PhoneShow.Size = new System.Drawing.Size(199, 26);
@@ -1540,6 +1565,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(346, 28);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(130, 26);
@@ -1553,6 +1579,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(346, 55);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(130, 26);
@@ -1567,6 +1594,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EmailShow.AutoSize = true;
             this.EmailShow.BackColor = System.Drawing.Color.White;
+            this.EmailShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailShow.Location = new System.Drawing.Point(483, 55);
             this.EmailShow.Name = "EmailShow";
             this.EmailShow.Size = new System.Drawing.Size(199, 26);
@@ -1581,6 +1609,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AddressShow.AutoSize = true;
             this.AddressShow.BackColor = System.Drawing.Color.White;
+            this.AddressShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddressShow.Location = new System.Drawing.Point(483, 82);
             this.AddressShow.Name = "AddressShow";
             this.AddressShow.Size = new System.Drawing.Size(199, 26);
@@ -1594,6 +1623,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(346, 82);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(130, 26);
@@ -1607,6 +1637,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.Location = new System.Drawing.Point(346, 109);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(130, 26);
@@ -1621,6 +1652,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BirthShow.AutoSize = true;
             this.BirthShow.BackColor = System.Drawing.Color.White;
+            this.BirthShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BirthShow.Location = new System.Drawing.Point(483, 109);
             this.BirthShow.Name = "BirthShow";
             this.BirthShow.Size = new System.Drawing.Size(199, 26);
@@ -1635,6 +1667,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label53.AutoSize = true;
             this.label53.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.Location = new System.Drawing.Point(4, 136);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(130, 31);
@@ -1649,6 +1682,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MassarShow.AutoSize = true;
             this.MassarShow.BackColor = System.Drawing.Color.White;
+            this.MassarShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MassarShow.Location = new System.Drawing.Point(141, 136);
             this.MassarShow.Name = "MassarShow";
             this.MassarShow.Size = new System.Drawing.Size(198, 31);
@@ -1662,6 +1696,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(346, 136);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(130, 31);
@@ -1676,6 +1711,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FormationNameShow.AutoSize = true;
             this.FormationNameShow.BackColor = System.Drawing.Color.White;
+            this.FormationNameShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormationNameShow.Location = new System.Drawing.Point(483, 136);
             this.FormationNameShow.Name = "FormationNameShow";
             this.FormationNameShow.Size = new System.Drawing.Size(199, 31);
@@ -1690,6 +1726,7 @@ namespace e.Components
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(4, 1);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(130, 26);
@@ -1700,10 +1737,10 @@ namespace e.Components
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(16, 311);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(75, 19);
+            this.label16.Size = new System.Drawing.Size(66, 18);
             this.label16.TabIndex = 48;
             this.label16.Text = "Payment";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1711,10 +1748,10 @@ namespace e.Components
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(16, 75);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(176, 19);
+            this.label9.Size = new System.Drawing.Size(154, 18);
             this.label9.TabIndex = 48;
             this.label9.Text = "Information personelle";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1753,10 +1790,10 @@ namespace e.Components
             // FullName
             // 
             this.FullName.AutoSize = true;
-            this.FullName.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FullName.Location = new System.Drawing.Point(13, 17);
             this.FullName.Name = "FullName";
-            this.FullName.Size = new System.Drawing.Size(186, 19);
+            this.FullName.Size = new System.Drawing.Size(168, 18);
             this.FullName.TabIndex = 11;
             this.FullName.Text = "Mohammed Hamham";
             // 
