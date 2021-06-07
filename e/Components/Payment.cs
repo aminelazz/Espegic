@@ -181,6 +181,9 @@ namespace e.Components
                 {
                     db.PAYMENTs.Add(payment);
                     db.SaveChanges();
+
+                    // Create history
+                    help.CreateHistory($"PAYER LE MOIS { month.Text.ToUpper() } POUR", student.F_NAME, student.L_NAME, student.CIN);
                     MessageBox.Show($"le mois { month.Text } payer avec success", "ESPEGIC", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -196,9 +199,10 @@ namespace e.Components
         //
         private void showBtn_Click(object sender, EventArgs e)
         {
-            var sy = Convert.ToInt32(year2.SelectedValue);
-            var sm = Convert.ToInt32(month2.SelectedValue);
-            List<PAYMENT> payment = db.PAYMENTs.Where(p => p.YEAR == sy && p.MONTH == sm).ToList();
+            int sy = Convert.ToInt32(year2.SelectedValue);
+            int sm = Convert.ToInt32(month2.SelectedValue);
+            int id = Convert.ToInt32(ID.Text);
+            List<PAYMENT> payment = db.PAYMENTs.Where(p => p.STUDENT_ID == id && p.YEAR == sy && p.MONTH == sm).ToList();
             if (payment.Count() > 0)
             {
                 var p = payment.First();
@@ -231,6 +235,7 @@ namespace e.Components
         private void price_KeyUp(object sender, KeyEventArgs e)
         {
             PayBtn.Enabled = price.Text != "" && ID.Text != "";
+            PayBtn.Enabled = price.Text.All(char.IsDigit);
         }
     }
 }

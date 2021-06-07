@@ -74,11 +74,11 @@ namespace e
                     return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "DELETE" && p.MODULES == true).Count() > 0;
 
                 // Student
-                case "WRITE STUDENTE":
+                case "WRITE STUDENT":
                     return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "WRITE" && p.STUDENTS == true).Count() > 0;
-                case "UPDATE STUDENTE":
+                case "UPDATE STUDENT":
                     return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "UPDATE" && p.STUDENTS == true).Count() > 0;
-                case "DELETE STUDENTE":
+                case "DELETE STUDENT":
                     return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "DELETE" && p.STUDENTS == true).Count() > 0;
 
                 default:

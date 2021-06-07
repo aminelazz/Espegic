@@ -7,7 +7,8 @@ namespace e
 {
     static class Program
     {
-        public static int CONID = 1;
+        //public static int CONID = 1;
+        public static Espegic db = new Espegic();
 
         /// <summary>
         /// The main entry point for the application.
@@ -17,7 +18,16 @@ namespace e
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            bool connected = Convert.ToInt32(db.HELPERS.Where(c => c.KEY == "CONNECTED").First().VALUE) > 0;
+
+            if (connected)
+            {
+                Application.Run(new Main());
+            }
+            else
+            {
+                Application.Run(new Login());
+            }
         }
 
     }

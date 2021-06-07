@@ -36,12 +36,6 @@ namespace e.Components
         private void Students_Load(object sender, EventArgs e)
         {
             StudentSource();
-            FormationName.DataSource = (from f in db.FORMATIONS
-                                        select new { f.NAME }).ToList();
-
-            FormationName.DisplayMember = "NAME";
-
-
         }
 
         //
@@ -50,8 +44,8 @@ namespace e.Components
         private void AddStudentBtn_Click(object sender, EventArgs e)
         {
             CIN.Clear();
-            F_Name.Clear();
             L_Name.Clear();
+            F_Name.Clear();
             Establishment.Clear();
             Sex.SelectedIndex = -1;
             FormationName.SelectedIndex = -1;
@@ -63,8 +57,17 @@ namespace e.Components
             Phone.Clear();
             Address.Clear();
             Email.Clear();
-            Pages.PageName = "tabPage2";
+
+            List<FORMATION> formation = db.FORMATIONS.ToList();
+            FormationName.DataSource = formation;
+            FormationName.ValueMember = "ID";
+            FormationName.DisplayMember = "NAME";
+            FormationName.SelectedItem = formation.First().NAME;
+            Sex.SelectedItem = "Masculin";
+
             SaveBtn.BringToFront();
+            Pages.PageName = "tabPage2";
+
         }
 
         //
@@ -92,8 +95,8 @@ namespace e.Components
             STUDENT student = db.STUDENTS.Find(DID);
             CIN.Text            = student.CIN;
             //FormationName.Text  = db.FORMATIONS.Where(f => f.ID == student.FORMATION_ID).Select(f => f.NAME).First();
-            F_Name.Text         = student.F_NAME;
-            L_Name.Text         = student.L_NAME;
+            L_Name.Text         = student.F_NAME;
+            F_Name.Text         = student.L_NAME;
             Establishment.Text  = student.ESTABLISHEMENT;
             Sex.Text            = student.SEX;
             Nationality.Text    = student.NATIONALITY;
@@ -103,8 +106,17 @@ namespace e.Components
             Reduction.Text      = "";
             Birth.Value         = DateTime.Parse(student.BIRTH.ToString());
             Phone.Text          = student.PHONE;
+            Reduction.Text        = student.REDUCTION.ToString();
             Address.Text        = student.ADRESS;
             Email.Text          = student.EMAIL;
+
+            List<FORMATION> formation = db.FORMATIONS.ToList();
+            FormationName.DataSource = formation;
+            FormationName.ValueMember = "ID";
+            FormationName.DisplayMember = "NAME";
+            FormationName.SelectedItem = formation.First().NAME;
+            Sex.SelectedItem = "Masculin";
+
             Pages.PageName = "tabPage2";
             UpdateBtn.BringToFront();
         }
@@ -115,15 +127,15 @@ namespace e.Components
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             // Extract Formation ID
-            int FormationID = db.FORMATIONS.Where(f => f.NAME == FormationName.Text).Select(f =>f.ID).First();
+            int FormationID = db.FORMATIONS.Where(f => f.NAME == FormationName.Text).Select(f => f.ID).First();
 
             // Input text
             STUDENT student = new STUDENT()
             {
-                //FORMATION_ID    = FormationID,
+                FORMATION_ID    = FormationID,
                 CIN             = CIN.Text.ToUpper(),
-                F_NAME          = F_Name.Text.ToUpper(),
-                L_NAME          = L_Name.Text.ToUpper(),
+                F_NAME          = L_Name.Text.ToUpper(),
+                L_NAME          = F_Name.Text.ToUpper(),
                 PHONE           = Phone.Text,
                 EMAIL           = Email.Text.ToLower(),
                 SEX             = Sex.Text.ToUpper(),
@@ -133,6 +145,7 @@ namespace e.Components
                 COMMUN          = Commune.Text.ToUpper(),
                 MASSAR          = Massar_ID.Text.ToUpper(),
                 ADRESS          = Address.Text.ToUpper(),
+                REDUCTION       = Convert.ToInt32(Reduction.Text),
                 BIRTH           = Birth.Value,
                 ARCHIVE         = false,
                 CREATED_BY      = help.Connected,
@@ -194,6 +207,7 @@ namespace e.Components
             // Extract Formation ID
             int FormationID = db.FORMATIONS.Where(f => f.NAME == FormationName.Text).Select(f => f.ID).First();
             DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
+            int reduction = Convert.ToInt32(Reduction.Text.ToUpper());
             // Input text
             STUDENT student = new STUDENT()
             {
@@ -211,6 +225,7 @@ namespace e.Components
                 COMMUN            = Commune.Text.ToUpper(),
                 MASSAR            = Massar_ID.Text.ToUpper(),
                 ADRESS            = Address.Text.ToUpper(),
+                REDUCTION         = reduction,
                 BIRTH             = Birth.Value,
                 ARCHIVE           = false,
                 CREATED_BY        = db.STUDENTS.Where(s => s.ID == DID).Select(s => s.CREATED_BY).First(),

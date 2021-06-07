@@ -34,7 +34,7 @@ namespace e
         {
             Content.Controls.Clear();
             Content.Controls.Add(new Home());
-            Profile.Text = db.USERS.Find(help.Connected).L_NAME.ToLower();
+            //Profile.Text = db.USERS.Find(help.Connected).L_NAME.ToString().ToLower();
         }
 
         //

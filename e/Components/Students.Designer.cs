@@ -37,6 +37,12 @@ namespace e.Components
             this.Pages = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.View = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Next = new Guna.UI2.WinForms.Guna2Button();
@@ -51,11 +57,11 @@ namespace e.Components
             this.Birth = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.FormationName = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Sex = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.F_Name = new Guna.UI2.WinForms.Guna2TextBox();
+            this.L_Name = new Guna.UI2.WinForms.Guna2TextBox();
             this.Commune = new Guna.UI2.WinForms.Guna2TextBox();
             this.Establishment = new Guna.UI2.WinForms.Guna2TextBox();
             this.Province = new Guna.UI2.WinForms.Guna2TextBox();
-            this.L_Name = new Guna.UI2.WinForms.Guna2TextBox();
+            this.F_Name = new Guna.UI2.WinForms.Guna2TextBox();
             this.CIN = new Guna.UI2.WinForms.Guna2TextBox();
             this.Massar_ID = new Guna.UI2.WinForms.Guna2TextBox();
             this.Reduction = new Guna.UI2.WinForms.Guna2TextBox();
@@ -72,6 +78,7 @@ namespace e.Components
             this.Label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.janvier = new Guna.UI2.WinForms.Guna2CheckBox();
             this.fevrier = new Guna.UI2.WinForms.Guna2CheckBox();
             this.mars = new Guna.UI2.WinForms.Guna2CheckBox();
             this.avril = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -115,13 +122,6 @@ namespace e.Components
             this.ReturnBtn1 = new Guna.UI2.WinForms.Guna2Button();
             this.FullName = new System.Windows.Forms.Label();
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.janvier = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.View)).BeginInit();
@@ -148,10 +148,10 @@ namespace e.Components
             this.Pages.Margin = new System.Windows.Forms.Padding(0);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.tabPage1;
-            this.Pages.PageIndex = 0;
-            this.Pages.PageName = "tabPage1";
-            this.Pages.PageTitle = "tabPage1";
+            this.Pages.Page = this.tabPage2;
+            this.Pages.PageIndex = 1;
+            this.Pages.PageName = "tabPage2";
+            this.Pages.PageTitle = "tabPage2";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(734, 483);
             this.Pages.TabIndex = 2;
@@ -260,6 +260,53 @@ namespace e.Components
             this.View.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.View.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.View.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.View_CellDoubleClick);
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.DataPropertyName = "CIN";
+            this.Column2.HeaderText = "CIN";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 85;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.DataPropertyName = "F_NAME";
+            this.Column4.HeaderText = "F_NAME";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 144;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.DataPropertyName = "L_NAME";
+            this.Column3.HeaderText = "L_NAME";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 144;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column5.DataPropertyName = "PHONE";
+            this.Column5.HeaderText = "PHONE";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 144;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.DataPropertyName = "EMAIL";
+            this.Column6.HeaderText = "EMAIL";
+            this.Column6.Name = "Column6";
             // 
             // guna2Panel2
             // 
@@ -446,11 +493,11 @@ namespace e.Components
             this.tabPage2.Controls.Add(this.Birth);
             this.tabPage2.Controls.Add(this.FormationName);
             this.tabPage2.Controls.Add(this.Sex);
-            this.tabPage2.Controls.Add(this.F_Name);
+            this.tabPage2.Controls.Add(this.L_Name);
             this.tabPage2.Controls.Add(this.Commune);
             this.tabPage2.Controls.Add(this.Establishment);
             this.tabPage2.Controls.Add(this.Province);
-            this.tabPage2.Controls.Add(this.L_Name);
+            this.tabPage2.Controls.Add(this.F_Name);
             this.tabPage2.Controls.Add(this.CIN);
             this.tabPage2.Controls.Add(this.Massar_ID);
             this.tabPage2.Controls.Add(this.Reduction);
@@ -527,29 +574,29 @@ namespace e.Components
             this.Sex.Size = new System.Drawing.Size(161, 36);
             this.Sex.TabIndex = 5;
             // 
-            // F_Name
+            // L_Name
             // 
-            this.F_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.F_Name.DefaultText = "";
-            this.F_Name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.F_Name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.F_Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.F_Name.DisabledState.Parent = this.F_Name;
-            this.F_Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.F_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.F_Name.FocusedState.Parent = this.F_Name;
-            this.F_Name.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.F_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.F_Name.HoverState.Parent = this.F_Name;
-            this.F_Name.Location = new System.Drawing.Point(370, 124);
-            this.F_Name.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.F_Name.Name = "F_Name";
-            this.F_Name.PasswordChar = '\0';
-            this.F_Name.PlaceholderText = "PRENOM";
-            this.F_Name.SelectedText = "";
-            this.F_Name.ShadowDecoration.Parent = this.F_Name;
-            this.F_Name.Size = new System.Drawing.Size(161, 36);
-            this.F_Name.TabIndex = 3;
+            this.L_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.L_Name.DefaultText = "";
+            this.L_Name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.L_Name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.L_Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.L_Name.DisabledState.Parent = this.L_Name;
+            this.L_Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.L_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.L_Name.FocusedState.Parent = this.L_Name;
+            this.L_Name.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.L_Name.HoverState.Parent = this.L_Name;
+            this.L_Name.Location = new System.Drawing.Point(370, 124);
+            this.L_Name.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.L_Name.Name = "L_Name";
+            this.L_Name.PasswordChar = '\0';
+            this.L_Name.PlaceholderText = "PRENOM";
+            this.L_Name.SelectedText = "";
+            this.L_Name.ShadowDecoration.Parent = this.L_Name;
+            this.L_Name.Size = new System.Drawing.Size(161, 36);
+            this.L_Name.TabIndex = 3;
             // 
             // Commune
             // 
@@ -623,29 +670,29 @@ namespace e.Components
             this.Province.Size = new System.Drawing.Size(163, 36);
             this.Province.TabIndex = 7;
             // 
-            // L_Name
+            // F_Name
             // 
-            this.L_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.L_Name.DefaultText = "";
-            this.L_Name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.L_Name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.L_Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.L_Name.DisabledState.Parent = this.L_Name;
-            this.L_Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.L_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.L_Name.FocusedState.Parent = this.L_Name;
-            this.L_Name.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.L_Name.HoverState.Parent = this.L_Name;
-            this.L_Name.Location = new System.Drawing.Point(195, 124);
-            this.L_Name.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.L_Name.Name = "L_Name";
-            this.L_Name.PasswordChar = '\0';
-            this.L_Name.PlaceholderText = "NOM";
-            this.L_Name.SelectedText = "";
-            this.L_Name.ShadowDecoration.Parent = this.L_Name;
-            this.L_Name.Size = new System.Drawing.Size(161, 36);
-            this.L_Name.TabIndex = 2;
+            this.F_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.F_Name.DefaultText = "";
+            this.F_Name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.F_Name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.F_Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.F_Name.DisabledState.Parent = this.F_Name;
+            this.F_Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.F_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.F_Name.FocusedState.Parent = this.F_Name;
+            this.F_Name.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.F_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.F_Name.HoverState.Parent = this.F_Name;
+            this.F_Name.Location = new System.Drawing.Point(195, 124);
+            this.F_Name.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.F_Name.Name = "F_Name";
+            this.F_Name.PasswordChar = '\0';
+            this.F_Name.PlaceholderText = "NOM";
+            this.F_Name.SelectedText = "";
+            this.F_Name.ShadowDecoration.Parent = this.F_Name;
+            this.F_Name.Size = new System.Drawing.Size(161, 36);
+            this.F_Name.TabIndex = 2;
             // 
             // CIN
             // 
@@ -969,6 +1016,30 @@ namespace e.Components
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(686, 81);
             this.tableLayoutPanel2.TabIndex = 52;
+            // 
+            // janvier
+            // 
+            this.janvier.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.janvier.AutoSize = true;
+            this.janvier.BackColor = System.Drawing.Color.White;
+            this.janvier.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.janvier.CheckedState.BorderRadius = 1;
+            this.janvier.CheckedState.BorderThickness = 0;
+            this.janvier.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.janvier.Enabled = false;
+            this.janvier.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.janvier.Location = new System.Drawing.Point(4, 4);
+            this.janvier.Name = "janvier";
+            this.janvier.Size = new System.Drawing.Size(107, 33);
+            this.janvier.TabIndex = 1;
+            this.janvier.Text = "Janvier";
+            this.janvier.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.janvier.UncheckedState.BorderRadius = 1;
+            this.janvier.UncheckedState.BorderThickness = 0;
+            this.janvier.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.janvier.UseVisualStyleBackColor = false;
             // 
             // fevrier
             // 
@@ -1719,77 +1790,6 @@ namespace e.Components
             this.guna2HtmlToolTip1.AllowLinksHandling = true;
             this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
             // 
-            // janvier
-            // 
-            this.janvier.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.janvier.AutoSize = true;
-            this.janvier.BackColor = System.Drawing.Color.White;
-            this.janvier.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.janvier.CheckedState.BorderRadius = 1;
-            this.janvier.CheckedState.BorderThickness = 0;
-            this.janvier.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.janvier.Enabled = false;
-            this.janvier.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.janvier.Location = new System.Drawing.Point(4, 4);
-            this.janvier.Name = "janvier";
-            this.janvier.Size = new System.Drawing.Size(107, 33);
-            this.janvier.TabIndex = 1;
-            this.janvier.Text = "Janvier";
-            this.janvier.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.janvier.UncheckedState.BorderRadius = 1;
-            this.janvier.UncheckedState.BorderThickness = 0;
-            this.janvier.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.janvier.UseVisualStyleBackColor = false;
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column2.DataPropertyName = "CIN";
-            this.Column2.HeaderText = "CIN";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 85;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.DataPropertyName = "F_NAME";
-            this.Column4.HeaderText = "F_NAME";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 144;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.DataPropertyName = "L_NAME";
-            this.Column3.HeaderText = "L_NAME";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 144;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column5.DataPropertyName = "PHONE";
-            this.Column5.HeaderText = "PHONE";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 144;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.DataPropertyName = "EMAIL";
-            this.Column6.HeaderText = "EMAIL";
-            this.Column6.Name = "Column6";
-            // 
             // Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1839,11 +1839,11 @@ namespace e.Components
         private System.Windows.Forms.TabPage tabPage2;
         private Guna.UI2.WinForms.Guna2DateTimePicker Birth;
         private Guna.UI2.WinForms.Guna2ComboBox Sex;
-        private Guna.UI2.WinForms.Guna2TextBox F_Name;
+        private Guna.UI2.WinForms.Guna2TextBox L_Name;
         private Guna.UI2.WinForms.Guna2TextBox Commune;
         private Guna.UI2.WinForms.Guna2TextBox Establishment;
         private Guna.UI2.WinForms.Guna2TextBox Province;
-        private Guna.UI2.WinForms.Guna2TextBox L_Name;
+        private Guna.UI2.WinForms.Guna2TextBox F_Name;
         private Guna.UI2.WinForms.Guna2TextBox CIN;
         private Guna.UI2.WinForms.Guna2TextBox Massar_ID;
         private Guna.UI2.WinForms.Guna2TextBox Nationality;
