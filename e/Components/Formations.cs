@@ -555,8 +555,15 @@ namespace e.Components
         //
         private void ViewFormation_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Pages.PageName = "tabPage3";
-            ModuleSource();
+            if (help.Permitted("READ MODULE"))
+            {
+                Pages.PageName = "tabPage3";
+                ModuleSource();
+            }
+            else
+            {
+                MessageBox.Show("Vous n'avez pas la permission d'accéder aux modules.");
+            }
         }
 
         ///////////////////////////////////////////////////////////////////////////////////

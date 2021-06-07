@@ -96,8 +96,8 @@ namespace e.Components
             PROFESSOR professor = new PROFESSOR()
             {
                 CIN             = CIN.Text.ToUpper(),
-                F_NAME          = L_Name.Text.ToUpper(),
-                L_NAME          = F_Name.Text.ToUpper(),
+                F_NAME          = F_Name.Text.ToUpper(),
+                L_NAME          = L_Name.Text.ToUpper(),
                 PHONE           = Phone.Text,
                 EMAIL           = Email.Text.ToLower(),
                 SEX             = Sex.Text.ToUpper(),
@@ -172,8 +172,8 @@ namespace e.Components
             {
                 ID              = DID,
                 CIN             = CIN.Text.ToUpper(),
-                F_NAME          = L_Name.Text.ToUpper(),
-                L_NAME          = F_Name.Text.ToUpper(),
+                F_NAME          = F_Name.Text.ToUpper(),
+                L_NAME          = L_Name.Text.ToUpper(),
                 PHONE           = Phone.Text,
                 EMAIL           = Email.Text.ToLower(),
                 SEX             = Sex.Text.ToUpper(),

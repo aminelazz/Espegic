@@ -94,9 +94,9 @@ namespace e.Components
             DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
             STUDENT student = db.STUDENTS.Find(DID);
             CIN.Text            = student.CIN;
-            //FormationName.Text  = db.FORMATIONS.Where(f => f.ID == student.FORMATION_ID).Select(f => f.NAME).First();
-            L_Name.Text         = student.F_NAME;
-            F_Name.Text         = student.L_NAME;
+            FormationName.Text  = db.FORMATIONS.Where(f => f.ID == student.FORMATION_ID).Select(f => f.NAME).First();
+            L_Name.Text         = student.L_NAME;
+            F_Name.Text         = student.F_NAME;
             Establishment.Text  = student.ESTABLISHEMENT;
             Sex.Text            = student.SEX;
             Nationality.Text    = student.NATIONALITY;
@@ -106,7 +106,7 @@ namespace e.Components
             Reduction.Text      = "";
             Birth.Value         = DateTime.Parse(student.BIRTH.ToString());
             Phone.Text          = student.PHONE;
-            Reduction.Text        = student.REDUCTION.ToString();
+            Reduction.Text      = student.REDUCTION.ToString();
             Address.Text        = student.ADRESS;
             Email.Text          = student.EMAIL;
 
@@ -134,8 +134,8 @@ namespace e.Components
             {
                 FORMATION_ID    = FormationID,
                 CIN             = CIN.Text.ToUpper(),
-                F_NAME          = L_Name.Text.ToUpper(),
-                L_NAME          = F_Name.Text.ToUpper(),
+                F_NAME          = F_Name.Text.ToUpper(),
+                L_NAME          = L_Name.Text.ToUpper(),
                 PHONE           = Phone.Text,
                 EMAIL           = Email.Text.ToLower(),
                 SEX             = Sex.Text.ToUpper(),
@@ -205,14 +205,14 @@ namespace e.Components
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
             // Extract Formation ID
-            int FormationID = db.FORMATIONS.Where(f => f.NAME == FormationName.Text).Select(f => f.ID).First();
+            //int FormationID = db.FORMATIONS.Where(f => f.NAME == FormationName.Text).Select(f => f.ID).First();
             DID = Convert.ToInt32(View.CurrentRow.Cells["ID"].Value);
             int reduction = Convert.ToInt32(Reduction.Text.ToUpper());
             // Input text
             STUDENT student = new STUDENT()
             {
                 ID                = DID,
-                FORMATION_ID      = FormationID,
+                FORMATION_ID      = Convert.ToInt32(FormationName.SelectedValue),
                 CIN               = CIN.Text.ToUpper(),
                 F_NAME            = F_Name.Text.ToUpper(),
                 L_NAME            = L_Name.Text.ToUpper(),
@@ -444,18 +444,18 @@ namespace e.Components
         //
         private void CheckBox()
         {
-            janvier.Checked = IsPayed(1).Count() > 0;
-            fevrier.Checked = IsPayed(2).Count() > 0;
-            mars.Checked = IsPayed(3).Count() > 0;
-            avril.Checked = IsPayed(4).Count() > 0;
-            mai.Checked = IsPayed(5).Count() > 0;
-            juin.Checked = IsPayed(6).Count() > 0;
-            juilet.Checked = IsPayed(7).Count() > 0;
-            aout.Checked = IsPayed(8).Count() > 0;
-            septembre.Checked = IsPayed(9).Count() > 0;
-            octobre.Checked = IsPayed(10).Count() > 0;
-            novembre.Checked = IsPayed(11).Count() > 0;
-            decembre.Checked = IsPayed(12).Count() > 0;
+            janvier.Checked     = IsPayed(1).Count() > 0;
+            fevrier.Checked     = IsPayed(2).Count() > 0;
+            mars.Checked        = IsPayed(3).Count() > 0;
+            avril.Checked       = IsPayed(4).Count() > 0;
+            mai.Checked         = IsPayed(5).Count() > 0;
+            juin.Checked        = IsPayed(6).Count() > 0;
+            juilet.Checked      = IsPayed(7).Count() > 0;
+            aout.Checked        = IsPayed(8).Count() > 0;
+            septembre.Checked   = IsPayed(9).Count() > 0;
+            octobre.Checked     = IsPayed(10).Count() > 0;
+            novembre.Checked    = IsPayed(11).Count() > 0;
+            decembre.Checked    = IsPayed(12).Count() > 0;
         }
 
         //

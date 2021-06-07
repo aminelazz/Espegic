@@ -55,7 +55,7 @@ namespace e.Components
             this.printBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ReturnBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.fullName2 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.StillShow = new System.Windows.Forms.Label();
@@ -70,6 +70,7 @@ namespace e.Components
             this.label55 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.yearShow = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.Pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
@@ -92,10 +93,10 @@ namespace e.Components
             this.Pages.Margin = new System.Windows.Forms.Padding(0);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.tabPage1;
-            this.Pages.PageIndex = 0;
-            this.Pages.PageName = "tabPage1";
-            this.Pages.PageTitle = "tabPage1";
+            this.Pages.Page = this.tabPage2;
+            this.Pages.PageIndex = 1;
+            this.Pages.PageName = "tabPage2";
+            this.Pages.PageTitle = "tabPage2";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(734, 483);
             this.Pages.TabIndex = 3;
@@ -476,6 +477,7 @@ namespace e.Components
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.printBtn);
+            this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Controls.Add(this.tableLayoutPanel3);
@@ -511,7 +513,7 @@ namespace e.Components
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.ReturnBtn);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.fullName2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
@@ -538,15 +540,15 @@ namespace e.Components
             this.ReturnBtn.TabIndex = 1;
             this.ReturnBtn.Click += new System.EventHandler(this.returnBtn_Click);
             // 
-            // label3
+            // fullName2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 19);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Reçu de paiement";
+            this.fullName2.AutoSize = true;
+            this.fullName2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.fullName2.Location = new System.Drawing.Point(13, 17);
+            this.fullName2.Name = "fullName2";
+            this.fullName2.Size = new System.Drawing.Size(80, 16);
+            this.fullName2.TabIndex = 11;
+            this.fullName2.Text = "Full Name";
             // 
             // label19
             // 
@@ -580,7 +582,7 @@ namespace e.Components
             this.tableLayoutPanel3.Controls.Add(this.label55, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.yearShow, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(20, 115);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(20, 129);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 6;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66611F));
@@ -754,6 +756,16 @@ namespace e.Components
             this.yearShow.TabIndex = 0;
             this.yearShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(17, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Reçu de paiement";
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -819,7 +831,8 @@ namespace e.Components
         private System.Windows.Forms.Label yearShow;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button ReturnBtn;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label fullName2;
         private Guna.UI2.WinForms.Guna2Button printBtn;
+        private System.Windows.Forms.Label label4;
     }
 }

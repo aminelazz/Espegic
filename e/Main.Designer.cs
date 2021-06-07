@@ -37,16 +37,16 @@ namespace e
             this.ProfessorsBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.StudentsBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.FormationsBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.paymentBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.Plus = new System.Windows.Forms.ToolStripMenuItem();
             this.StatisticsBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.UserGuideBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.TechnicalGuideBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.Content = new Guna.UI2.WinForms.Guna2Panel();
-            this.paymentBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.Profile = new System.Windows.Forms.ToolStripMenuItem();
             this.ProfileBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.DisconnectBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.Content = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -79,10 +79,10 @@ namespace e
             this.paymentBtn,
             this.Plus});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(108, 27);
+            this.menuStrip1.Location = new System.Drawing.Point(228, 27);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(605, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(485, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -123,6 +123,13 @@ namespace e
             this.FormationsBtn.Text = "Formations";
             this.FormationsBtn.Click += new System.EventHandler(this.FormationsBtn_Click);
             // 
+            // paymentBtn
+            // 
+            this.paymentBtn.Name = "paymentBtn";
+            this.paymentBtn.Size = new System.Drawing.Size(67, 20);
+            this.paymentBtn.Text = "Payment";
+            this.paymentBtn.Click += new System.EventHandler(this.paymentBtn_Click);
+            // 
             // Plus
             // 
             this.Plus.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -160,26 +167,9 @@ namespace e
             this.Profile});
             this.menuStrip2.Location = new System.Drawing.Point(20, 27);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(56, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(176, 24);
             this.menuStrip2.TabIndex = 5;
             this.menuStrip2.Text = "menuStrip2";
-            // 
-            // Content
-            // 
-            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Content.Location = new System.Drawing.Point(0, 78);
-            this.Content.Name = "Content";
-            this.Content.ShadowDecoration.Parent = this.Content;
-            this.Content.Size = new System.Drawing.Size(734, 483);
-            this.Content.TabIndex = 3;
-            // 
-            // paymentBtn
-            // 
-            this.paymentBtn.Name = "paymentBtn";
-            this.paymentBtn.Size = new System.Drawing.Size(67, 20);
-            this.paymentBtn.Text = "Payment";
-            this.paymentBtn.Click += new System.EventHandler(this.paymentBtn_Click);
             // 
             // Profile
             // 
@@ -195,14 +185,26 @@ namespace e
             // ProfileBtn
             // 
             this.ProfileBtn.Name = "ProfileBtn";
-            this.ProfileBtn.Size = new System.Drawing.Size(171, 22);
-            this.ProfileBtn.Text = "Profile";
+            this.ProfileBtn.Size = new System.Drawing.Size(180, 22);
+            this.ProfileBtn.Text = "Profil";
+            this.ProfileBtn.Click += new System.EventHandler(this.ProfileBtn_Click);
             // 
             // DisconnectBtn
             // 
             this.DisconnectBtn.Name = "DisconnectBtn";
-            this.DisconnectBtn.Size = new System.Drawing.Size(171, 22);
+            this.DisconnectBtn.Size = new System.Drawing.Size(180, 22);
             this.DisconnectBtn.Text = "Se deconnecter";
+            this.DisconnectBtn.Click += new System.EventHandler(this.DisconnectBtn_Click);
+            // 
+            // Content
+            // 
+            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Content.Location = new System.Drawing.Point(0, 78);
+            this.Content.Name = "Content";
+            this.Content.ShadowDecoration.Parent = this.Content;
+            this.Content.Size = new System.Drawing.Size(734, 483);
+            this.Content.TabIndex = 3;
             // 
             // Main
             // 

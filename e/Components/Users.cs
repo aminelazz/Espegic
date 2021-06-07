@@ -145,8 +145,8 @@ namespace e.Components
             USER user = new USER()
             {
                 CIN         = CIN.Text.ToUpper(),
-                F_NAME      = L_Name.Text.ToUpper(),
-                L_NAME      = F_Name.Text.ToUpper(),
+                F_NAME      = F_Name.Text.ToUpper(),
+                L_NAME      = L_Name.Text.ToUpper(),
                 PHONE       = Phone.Text,
                 EMAIL       = Email.Text.ToLower(),
                 PASSWORD    = Password.Text,

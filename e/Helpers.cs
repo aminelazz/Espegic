@@ -42,6 +42,8 @@ namespace e
             switch (pCase)
             {
                 // User
+                case "READ USER":
+                    return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "READ" && p.USERS == true).Count() > 0;
                 case "WRITE USER":
                     return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "WRITE" && p.USERS == true).Count() > 0;
                 case "UPDATE USER":
@@ -50,6 +52,8 @@ namespace e
                     return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "DELETE" && p.USERS == true).Count() > 0;
 
                 // Professor
+                case "READ PROFESSOR":
+                    return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "READ" && p.PROFESSORS == true).Count() > 0;
                 case "WRITE PROFESSOR":
                     return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "WRITE" && p.PROFESSORS == true).Count() > 0;
                 case "UPDATE PROFESSOR":
@@ -58,6 +62,8 @@ namespace e
                     return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "DELETE" && p.PROFESSORS == true).Count() > 0;
 
                 // Formation
+                case "READ FORMATION":
+                    return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "READ" && p.FORMATIONS == true).Count() > 0;
                 case "WRITE FORMATION":
                     return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "WRITE" && p.FORMATIONS == true).Count() > 0;
                 case "UPDATE FORMATION":
@@ -66,6 +72,8 @@ namespace e
                     return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "DELETE" && p.FORMATIONS == true).Count() > 0;
 
                 // Module
+                case "READ MODULE":
+                    return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "READ" && p.MODULES == true).Count() > 0;
                 case "WRITE MODULE":
                     return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "WRITE" && p.MODULES == true).Count() > 0;
                 case "UPDATE MODULE":
@@ -74,6 +82,8 @@ namespace e
                     return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "DELETE" && p.MODULES == true).Count() > 0;
 
                 // Student
+                case "READ STUDENT":
+                    return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "READ" && p.STUDENTS == true).Count() > 0;
                 case "WRITE STUDENT":
                     return db.PERMISSIONS.Where(p => p.USER_ID == Connected && p.ACTION == "WRITE" && p.STUDENTS == true).Count() > 0;
                 case "UPDATE STUDENT":

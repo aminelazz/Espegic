@@ -202,6 +202,8 @@ namespace e.Components
             int sy = Convert.ToInt32(year2.SelectedValue);
             int sm = Convert.ToInt32(month2.SelectedValue);
             int id = Convert.ToInt32(ID.Text);
+            // Student
+            STUDENT student = db.STUDENTS.Find(id);
             List<PAYMENT> payment = db.PAYMENTs.Where(p => p.STUDENT_ID == id && p.YEAR == sy && p.MONTH == sm).ToList();
             if (payment.Count() > 0)
             {
@@ -212,6 +214,8 @@ namespace e.Components
                 PayedAtShow.Text = string.Format("{0:MM.dd.yyyy HH:mm}", p.CREATED_AT);
                 PayedShow.Text = p.PAYED.ToString();
                 StillShow.Text = p.STILL.ToString();
+
+                fullName2.Text = student.F_NAME + " " + student.L_NAME;
                 Pages.PageName = "tabPage2";
             }
             else
@@ -234,8 +238,7 @@ namespace e.Components
         //
         private void price_KeyUp(object sender, KeyEventArgs e)
         {
-            PayBtn.Enabled = price.Text != "" && ID.Text != "";
-            PayBtn.Enabled = price.Text.All(char.IsDigit);
+            PayBtn.Enabled = price.Text != "" && ID.Text != "" && price.Text.All(char.IsDigit);
         }
     }
 }
