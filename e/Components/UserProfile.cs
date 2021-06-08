@@ -21,7 +21,7 @@ namespace e.Components
         // Properties
         //
         readonly Helpers help = new Helpers();
-        readonly Espegic db = new Espegic();
+        readonly Espegic db   = new Espegic();
 
         private void UserProfile_Load(object sender, EventArgs e)
         {

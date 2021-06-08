@@ -167,7 +167,7 @@ namespace e
             this.Profile});
             this.menuStrip2.Location = new System.Drawing.Point(20, 27);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(176, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(56, 24);
             this.menuStrip2.TabIndex = 5;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -185,14 +185,14 @@ namespace e
             // ProfileBtn
             // 
             this.ProfileBtn.Name = "ProfileBtn";
-            this.ProfileBtn.Size = new System.Drawing.Size(180, 22);
+            this.ProfileBtn.Size = new System.Drawing.Size(171, 22);
             this.ProfileBtn.Text = "Profil";
             this.ProfileBtn.Click += new System.EventHandler(this.ProfileBtn_Click);
             // 
             // DisconnectBtn
             // 
             this.DisconnectBtn.Name = "DisconnectBtn";
-            this.DisconnectBtn.Size = new System.Drawing.Size(180, 22);
+            this.DisconnectBtn.Size = new System.Drawing.Size(171, 22);
             this.DisconnectBtn.Text = "Se deconnecter";
             this.DisconnectBtn.Click += new System.EventHandler(this.DisconnectBtn_Click);
             // 

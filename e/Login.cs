@@ -66,8 +66,8 @@ namespace e
 
             if (user.Count() > 0)
             {
-                string password = user.Select(u => u.PASSWORD).First();
-                string to = LOGIN_EMAIL.Text;
+                string password = user.First().PASSWORD;
+                string to = user.First().EMAIL;
                 string from = "dv.hamham@gmail.com";
                 MailMessage message = new MailMessage(from, to);
                 message.Subject = "Réinitialiser le mot de passe";
