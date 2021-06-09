@@ -73,7 +73,6 @@ namespace e.Components
             this.yearShow = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.Pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
@@ -785,10 +784,6 @@ namespace e.Components
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
-            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -859,6 +854,5 @@ namespace e.Components
         private System.Windows.Forms.Label label4;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

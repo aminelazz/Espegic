@@ -252,56 +252,137 @@ namespace e.Components
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
+            int x = 40;
+            int y = 100;
+            Dictionary<string, string> header = new Dictionary<string, string>();
+            Dictionary<string, string> items = new Dictionary<string, string>();
 
-            // String keys
-            string keyNumber = "N :";
-            string keyCity1 = "Khémisset :";
-            string keyCity2 = "Tiflet :";
-            string keyCity3 = "Roumani :";
-            string keyEmail = "Email :";
-            string keySite  = "Site :";
+            header.Add("Khemisset", "0537558448");
+            header.Add("Tiflet", "0537515542");
+            header.Add("Roumani", "0537517920");
 
-            // String values
-            string valueNumber = "5555";
-            string valueCity1 = "0537558448";
-            string valueCity2 = "0537515542";
-            string valueCity3 = "0537517920";
-            string valueEmail = "espegic@gmail.com";
-            string valueSite = "www.espegic.ma";
+            items.Add("Email", "espegic@gmail.com");
+            items.Add("Site", "www.espegic.ma");
+            items.Add("Khemisset le", "30/06/2021");
+            items.Add("Reçu de M", "");
+            items.Add("Inscrit(e) sous N°", "");
+            items.Add("Classe", "");
+            items.Add("La somme de", "");
+            items.Add("Reste a payer", "");
 
-            int margin = 10;
+            //items.Add("lastLine", "N.B : Aucun remboursement ne sera accordé délivrance du reçu");
+
+
+            //string lastLine = "N.B : Aucun remboursement ne sera accordé délivrance du reçu";
+            //// String keys header
+            //string keyCity1 = "Khemisset";
+            //string keyCity2 = "Tiflet";
+            //string keyCity3 = "Roumani";
+            //string keyEmail = "Email";
+            //string keySite  = "Site";
+            //string keyDate  = "Khémisset le";
+
+            //// String values
+            //string valueCity1 = ": 0537558448";
+            //string valueCity2 = ": 0537515542";
+            //string valueCity3 = ": 0537517920";
+            //string valueEmail = ": espegic@gmail.com";
+            //string valueSite = ": www.espegic.ma";
+            //string valueDate = "30/06/2021";
+
+
+            //// string keys
+            //string keyRecu = "Reçu de M";
+            //string keyInscription = "Inscrit(e) sous N°";
+            //string keyClass = "Classe";
+            //string keySum = "La somme de";
+            //string keyStill = "Reste a payer";
+
+
+            //// string keys
+            //string valueRecu = ": " + "text";
+            //string valueInscription = ": " + "text";
+            //string valueClass = ": " + "text";
+            //string valueSum = ": " + "text";
+            //string valueStill = ": " + "text";
+            //string valueCachet = "Cachet et signature";
+
+
+
             // Fonts
-            Font font = new Font("Arial", 16, FontStyle.Bold);
+            Font font = new Font("Arial", 16 /*FontStyle.Bold*/);
+
+            for (int i = 0; i < header.Count(); i++)
+            {
+                e.Graphics.DrawString(header.ElementAt(i).Key, font, Brushes.Black, x, y * i);
+                e.Graphics.DrawString(": " + header.ElementAt(i).Value, font, Brushes.Black, x + 200, y * i);
+            }
+
+            //for (int i = 0; i < items.Count(); i++)
+            //{
+            //    e.Graphics.DrawString(items.ElementAt(i).Key, font, Brushes.Black, margin, margin * i);
+            //    e.Graphics.DrawString(": " + items.ElementAt(i).Value, font, Brushes.Black, margin + 200 , margin * i);
+            //}
+
 
             // Fonts measure
-            SizeF sizeCity1 = e.Graphics.MeasureString(keyCity1, font);
-            SizeF sizeEmail = e.Graphics.MeasureString(valueEmail, font);
+            //SizeF sizeCity1 = e.Graphics.MeasureString(keyCity1, font);
+            //SizeF sizeEmail = e.Graphics.MeasureString(valueEmail, font);
 
             // logo
-            e.Graphics.DrawImage(Properties.Resources.users, margin, margin, 100, 100);
-            // Number
-            e.Graphics.DrawString(keyNumber, font, Brushes.Black, 300, 50);
-            e.Graphics.DrawString(valueNumber, font, Brushes.Black, 320, 50);
+            //e.Graphics.DrawImage(Properties.Resources.users, margin, margin, 100, 100);
 
-            // line 1 section 1
-            e.Graphics.DrawString(keyCity1, font, Brushes.Black, margin, 140);
-            e.Graphics.DrawString(valueCity1, font, Brushes.Black, 145, 140);
+            //// line 1 section 1
+            //e.Graphics.DrawString(keyCity1, font, Brushes.Black, margin, 140);
+            //e.Graphics.DrawString(valueCity1, font, Brushes.Black, 145, 140);
 
-            // line 1 section 2
-            e.Graphics.DrawString(keyEmail, font, Brushes.Black, 300, 140);
-            e.Graphics.DrawString(valueEmail, font, Brushes.Black, 380, 140);
+            //// line 1 section 2
+            //e.Graphics.DrawString(keyEmail, font, Brushes.Black, 340, 140);
+            //e.Graphics.DrawString(valueEmail, font, Brushes.Black, 420, 140);
 
-            // line 2 section 1
-            e.Graphics.DrawString(keyCity2, font, Brushes.Black, margin, 140 + sizeCity1.Height);
-            e.Graphics.DrawString(valueCity2, font, Brushes.Black, 145, 140  + sizeCity1.Height);
+            //// line 2 section 1
+            //e.Graphics.DrawString(keyCity2, font, Brushes.Black, margin, 140 + sizeCity1.Height);
+            //e.Graphics.DrawString(valueCity2, font, Brushes.Black, 145, 140  + sizeCity1.Height);
 
-            // line 2 section 2
-            e.Graphics.DrawString(keySite, font, Brushes.Black, 300, 140 + sizeCity1.Height);
-            e.Graphics.DrawString(valueSite, font, Brushes.Black, 380, 140 + sizeCity1.Height);
+            //// line 2 section 2
+            //e.Graphics.DrawString(keySite, font, Brushes.Black, 340, 140 + sizeCity1.Height);
+            //e.Graphics.DrawString(valueSite, font, Brushes.Black, 420, 140 + sizeCity1.Height);
 
-            // line 3
-            e.Graphics.DrawString(keyCity3, font, Brushes.Black, margin, 140 + (sizeCity1.Height*2));
-            e.Graphics.DrawString(valueCity3, font, Brushes.Black, 145, 140 + (sizeCity1.Height * 2));
+            //// line 3
+            //e.Graphics.DrawString(keyCity3, font, Brushes.Black, margin, 140 + (sizeCity1.Height*2));
+            //e.Graphics.DrawString(valueCity3, font, Brushes.Black, 145, 140 + (sizeCity1.Height * 2));
+
+            //////////////////////////////////////////////////////////////////////////////////////////
+
+            //// line 4
+            //e.Graphics.DrawString(keyRecu, font, Brushes.Black, margin, 150 + (sizeCity1.Height * 3));
+            //e.Graphics.DrawString(valueRecu, font, Brushes.Black, 250, 150 + (sizeCity1.Height * 3));
+
+            //// line 5
+            //e.Graphics.DrawString(keyInscription, font, Brushes.Black, margin, 150 + (sizeCity1.Height * 4));
+            //e.Graphics.DrawString(valueInscription, font, Brushes.Black, 250, 150 + (sizeCity1.Height * 4));
+
+            //// line 6
+            //e.Graphics.DrawString(keyClass, font, Brushes.Black, margin, 150 + (sizeCity1.Height * 5));
+            //e.Graphics.DrawString(valueClass, font, Brushes.Black, 250, 150 + (sizeCity1.Height * 5));
+
+            //// line 7
+            //e.Graphics.DrawString(keySum, font, Brushes.Black, margin, 150 + (sizeCity1.Height * 6));
+            //e.Graphics.DrawString(valueSum, font, Brushes.Black, 250, 150 + (sizeCity1.Height * 6));
+
+            //// line 8
+            //e.Graphics.DrawString(keyStill, font, Brushes.Black, margin, 150 + (sizeCity1.Height * 7));
+            //e.Graphics.DrawString(valueStill, font, Brushes.Black, 250, 150 + (sizeCity1.Height * 7));
+
+            //// line 9
+            //e.Graphics.DrawString(valueCachet, new Font("Arial", 14), Brushes.Black, margin + 50, 140 + (sizeCity1.Height * 9));
+
+            //e.Graphics.DrawString(keyDate, new Font("Arial", 14), Brushes.Black, 410, 140 + (sizeCity1.Height * 9));
+            //e.Graphics.DrawString(valueDate, new Font("Arial", 14), Brushes.Black, 550, 140 + (sizeCity1.Height * 9));
+
+            //// line 10
+            //e.Graphics.DrawString(lastLine, font, Brushes.Black, margin, 150 + (sizeCity1.Height * 12));
+
         }
     }
 }
