@@ -489,8 +489,7 @@ namespace e.Components
                 ViewModule.DataSource = (from m in db.MODULES
                                          join f in db.FORMATIONS
                                          on m.FORMATION_ID equals f.ID
-                                         where m.ARCHIVE == false
-                                         && m.FORMATION_ID == DID
+                                         where m.ARCHIVE == false && m.FORMATION_ID == DID
                                          where m.NAME.Contains(SearchModule.Text)
                                          orderby m.UPDATED_AT descending
                                          select new { m.ID, m.NAME, formationName = f.NAME }).Take(10).ToList();

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ESPEGICModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="EspegicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="FORMATIONS">
           <Key>
             <PropertyRef Name="ID" />
@@ -182,7 +182,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ESPEGICModelStoreContainer">
+        <EntityContainer Name="EspegicModelStoreContainer">
           <EntitySet Name="FORMATIONS" EntityType="Self.FORMATIONS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HELPERS" EntityType="Self.HELPERS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HISTORIES" EntityType="Self.HISTORIES" Schema="dbo" store:Type="Tables" />
@@ -207,7 +207,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="ESPEGICModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="EspegicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="FORMATION">
           <Key>
             <PropertyRef Name="ID" />
@@ -415,9 +415,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ESPEGICModelStoreContainer" CdmEntityContainer="Espegic">
+        <EntityContainerMapping StorageEntityContainer="EspegicModelStoreContainer" CdmEntityContainer="Espegic">
           <EntitySetMapping Name="FORMATIONS">
-            <EntityTypeMapping TypeName="ESPEGICModel.FORMATION">
+            <EntityTypeMapping TypeName="EspegicModel.FORMATION">
               <MappingFragment StoreEntitySet="FORMATIONS">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="NAME" ColumnName="NAME" />
@@ -432,7 +432,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HELPERS">
-            <EntityTypeMapping TypeName="ESPEGICModel.HELPER">
+            <EntityTypeMapping TypeName="EspegicModel.HELPER">
               <MappingFragment StoreEntitySet="HELPERS">
                 <ScalarProperty Name="KEY" ColumnName="KEY" />
                 <ScalarProperty Name="VALUE" ColumnName="VALUE" />
@@ -440,7 +440,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HISTORIES">
-            <EntityTypeMapping TypeName="ESPEGICModel.HISTORy">
+            <EntityTypeMapping TypeName="EspegicModel.HISTORy">
               <MappingFragment StoreEntitySet="HISTORIES">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ACTION" ColumnName="ACTION" />
@@ -450,7 +450,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MODULES">
-            <EntityTypeMapping TypeName="ESPEGICModel.MODULE">
+            <EntityTypeMapping TypeName="EspegicModel.MODULE">
               <MappingFragment StoreEntitySet="MODULES">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="FORMATION_ID" ColumnName="FORMATION_ID" />
@@ -464,7 +464,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PAYMENTs">
-            <EntityTypeMapping TypeName="ESPEGICModel.PAYMENT">
+            <EntityTypeMapping TypeName="EspegicModel.PAYMENT">
               <MappingFragment StoreEntitySet="PAYMENT">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="STUDENT_ID" ColumnName="STUDENT_ID" />
@@ -478,7 +478,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PERMISSIONS">
-            <EntityTypeMapping TypeName="ESPEGICModel.PERMISSION">
+            <EntityTypeMapping TypeName="EspegicModel.PERMISSION">
               <MappingFragment StoreEntitySet="PERMISSIONS">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
@@ -492,7 +492,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PROFESSORS">
-            <EntityTypeMapping TypeName="ESPEGICModel.PROFESSOR">
+            <EntityTypeMapping TypeName="EspegicModel.PROFESSOR">
               <MappingFragment StoreEntitySet="PROFESSORS">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="CIN" ColumnName="CIN" />
@@ -516,7 +516,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="STUDENTS">
-            <EntityTypeMapping TypeName="ESPEGICModel.STUDENT">
+            <EntityTypeMapping TypeName="EspegicModel.STUDENT">
               <MappingFragment StoreEntitySet="STUDENTS">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="FORMATION_ID" ColumnName="FORMATION_ID" />
@@ -543,7 +543,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="ESPEGICModel.sysdiagram">
+            <EntityTypeMapping TypeName="EspegicModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -554,7 +554,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TEACHES">
-            <EntityTypeMapping TypeName="ESPEGICModel.TEACH">
+            <EntityTypeMapping TypeName="EspegicModel.TEACH">
               <MappingFragment StoreEntitySet="TEACHES">
                 <ScalarProperty Name="PROFESSOR_ID" ColumnName="PROFESSOR_ID" />
                 <ScalarProperty Name="FORMATION_ID" ColumnName="FORMATION_ID" />
@@ -562,7 +562,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="USERS">
-            <EntityTypeMapping TypeName="ESPEGICModel.USER">
+            <EntityTypeMapping TypeName="EspegicModel.USER">
               <MappingFragment StoreEntitySet="USERS">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="CIN" ColumnName="CIN" />

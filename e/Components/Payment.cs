@@ -240,5 +240,68 @@ namespace e.Components
         {
             PayBtn.Enabled = price.Text != "" && ID.Text != "" && price.Text.All(char.IsDigit);
         }
+
+        private void printBtn_Click(object sender, EventArgs e)
+        {
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                ((Form)printPreviewDialog1).WindowState = FormWindowState.Maximized;
+                printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+            // String keys
+            string keyNumber = "N :";
+            string keyCity1 = "Khémisset :";
+            string keyCity2 = "Tiflet :";
+            string keyCity3 = "Roumani :";
+            string keyEmail = "Email :";
+            string keySite  = "Site :";
+
+            // String values
+            string valueNumber = "5555";
+            string valueCity1 = "0537558448";
+            string valueCity2 = "0537515542";
+            string valueCity3 = "0537517920";
+            string valueEmail = "espegic@gmail.com";
+            string valueSite = "www.espegic.ma";
+
+            int margin = 10;
+            // Fonts
+            Font font = new Font("Arial", 16, FontStyle.Bold);
+
+            // Fonts measure
+            SizeF sizeCity1 = e.Graphics.MeasureString(keyCity1, font);
+            SizeF sizeEmail = e.Graphics.MeasureString(valueEmail, font);
+
+            // logo
+            e.Graphics.DrawImage(Properties.Resources.users, margin, margin, 100, 100);
+            // Number
+            e.Graphics.DrawString(keyNumber, font, Brushes.Black, 300, 50);
+            e.Graphics.DrawString(valueNumber, font, Brushes.Black, 320, 50);
+
+            // line 1 section 1
+            e.Graphics.DrawString(keyCity1, font, Brushes.Black, margin, 140);
+            e.Graphics.DrawString(valueCity1, font, Brushes.Black, 145, 140);
+
+            // line 1 section 2
+            e.Graphics.DrawString(keyEmail, font, Brushes.Black, 300, 140);
+            e.Graphics.DrawString(valueEmail, font, Brushes.Black, 380, 140);
+
+            // line 2 section 1
+            e.Graphics.DrawString(keyCity2, font, Brushes.Black, margin, 140 + sizeCity1.Height);
+            e.Graphics.DrawString(valueCity2, font, Brushes.Black, 145, 140  + sizeCity1.Height);
+
+            // line 2 section 2
+            e.Graphics.DrawString(keySite, font, Brushes.Black, 300, 140 + sizeCity1.Height);
+            e.Graphics.DrawString(valueSite, font, Brushes.Black, 380, 140 + sizeCity1.Height);
+
+            // line 3
+            e.Graphics.DrawString(keyCity3, font, Brushes.Black, margin, 140 + (sizeCity1.Height*2));
+            e.Graphics.DrawString(valueCity3, font, Brushes.Black, 145, 140 + (sizeCity1.Height * 2));
+        }
     }
 }

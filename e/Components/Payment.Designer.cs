@@ -53,6 +53,7 @@ namespace e.Components
             this.Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.printBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ReturnBtn = new Guna.UI2.WinForms.Guna2Button();
             this.fullName2 = new System.Windows.Forms.Label();
@@ -70,7 +71,9 @@ namespace e.Components
             this.label55 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.yearShow = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.Pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
@@ -155,7 +158,7 @@ namespace e.Components
             this.showBtn.CustomImages.Parent = this.showBtn;
             this.showBtn.Enabled = false;
             this.showBtn.FillColor = System.Drawing.Color.CadetBlue;
-            this.showBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showBtn.ForeColor = System.Drawing.Color.White;
             this.showBtn.HoverState.Parent = this.showBtn;
             this.showBtn.ImageSize = new System.Drawing.Size(15, 15);
@@ -208,10 +211,10 @@ namespace e.Components
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(16, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 19);
+            this.label1.Size = new System.Drawing.Size(127, 18);
             this.label1.TabIndex = 49;
             this.label1.Text = "Reçu de paiement";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -240,7 +243,7 @@ namespace e.Components
             this.PayBtn.CustomImages.Parent = this.PayBtn;
             this.PayBtn.Enabled = false;
             this.PayBtn.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.PayBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PayBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PayBtn.ForeColor = System.Drawing.Color.White;
             this.PayBtn.HoverState.Parent = this.PayBtn;
             this.PayBtn.ImageSize = new System.Drawing.Size(15, 15);
@@ -293,10 +296,10 @@ namespace e.Components
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(16, 30);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 19);
+            this.label9.Size = new System.Drawing.Size(70, 18);
             this.label9.TabIndex = 49;
             this.label9.Text = "Paiement";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -454,7 +457,7 @@ namespace e.Components
             this.Search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Search.FocusedState.Parent = this.Search;
-            this.Search.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Search.HoverState.Parent = this.Search;
             this.Search.IconLeft = global::e.Properties.Resources.search;
@@ -498,7 +501,7 @@ namespace e.Components
             this.printBtn.CustomImages.Parent = this.printBtn;
             this.printBtn.Enabled = false;
             this.printBtn.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.printBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printBtn.ForeColor = System.Drawing.Color.White;
             this.printBtn.HoverState.Parent = this.printBtn;
             this.printBtn.ImageSize = new System.Drawing.Size(15, 15);
@@ -508,6 +511,17 @@ namespace e.Components
             this.printBtn.Size = new System.Drawing.Size(103, 36);
             this.printBtn.TabIndex = 56;
             this.printBtn.Text = "Imprimer";
+            this.printBtn.Click += new System.EventHandler(this.printBtn_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(17, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Reçu de paiement";
             // 
             // panel2
             // 
@@ -528,7 +542,7 @@ namespace e.Components
             this.ReturnBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ReturnBtn.CustomImages.Parent = this.ReturnBtn;
             this.ReturnBtn.FillColor = System.Drawing.Color.SkyBlue;
-            this.ReturnBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReturnBtn.ForeColor = System.Drawing.Color.White;
             this.ReturnBtn.HoverState.Parent = this.ReturnBtn;
             this.ReturnBtn.Image = global::e.Properties.Resources.back_arrow;
@@ -543,20 +557,20 @@ namespace e.Components
             // fullName2
             // 
             this.fullName2.AutoSize = true;
-            this.fullName2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.fullName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.fullName2.Location = new System.Drawing.Point(13, 17);
             this.fullName2.Name = "fullName2";
-            this.fullName2.Size = new System.Drawing.Size(80, 16);
+            this.fullName2.Size = new System.Drawing.Size(78, 16);
             this.fullName2.TabIndex = 11;
             this.fullName2.Text = "Full Name";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(23, 93);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(0, 19);
+            this.label19.Size = new System.Drawing.Size(0, 18);
             this.label19.TabIndex = 53;
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -756,15 +770,24 @@ namespace e.Components
             this.yearShow.TabIndex = 0;
             this.yearShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label4
+            // printDocument1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 16);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Reçu de paiement";
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
             // 
             // Payment
             // 
@@ -834,5 +857,8 @@ namespace e.Components
         private System.Windows.Forms.Label fullName2;
         private Guna.UI2.WinForms.Guna2Button printBtn;
         private System.Windows.Forms.Label label4;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }
