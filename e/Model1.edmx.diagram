@@ -18,6 +18,7 @@
         <EntityTypeShape EntityType="EspegicModel.USER" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
         <AssociationConnector Association="EspegicModel.FK__MODULES__FORMATI__373B3228" ManuallyRouted="false" />
         <AssociationConnector Association="EspegicModel.FK__STUDENTS__FORMAT__0880433F" ManuallyRouted="false" />
+        <AssociationConnector Association="EspegicModel.FK_PAYMENT_STUDENTS" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

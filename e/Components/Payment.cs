@@ -175,7 +175,7 @@ namespace e.Components
                 bool isPayed = db.PAYMENTs.Where(p => p.STUDENT_ID == id && p.MONTH == monthT && p.YEAR == yearT).Count() > 0;
                 if (isPayed)
                 {
-                    MessageBox.Show($"Le mois { month.Text } est deja payer", "ESPEGIC", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Le mois { month.Text } est deja payé", "ESPEGIC", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -184,12 +184,12 @@ namespace e.Components
 
                     // Create history
                     help.CreateHistory($"PAYER LE MOIS { month.Text.ToUpper() } POUR", student.F_NAME, student.L_NAME, student.CIN);
-                    MessageBox.Show($"le mois { month.Text } payer avec success", "ESPEGIC", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"le mois { month.Text } payé avec success", "ESPEGIC", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show($"Montant inccorect il reste { formationPrice - payed } DH a payer", "ESPEGIC", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Montant inccorect il reste { formationPrice - payed } DH à payer", "ESPEGIC", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -212,15 +212,15 @@ namespace e.Components
                 MonthShow.Text = month2.Text;
                 PriceShow.Text = p.PRICE + " DH";
                 PayedAtShow.Text = string.Format("{0:MM.dd.yyyy HH:mm}", p.CREATED_AT);
-                PayedShow.Text = p.PAYED.ToString();
-                StillShow.Text = p.STILL.ToString();
+                PayedShow.Text = p.PAYED.ToString() + " DH";
+                StillShow.Text = p.STILL.ToString() + " DH";
 
                 fullName2.Text = student.F_NAME + " " + student.L_NAME;
                 Pages.PageName = "tabPage2";
             }
             else
             {
-                MessageBox.Show($"Le mois { month2.Text } n'a pas encore payer", "ESPEGIC", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Le mois { month2.Text } n'a pas encore payé", "ESPEGIC", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -255,6 +255,21 @@ namespace e.Components
         {
             ((Form)printPreviewDialog1).WindowState = FormWindowState.Maximized;
 
+            int yearPayment = Convert.ToInt32(year2.SelectedValue);
+            int monthPayment = Convert.ToInt32(month2.SelectedValue);
+            int studentId = int.Parse(ID.Text);
+
+
+            var infoPayment = (from s in db.STUDENTS
+                              join p in db.PAYMENTs
+                              on s.ID equals p.STUDENT_ID
+                              join f in db.FORMATIONS
+                              on s.FORMATION_ID equals f.ID
+                              where s.ID == studentId
+                              && p.YEAR == yearPayment
+                              && p.MONTH == monthPayment
+                               select new { s.F_NAME, s.L_NAME, f.NAME, p.PRICE, p.STILL }).First();
+
             Dictionary<string, string> header = new Dictionary<string, string>();
             Dictionary<string, string> body = new Dictionary<string, string>();
             Dictionary<string, string> footer = new Dictionary<string, string>();
@@ -271,16 +286,15 @@ namespace e.Components
             header.Add("Roumani", "0537517920");
             header.Add("Email", "espegic@gmail.com");
             header.Add("Site", "www.espegic.ma");
-            header.Add("Khemisset le", "30/06/2021");
             // Body
-            body.Add("Reçu de M", "test");
-            body.Add("Inscrit(e) sous N°", "test");
-            body.Add("Classe", "test");
-            body.Add("La somme de", "test");
-            body.Add("Reste a payer", "test");
+            body.Add("Reçu de M", infoPayment.F_NAME + " " + infoPayment.L_NAME);
+            body.Add("Inscrit(e) sous N°", "");
+            body.Add("Classe", infoPayment.NAME);
+            body.Add("La somme de", infoPayment.PRICE.ToString() + " DH");
+            body.Add("Reste à payer", infoPayment.STILL.ToString() + " DH");
             // Footer
-            footer.Add("Cachet et signature", "Khemisset le : 30/06/2021");
-            footer.Add("N.B : Aucun remboursement ne sera accordé apres délivrance du recu", "");
+            footer.Add("Cachet et signature", "Khemisset le : " + DateTime.Now.ToString("MM/dd/yyyy"));
+            footer.Add("N.B : Aucun remboursement ne sera accordé après délivrance du reçu", "");
 
             // Logo
             e.Graphics.DrawImage(Properties.Resources.espegic, marginX, marginY, 140, 60);
@@ -299,8 +313,8 @@ namespace e.Components
                 else if (i >= 3)
                 {
                     marginY = i == 0 ? top : top + ((i-3) * spacing);
-                    e.Graphics.DrawString(header.ElementAt(i).Key, font, Brushes.Black, marginX + 300, marginY);
-                    e.Graphics.DrawString(": " + header.ElementAt(i).Value, font, Brushes.Black, marginX + 450, marginY);
+                    e.Graphics.DrawString(header.ElementAt(i).Key, font, Brushes.Black, marginX + 310, marginY);
+                    e.Graphics.DrawString(": " + header.ElementAt(i).Value, font, Brushes.Black, marginX + 380, marginY);
                 }
 
             }
@@ -311,13 +325,13 @@ namespace e.Components
                 marginY = i == 0 ? top + 108 : top + 108 + (i * spacing);
 
                 e.Graphics.DrawString(body.ElementAt(i).Key, font, Brushes.Black, marginX, marginY);
-                e.Graphics.DrawString(": " + body.ElementAt(i).Value, font, Brushes.Black, marginX + 170, marginY);
+                e.Graphics.DrawString(": " + body.ElementAt(i).Value, font, Brushes.Black, marginX + 190, marginY);
             }
 
             // Footer
             for (int i = 0; i < footer.Count(); i++)
             {
-                marginY = i == 0 ? top + 260 : top + 260 + (i * spacing);
+                marginY = i == 0 ? top + 270 : top + 270 + (i * spacing);
                 int x = marginX;
                 if (i == 0)
                 {

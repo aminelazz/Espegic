@@ -14,6 +14,12 @@ namespace e
     
     public partial class STUDENT
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public STUDENT()
+        {
+            this.PAYMENTs = new HashSet<PAYMENT>();
+        }
+    
         public int ID { get; set; }
         public int FORMATION_ID { get; set; }
         public string CIN { get; set; }
@@ -37,5 +43,7 @@ namespace e
         public System.DateTime UPDATED_AT { get; set; }
     
         public virtual FORMATION FORMATION { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PAYMENT> PAYMENTs { get; set; }
     }
 }

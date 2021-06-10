@@ -16,5 +16,26 @@ namespace e.Components
         {
             InitializeComponent();
         }
+
+        //
+        // Properties
+        //
+        readonly Espegic db = new Espegic();
+
+        //
+        // Load
+        //
+        private void Statistics_Load(object sender, EventArgs e)
+        {
+            // Count of each table
+            nbr_user.Text       = db.USERS.Count().ToString();
+            nbr_prof.Text       = db.PROFESSORS.Count().ToString();
+            nbr_student.Text    = db.STUDENTS.Count().ToString();
+            nbr_formation.Text  = db.FORMATIONS.Count().ToString();
+            nbr_module.Text     = db.MODULES.Count().ToString();
+
+            // Date
+            date.Text = "Date : " + DateTime.Now.ToString("dd/MM/yyyy");
+        }
     }
 }

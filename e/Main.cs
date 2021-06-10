@@ -126,6 +126,9 @@ namespace e
             }
         }
 
+        //
+        // Disconnect
+        //
         private void DisconnectBtn_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(this, "Voulez-vous déconnecter?", "Déconnexion", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
@@ -145,10 +148,22 @@ namespace e
             
         }
 
+        //
+        // Navigate to User Profile
+        //
         private void ProfileBtn_Click(object sender, EventArgs e)
         {
             Content.Controls.Clear();
             Content.Controls.Add(new UserProfile());
+        }
+
+        //
+        // Navigate to Statistics
+        //
+        private void StatisticsBtn_Click(object sender, EventArgs e)
+        {
+            Content.Controls.Clear();
+            Content.Controls.Add(new Statistics());
         }
     }
 }

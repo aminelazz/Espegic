@@ -143,19 +143,20 @@ namespace e
             // StatisticsBtn
             // 
             this.StatisticsBtn.Name = "StatisticsBtn";
-            this.StatisticsBtn.Size = new System.Drawing.Size(172, 22);
-            this.StatisticsBtn.Text = "Statistique";
+            this.StatisticsBtn.Size = new System.Drawing.Size(180, 22);
+            this.StatisticsBtn.Text = "Statistiques";
+            this.StatisticsBtn.Click += new System.EventHandler(this.StatisticsBtn_Click);
             // 
             // UserGuideBtn
             // 
             this.UserGuideBtn.Name = "UserGuideBtn";
-            this.UserGuideBtn.Size = new System.Drawing.Size(172, 22);
+            this.UserGuideBtn.Size = new System.Drawing.Size(180, 22);
             this.UserGuideBtn.Text = "Guide d\'utilisation";
             // 
             // TechnicalGuideBtn
             // 
             this.TechnicalGuideBtn.Name = "TechnicalGuideBtn";
-            this.TechnicalGuideBtn.Size = new System.Drawing.Size(172, 22);
+            this.TechnicalGuideBtn.Size = new System.Drawing.Size(180, 22);
             this.TechnicalGuideBtn.Text = "Guide technique";
             // 
             // menuStrip2
@@ -193,7 +194,7 @@ namespace e
             // 
             this.DisconnectBtn.Name = "DisconnectBtn";
             this.DisconnectBtn.Size = new System.Drawing.Size(171, 22);
-            this.DisconnectBtn.Text = "Se deconnecter";
+            this.DisconnectBtn.Text = "Se déconnecter";
             this.DisconnectBtn.Click += new System.EventHandler(this.DisconnectBtn_Click);
             // 
             // Content

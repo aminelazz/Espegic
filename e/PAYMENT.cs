@@ -22,5 +22,7 @@ namespace e
         public Nullable<System.DateTime> CREATED_AT { get; set; }
         public Nullable<int> PAYED { get; set; }
         public Nullable<int> STILL { get; set; }
+    
+        public virtual STUDENT STUDENT { get; set; }
     }
 }

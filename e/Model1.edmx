@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EspegicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EspegicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="FORMATIONS">
           <Key>
             <PropertyRef Name="ID" />
@@ -182,6 +182,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_PAYMENT_STUDENTS">
+          <End Role="STUDENTS" Type="Self.STUDENTS" Multiplicity="0..1" />
+          <End Role="PAYMENT" Type="Self.PAYMENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STUDENTS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PAYMENT">
+              <PropertyRef Name="STUDENT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="EspegicModelStoreContainer">
           <EntitySet Name="FORMATIONS" EntityType="Self.FORMATIONS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HELPERS" EntityType="Self.HELPERS" Schema="dbo" store:Type="Tables" />
@@ -202,9 +214,12 @@
             <End Role="FORMATIONS" EntitySet="FORMATIONS" />
             <End Role="STUDENTS" EntitySet="STUDENTS" />
           </AssociationSet>
+          <AssociationSet Name="FK_PAYMENT_STUDENTS" Association="Self.FK_PAYMENT_STUDENTS">
+            <End Role="STUDENTS" EntitySet="STUDENTS" />
+            <End Role="PAYMENT" EntitySet="PAYMENT" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EspegicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -266,6 +281,7 @@
           <Property Name="CREATED_AT" Type="DateTime" Precision="3" />
           <Property Name="PAYED" Type="Int32" />
           <Property Name="STILL" Type="Int32" />
+          <NavigationProperty Name="STUDENT" Relationship="EspegicModel.FK_PAYMENT_STUDENTS" FromRole="PAYMENT" ToRole="STUDENT" />
         </EntityType>
         <EntityType Name="PERMISSION">
           <Key>
@@ -329,6 +345,7 @@
           <Property Name="UPDATED_BY" Type="Int32" Nullable="false" />
           <Property Name="UPDATED_AT" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="FORMATION" Relationship="Self.FK__STUDENTS__FORMAT__0880433F" FromRole="STUDENTS" ToRole="FORMATIONS" />
+          <NavigationProperty Name="PAYMENTs" Relationship="EspegicModel.FK_PAYMENT_STUDENTS" FromRole="STUDENT" ToRole="PAYMENT" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -409,7 +426,23 @@
             <End Role="FORMATIONS" EntitySet="FORMATIONS" />
             <End Role="STUDENTS" EntitySet="STUDENTS" />
           </AssociationSet>
+          <AssociationSet Name="FK_PAYMENT_STUDENTS" Association="EspegicModel.FK_PAYMENT_STUDENTS">
+            <End Role="STUDENT" EntitySet="STUDENTS" />
+            <End Role="PAYMENT" EntitySet="PAYMENTs" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_PAYMENT_STUDENTS">
+          <End Type="EspegicModel.STUDENT" Role="STUDENT" Multiplicity="0..1" />
+          <End Type="EspegicModel.PAYMENT" Role="PAYMENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STUDENT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PAYMENT">
+              <PropertyRef Name="STUDENT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
