@@ -245,143 +245,94 @@ namespace e.Components
         {
             if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
-                ((Form)printPreviewDialog1).WindowState = FormWindowState.Maximized;
                 printDocument1.Print();
+                
+
             }
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            int x = 40;
-            int y = 100;
-            Dictionary<string, string> header = new Dictionary<string, string>();
-            Dictionary<string, string> items = new Dictionary<string, string>();
+            ((Form)printPreviewDialog1).WindowState = FormWindowState.Maximized;
 
+            Dictionary<string, string> header = new Dictionary<string, string>();
+            Dictionary<string, string> body = new Dictionary<string, string>();
+            Dictionary<string, string> footer = new Dictionary<string, string>();
+            Font font = new Font("Arial", 15 /*FontStyle.Bold*/);
+
+            int marginY = 30;
+            int marginX = 80;
+            int spacing = 30;
+            int top = marginY + 80;
+
+            // Header
             header.Add("Khemisset", "0537558448");
             header.Add("Tiflet", "0537515542");
             header.Add("Roumani", "0537517920");
+            header.Add("Email", "espegic@gmail.com");
+            header.Add("Site", "www.espegic.ma");
+            header.Add("Khemisset le", "30/06/2021");
+            // Body
+            body.Add("Reçu de M", "test");
+            body.Add("Inscrit(e) sous N°", "test");
+            body.Add("Classe", "test");
+            body.Add("La somme de", "test");
+            body.Add("Reste a payer", "test");
+            // Footer
+            footer.Add("Cachet et signature", "Khemisset le : 30/06/2021");
+            footer.Add("N.B : Aucun remboursement ne sera accordé apres délivrance du recu", "");
 
-            items.Add("Email", "espegic@gmail.com");
-            items.Add("Site", "www.espegic.ma");
-            items.Add("Khemisset le", "30/06/2021");
-            items.Add("Reçu de M", "");
-            items.Add("Inscrit(e) sous N°", "");
-            items.Add("Classe", "");
-            items.Add("La somme de", "");
-            items.Add("Reste a payer", "");
+            // Logo
+            e.Graphics.DrawImage(Properties.Resources.espegic, marginX, marginY, 140, 60);
 
-            //items.Add("lastLine", "N.B : Aucun remboursement ne sera accordé délivrance du reçu");
-
-
-            //string lastLine = "N.B : Aucun remboursement ne sera accordé délivrance du reçu";
-            //// String keys header
-            //string keyCity1 = "Khemisset";
-            //string keyCity2 = "Tiflet";
-            //string keyCity3 = "Roumani";
-            //string keyEmail = "Email";
-            //string keySite  = "Site";
-            //string keyDate  = "Khémisset le";
-
-            //// String values
-            //string valueCity1 = ": 0537558448";
-            //string valueCity2 = ": 0537515542";
-            //string valueCity3 = ": 0537517920";
-            //string valueEmail = ": espegic@gmail.com";
-            //string valueSite = ": www.espegic.ma";
-            //string valueDate = "30/06/2021";
-
-
-            //// string keys
-            //string keyRecu = "Reçu de M";
-            //string keyInscription = "Inscrit(e) sous N°";
-            //string keyClass = "Classe";
-            //string keySum = "La somme de";
-            //string keyStill = "Reste a payer";
-
-
-            //// string keys
-            //string valueRecu = ": " + "text";
-            //string valueInscription = ": " + "text";
-            //string valueClass = ": " + "text";
-            //string valueSum = ": " + "text";
-            //string valueStill = ": " + "text";
-            //string valueCachet = "Cachet et signature";
-
-
-
-            // Fonts
-            Font font = new Font("Arial", 16 /*FontStyle.Bold*/);
-
+            // Header
             for (int i = 0; i < header.Count(); i++)
             {
-                e.Graphics.DrawString(header.ElementAt(i).Key, font, Brushes.Black, x, y * i);
-                e.Graphics.DrawString(": " + header.ElementAt(i).Value, font, Brushes.Black, x + 200, y * i);
+  
+                if (i < 3)
+                {
+                    marginY = i == 0 ? top : top + (i * spacing);
+
+                    e.Graphics.DrawString(header.ElementAt(i).Key, font, Brushes.Black, marginX, marginY);
+                    e.Graphics.DrawString(": " + header.ElementAt(i).Value, font, Brushes.Black, marginX + 120, marginY);
+                }
+                else if (i >= 3)
+                {
+                    marginY = i == 0 ? top : top + ((i-3) * spacing);
+                    e.Graphics.DrawString(header.ElementAt(i).Key, font, Brushes.Black, marginX + 300, marginY);
+                    e.Graphics.DrawString(": " + header.ElementAt(i).Value, font, Brushes.Black, marginX + 450, marginY);
+                }
+
             }
 
-            //for (int i = 0; i < items.Count(); i++)
-            //{
-            //    e.Graphics.DrawString(items.ElementAt(i).Key, font, Brushes.Black, margin, margin * i);
-            //    e.Graphics.DrawString(": " + items.ElementAt(i).Value, font, Brushes.Black, margin + 200 , margin * i);
-            //}
+            // body
+            for (int i = 0; i < body.Count(); i++)
+            {
+                marginY = i == 0 ? top + 108 : top + 108 + (i * spacing);
 
+                e.Graphics.DrawString(body.ElementAt(i).Key, font, Brushes.Black, marginX, marginY);
+                e.Graphics.DrawString(": " + body.ElementAt(i).Value, font, Brushes.Black, marginX + 170, marginY);
+            }
 
-            // Fonts measure
-            //SizeF sizeCity1 = e.Graphics.MeasureString(keyCity1, font);
-            //SizeF sizeEmail = e.Graphics.MeasureString(valueEmail, font);
+            // Footer
+            for (int i = 0; i < footer.Count(); i++)
+            {
+                marginY = i == 0 ? top + 260 : top + 260 + (i * spacing);
+                int x = marginX;
+                if (i == 0)
+                {
+                    marginX = x + 100;
+                }
+                else
+                {
+                    marginX = 80;
+                    marginY = top + 350;
 
-            // logo
-            //e.Graphics.DrawImage(Properties.Resources.users, margin, margin, 100, 100);
+                }
 
-            //// line 1 section 1
-            //e.Graphics.DrawString(keyCity1, font, Brushes.Black, margin, 140);
-            //e.Graphics.DrawString(valueCity1, font, Brushes.Black, 145, 140);
-
-            //// line 1 section 2
-            //e.Graphics.DrawString(keyEmail, font, Brushes.Black, 340, 140);
-            //e.Graphics.DrawString(valueEmail, font, Brushes.Black, 420, 140);
-
-            //// line 2 section 1
-            //e.Graphics.DrawString(keyCity2, font, Brushes.Black, margin, 140 + sizeCity1.Height);
-            //e.Graphics.DrawString(valueCity2, font, Brushes.Black, 145, 140  + sizeCity1.Height);
-
-            //// line 2 section 2
-            //e.Graphics.DrawString(keySite, font, Brushes.Black, 340, 140 + sizeCity1.Height);
-            //e.Graphics.DrawString(valueSite, font, Brushes.Black, 420, 140 + sizeCity1.Height);
-
-            //// line 3
-            //e.Graphics.DrawString(keyCity3, font, Brushes.Black, margin, 140 + (sizeCity1.Height*2));
-            //e.Graphics.DrawString(valueCity3, font, Brushes.Black, 145, 140 + (sizeCity1.Height * 2));
-
-            //////////////////////////////////////////////////////////////////////////////////////////
-
-            //// line 4
-            //e.Graphics.DrawString(keyRecu, font, Brushes.Black, margin, 150 + (sizeCity1.Height * 3));
-            //e.Graphics.DrawString(valueRecu, font, Brushes.Black, 250, 150 + (sizeCity1.Height * 3));
-
-            //// line 5
-            //e.Graphics.DrawString(keyInscription, font, Brushes.Black, margin, 150 + (sizeCity1.Height * 4));
-            //e.Graphics.DrawString(valueInscription, font, Brushes.Black, 250, 150 + (sizeCity1.Height * 4));
-
-            //// line 6
-            //e.Graphics.DrawString(keyClass, font, Brushes.Black, margin, 150 + (sizeCity1.Height * 5));
-            //e.Graphics.DrawString(valueClass, font, Brushes.Black, 250, 150 + (sizeCity1.Height * 5));
-
-            //// line 7
-            //e.Graphics.DrawString(keySum, font, Brushes.Black, margin, 150 + (sizeCity1.Height * 6));
-            //e.Graphics.DrawString(valueSum, font, Brushes.Black, 250, 150 + (sizeCity1.Height * 6));
-
-            //// line 8
-            //e.Graphics.DrawString(keyStill, font, Brushes.Black, margin, 150 + (sizeCity1.Height * 7));
-            //e.Graphics.DrawString(valueStill, font, Brushes.Black, 250, 150 + (sizeCity1.Height * 7));
-
-            //// line 9
-            //e.Graphics.DrawString(valueCachet, new Font("Arial", 14), Brushes.Black, margin + 50, 140 + (sizeCity1.Height * 9));
-
-            //e.Graphics.DrawString(keyDate, new Font("Arial", 14), Brushes.Black, 410, 140 + (sizeCity1.Height * 9));
-            //e.Graphics.DrawString(valueDate, new Font("Arial", 14), Brushes.Black, 550, 140 + (sizeCity1.Height * 9));
-
-            //// line 10
-            //e.Graphics.DrawString(lastLine, font, Brushes.Black, margin, 150 + (sizeCity1.Height * 12));
+                e.Graphics.DrawString(footer.ElementAt(i).Key, font, Brushes.Black, marginX, marginY);
+                e.Graphics.DrawString(footer.ElementAt(i).Value, font, Brushes.Black, marginX + 300, marginY);
+            }
 
         }
     }

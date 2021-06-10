@@ -133,6 +133,16 @@ namespace e.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap espegic {
+            get {
+                object obj = ResourceManager.GetObject("espegic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Internet_Explorer_23486 {
             get {
                 object obj = ResourceManager.GetObject("Internet_Explorer_23486", resourceCulture);
