@@ -18,7 +18,7 @@ namespace e
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            bool connected = db.HELPERS.Where(c => c.KEY == "CONNECTED").First().VALUE != "0";
+            bool connected = db.HELPERS.Where(c => c.KEY == "CONNECTED" && c.VALUE != "0").Count() > 0;
             if (connected)
             {
                 Application.Run(new Main());
