@@ -66,8 +66,8 @@ namespace e.Components
                 EMAIL       = Email.Text.ToLower(),
                 PASSWORD    = Password.Text,
                 ARCHIVE     = false,
-                CREATED_BY  = db.USERS.Where(u => u.ID == help.Connected).Select(u => u.CREATED_BY).First(),
-                CREATED_AT  = db.USERS.Where(u => u.ID == help.Connected).Select(u => u.CREATED_AT).First(),
+                CREATED_BY = db.USERS.Find(help.Connected).CREATED_BY,
+                CREATED_AT = db.USERS.Find(help.Connected).CREATED_AT,
                 UPDATED_BY  = help.Connected,
                 UPDATED_AT  = DateTime.Now
             };
