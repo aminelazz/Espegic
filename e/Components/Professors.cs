@@ -52,6 +52,7 @@ namespace e.Components
             Address.Clear();
             Email.Clear();
             Pages.PageName = "tabPage2";
+            TitleLabel.Text = "Ajouter un nouvel professeur";
             SaveBtn.BringToFront();
         }
 
@@ -83,7 +84,8 @@ namespace e.Components
             Address.Text        = professor.ADRESS;
             Email.Text          = professor.EMAIL;
 
-            Pages.PageName = "tabPage2";
+            Pages.PageName  = "tabPage2";
+            TitleLabel.Text = "Modifier le professeur sélectionné";
             UpdateBtn.BringToFront();
         }
 

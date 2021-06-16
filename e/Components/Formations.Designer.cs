@@ -40,6 +40,15 @@ namespace e.Components
             this.Pages = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.ViewFormation = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Archive_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Created_By_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Created_At_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Updated_By_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Updated_At_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.NextFormation = new Guna.UI2.WinForms.Guna2Button();
@@ -78,7 +87,7 @@ namespace e.Components
             this.UpdateModuleBtn = new Guna.UI2.WinForms.Guna2Button();
             this.AddModule = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteModuleBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.ModuleLabel = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.SearchModule = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -91,15 +100,6 @@ namespace e.Components
             this.ModuleName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.ID_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Archive_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Created_By_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Created_At_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Updated_By_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Updated_At_Formation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewFormation)).BeginInit();
@@ -245,6 +245,66 @@ namespace e.Components
             this.ViewFormation.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.ViewFormation.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.ViewFormation.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewFormation_CellDoubleClick);
+            // 
+            // ID_Formation
+            // 
+            this.ID_Formation.DataPropertyName = "ID";
+            this.ID_Formation.HeaderText = "ID";
+            this.ID_Formation.Name = "ID_Formation";
+            this.ID_Formation.Visible = false;
+            // 
+            // Name_Formation
+            // 
+            this.Name_Formation.DataPropertyName = "NAME";
+            this.Name_Formation.HeaderText = "Nom";
+            this.Name_Formation.Name = "Name_Formation";
+            // 
+            // Duration
+            // 
+            this.Duration.DataPropertyName = "DURATION";
+            this.Duration.HeaderText = "Durée";
+            this.Duration.Name = "Duration";
+            // 
+            // Price
+            // 
+            this.Price.DataPropertyName = "PRICE";
+            this.Price.HeaderText = "Prix";
+            this.Price.Name = "Price";
+            // 
+            // Archive_Formation
+            // 
+            this.Archive_Formation.DataPropertyName = "ARCHIVE";
+            this.Archive_Formation.HeaderText = "Archive";
+            this.Archive_Formation.Name = "Archive_Formation";
+            this.Archive_Formation.Visible = false;
+            // 
+            // Created_By_Formation
+            // 
+            this.Created_By_Formation.DataPropertyName = "CREATED_BY";
+            this.Created_By_Formation.HeaderText = "Créé par";
+            this.Created_By_Formation.Name = "Created_By_Formation";
+            this.Created_By_Formation.Visible = false;
+            // 
+            // Created_At_Formation
+            // 
+            this.Created_At_Formation.DataPropertyName = "CREATED_AT";
+            this.Created_At_Formation.HeaderText = "Créé le";
+            this.Created_At_Formation.Name = "Created_At_Formation";
+            this.Created_At_Formation.Visible = false;
+            // 
+            // Updated_By_Formation
+            // 
+            this.Updated_By_Formation.DataPropertyName = "UPDATED_BY";
+            this.Updated_By_Formation.HeaderText = "Modifié par";
+            this.Updated_By_Formation.Name = "Updated_By_Formation";
+            this.Updated_By_Formation.Visible = false;
+            // 
+            // Updated_At_Formation
+            // 
+            this.Updated_At_Formation.DataPropertyName = "UPDATED_AT";
+            this.Updated_At_Formation.HeaderText = "Modifié le";
+            this.Updated_At_Formation.Name = "Updated_At_Formation";
+            this.Updated_At_Formation.Visible = false;
             // 
             // guna2Panel2
             // 
@@ -792,7 +852,7 @@ namespace e.Components
             this.panel2.Controls.Add(this.UpdateModuleBtn);
             this.panel2.Controls.Add(this.AddModule);
             this.panel2.Controls.Add(this.DeleteModuleBtn);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.ModuleLabel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 55);
             this.panel2.Name = "panel2";
@@ -900,15 +960,15 @@ namespace e.Components
             this.guna2HtmlToolTip1.SetToolTip(this.DeleteModuleBtn, "Supprimer le module sélectionné");
             this.DeleteModuleBtn.Click += new System.EventHandler(this.DeleteModuleBtn_Click);
             // 
-            // label5
+            // ModuleLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 19);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Modules";
+            this.ModuleLabel.AutoSize = true;
+            this.ModuleLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModuleLabel.Location = new System.Drawing.Point(13, 17);
+            this.ModuleLabel.Name = "ModuleLabel";
+            this.ModuleLabel.Size = new System.Drawing.Size(77, 19);
+            this.ModuleLabel.TabIndex = 11;
+            this.ModuleLabel.Text = "Modules";
             // 
             // guna2Panel4
             // 
@@ -1110,66 +1170,6 @@ namespace e.Components
             this.guna2HtmlToolTip1.AllowLinksHandling = true;
             this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
             // 
-            // ID_Formation
-            // 
-            this.ID_Formation.DataPropertyName = "ID";
-            this.ID_Formation.HeaderText = "ID";
-            this.ID_Formation.Name = "ID_Formation";
-            this.ID_Formation.Visible = false;
-            // 
-            // Name_Formation
-            // 
-            this.Name_Formation.DataPropertyName = "NAME";
-            this.Name_Formation.HeaderText = "Nom";
-            this.Name_Formation.Name = "Name_Formation";
-            // 
-            // Duration
-            // 
-            this.Duration.DataPropertyName = "DURATION";
-            this.Duration.HeaderText = "Durée";
-            this.Duration.Name = "Duration";
-            // 
-            // Price
-            // 
-            this.Price.DataPropertyName = "PRICE";
-            this.Price.HeaderText = "Prix";
-            this.Price.Name = "Price";
-            // 
-            // Archive_Formation
-            // 
-            this.Archive_Formation.DataPropertyName = "ARCHIVE";
-            this.Archive_Formation.HeaderText = "Archive";
-            this.Archive_Formation.Name = "Archive_Formation";
-            this.Archive_Formation.Visible = false;
-            // 
-            // Created_By_Formation
-            // 
-            this.Created_By_Formation.DataPropertyName = "CREATED_BY";
-            this.Created_By_Formation.HeaderText = "Créé par";
-            this.Created_By_Formation.Name = "Created_By_Formation";
-            this.Created_By_Formation.Visible = false;
-            // 
-            // Created_At_Formation
-            // 
-            this.Created_At_Formation.DataPropertyName = "CREATED_AT";
-            this.Created_At_Formation.HeaderText = "Créé le";
-            this.Created_At_Formation.Name = "Created_At_Formation";
-            this.Created_At_Formation.Visible = false;
-            // 
-            // Updated_By_Formation
-            // 
-            this.Updated_By_Formation.DataPropertyName = "UPDATED_BY";
-            this.Updated_By_Formation.HeaderText = "Modifié par";
-            this.Updated_By_Formation.Name = "Updated_By_Formation";
-            this.Updated_By_Formation.Visible = false;
-            // 
-            // Updated_At_Formation
-            // 
-            this.Updated_At_Formation.DataPropertyName = "UPDATED_AT";
-            this.Updated_At_Formation.HeaderText = "Modifié le";
-            this.Updated_At_Formation.Name = "Updated_At_Formation";
-            this.Updated_At_Formation.Visible = false;
-            // 
             // Formations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1241,7 +1241,7 @@ namespace e.Components
         private Guna.UI2.WinForms.Guna2Button UpdateModuleBtn;
         private Guna.UI2.WinForms.Guna2Button AddModule;
         private Guna.UI2.WinForms.Guna2Button DeleteModuleBtn;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label ModuleLabel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2TextBox SearchModule;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_MODULE;

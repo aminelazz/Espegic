@@ -93,7 +93,7 @@ namespace e.Components
             this.DeleteModule = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ReturnBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.TitleLabel = new System.Windows.Forms.Label();
             this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SaveBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -1157,7 +1157,7 @@ namespace e.Components
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.ReturnBtn);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.TitleLabel);
             this.panel1.Controls.Add(this.UpdateBtn);
             this.panel1.Controls.Add(this.SaveBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1186,15 +1186,15 @@ namespace e.Components
             this.ReturnBtn.TabIndex = 1;
             this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
-            // label1
+            // TitleLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 19);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Ajouter un nouvel utilisateur";
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Location = new System.Drawing.Point(13, 17);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(246, 19);
+            this.TitleLabel.TabIndex = 11;
+            this.TitleLabel.Text = "Ajouter un nouvel utilisateur";
             // 
             // UpdateBtn
             // 
@@ -1307,7 +1307,7 @@ namespace e.Components
         private System.Windows.Forms.Label Label2;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button ReturnBtn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label7;

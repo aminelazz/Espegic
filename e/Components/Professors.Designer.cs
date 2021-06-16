@@ -69,7 +69,7 @@ namespace e.Components
             this.panel1 = new System.Windows.Forms.Panel();
             this.SaveBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ReturnBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.TitleLabel = new System.Windows.Forms.Label();
             this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
@@ -125,10 +125,10 @@ namespace e.Components
             this.Pages.Margin = new System.Windows.Forms.Padding(0);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.tabPage1;
-            this.Pages.PageIndex = 0;
-            this.Pages.PageName = "tabPage1";
-            this.Pages.PageTitle = "tabPage1";
+            this.Pages.Page = this.tabPage2;
+            this.Pages.PageIndex = 1;
+            this.Pages.PageName = "tabPage2";
+            this.Pages.PageTitle = "tabPage2";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(734, 483);
             this.Pages.TabIndex = 1;
@@ -763,7 +763,7 @@ namespace e.Components
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.SaveBtn);
             this.panel1.Controls.Add(this.ReturnBtn);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.TitleLabel);
             this.panel1.Controls.Add(this.UpdateBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 3);
@@ -811,15 +811,15 @@ namespace e.Components
             this.ReturnBtn.TabIndex = 1;
             this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
-            // label1
+            // TitleLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 19);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Ajouter un nouvelle professeur";
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Location = new System.Drawing.Point(13, 17);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(253, 19);
+            this.TitleLabel.TabIndex = 11;
+            this.TitleLabel.Text = "Ajouter un nouvel professeur";
             // 
             // UpdateBtn
             // 
@@ -1306,7 +1306,7 @@ namespace e.Components
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button SaveBtn;
         private Guna.UI2.WinForms.Guna2Button ReturnBtn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Label Label2;
         private Guna.UI2.WinForms.Guna2DateTimePicker Birth;
         private Guna.UI2.WinForms.Guna2ComboBox Sex;

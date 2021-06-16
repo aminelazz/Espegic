@@ -66,6 +66,7 @@ namespace e.Components
             Sex.SelectedItem = "Masculin";
 
             SaveBtn.BringToFront();
+            TitleLabel.Text = "Ajouter un nouvel étudiant";
             Pages.PageName = "tabPage2";
 
         }
@@ -118,6 +119,7 @@ namespace e.Components
             Sex.SelectedItem = "Masculin";
 
             Pages.PageName = "tabPage2";
+            TitleLabel.Text = "Modifier l'étudiant sélectionné";
             UpdateBtn.BringToFront();
         }
 

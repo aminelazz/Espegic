@@ -82,7 +82,8 @@ namespace e.Components
             DeleteFormation.Checked = true;
             DeleteModule.Checked    = true;
 
-            Pages.PageName = "tabPage2";
+            Pages.PageName  = "tabPage2";
+            TitleLabel.Text = "Ajouter un nouvel utilisateur";
             SaveBtn.BringToFront();
         }
 
@@ -131,7 +132,8 @@ namespace e.Components
             DeleteFormation.Checked = Convert.ToBoolean(delete.FORMATIONS);
             DeleteModule.Checked    = Convert.ToBoolean(delete.MODULES);
 
-            Pages.PageName = "tabPage2";
+            Pages.PageName  = "tabPage2";
+            TitleLabel.Text = "Modifier l'utilisateur sélectionné";
             UpdateBtn.BringToFront();
 
         }
@@ -266,7 +268,7 @@ namespace e.Components
                     }
                     else
                     {
-                        MessageBox.Show("Tu n'a pas la permission pour creer un utilisateur");
+                        MessageBox.Show("Tu n'a pas la permission pour modifier un utilisateur");
                     }
                 }
             }

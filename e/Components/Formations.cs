@@ -556,7 +556,10 @@ namespace e.Components
         {
             if (help.Permitted("READ MODULE"))
             {
+                string DGV_FormationName = ViewFormation.CurrentRow.Cells["Name_Formation"].Value.ToString();
+
                 Pages.PageName = "tabPage3";
+                ModuleLabel.Text = "Modules : " + DGV_FormationName;
                 ModuleSource();
             }
             else
