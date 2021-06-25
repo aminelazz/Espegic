@@ -19,6 +19,7 @@
         <AssociationConnector Association="EspegicModel.FK__MODULES__FORMATI__373B3228" ManuallyRouted="false" />
         <AssociationConnector Association="EspegicModel.FK__STUDENTS__FORMAT__0880433F" ManuallyRouted="false" />
         <AssociationConnector Association="EspegicModel.FK_PAYMENT_STUDENTS" />
+        <AssociationConnector Association="EspegicModel.FK__PERMISSIO__USER___0C1BC9F9" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

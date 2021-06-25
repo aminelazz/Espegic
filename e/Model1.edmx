@@ -170,6 +170,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__PERMISSIO__USER___0C1BC9F9">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="0..1" />
+          <End Role="PERMISSIONS" Type="Self.PERMISSIONS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PERMISSIONS">
+              <PropertyRef Name="USER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__STUDENTS__FORMAT__0880433F">
           <End Role="FORMATIONS" Type="Self.FORMATIONS" Multiplicity="1" />
           <End Role="STUDENTS" Type="Self.STUDENTS" Multiplicity="*" />
@@ -209,6 +221,10 @@
           <AssociationSet Name="FK__MODULES__FORMATI__373B3228" Association="Self.FK__MODULES__FORMATI__373B3228">
             <End Role="FORMATIONS" EntitySet="FORMATIONS" />
             <End Role="MODULES" EntitySet="MODULES" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PERMISSIO__USER___0C1BC9F9" Association="Self.FK__PERMISSIO__USER___0C1BC9F9">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="PERMISSIONS" EntitySet="PERMISSIONS" />
           </AssociationSet>
           <AssociationSet Name="FK__STUDENTS__FORMAT__0880433F" Association="Self.FK__STUDENTS__FORMAT__0880433F">
             <End Role="FORMATIONS" EntitySet="FORMATIONS" />
@@ -295,6 +311,7 @@
           <Property Name="STUDENTS" Type="Boolean" />
           <Property Name="FORMATIONS" Type="Boolean" />
           <Property Name="MODULES" Type="Boolean" />
+          <NavigationProperty Name="USER" Relationship="EspegicModel.FK__PERMISSIO__USER___0C1BC9F9" FromRole="PERMISSION" ToRole="USER" />
         </EntityType>
         <EntityType Name="PROFESSOR">
           <Key>
@@ -381,6 +398,7 @@
           <Property Name="CREATED_AT" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="UPDATED_BY" Type="Int32" Nullable="false" />
           <Property Name="UPDATED_AT" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="PERMISSIONS" Relationship="EspegicModel.FK__PERMISSIO__USER___0C1BC9F9" FromRole="USER" ToRole="PERMISSION" />
         </EntityType>
         <Association Name="FK__MODULES__FORMATI__373B3228">
           <End Role="FORMATIONS" Type="Self.FORMATION" Multiplicity="1" />
@@ -430,6 +448,10 @@
             <End Role="STUDENT" EntitySet="STUDENTS" />
             <End Role="PAYMENT" EntitySet="PAYMENTs" />
           </AssociationSet>
+          <AssociationSet Name="FK__PERMISSIO__USER___0C1BC9F9" Association="EspegicModel.FK__PERMISSIO__USER___0C1BC9F9">
+            <End Role="USER" EntitySet="USERS" />
+            <End Role="PERMISSION" EntitySet="PERMISSIONS" />
+          </AssociationSet>
         </EntityContainer>
         <Association Name="FK_PAYMENT_STUDENTS">
           <End Type="EspegicModel.STUDENT" Role="STUDENT" Multiplicity="0..1" />
@@ -440,6 +462,18 @@
             </Principal>
             <Dependent Role="PAYMENT">
               <PropertyRef Name="STUDENT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PERMISSIO__USER___0C1BC9F9">
+          <End Type="EspegicModel.USER" Role="USER" Multiplicity="0..1" />
+          <End Type="EspegicModel.PERMISSION" Role="PERMISSION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USER">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PERMISSION">
+              <PropertyRef Name="USER_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>

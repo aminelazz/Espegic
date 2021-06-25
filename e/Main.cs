@@ -165,5 +165,13 @@ namespace e
             Content.Controls.Clear();
             Content.Controls.Add(new Statistics());
         }
+
+        //
+        // Open User Guide
+        //
+        private void UserGuideBtn_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"/USER_GUDE.pptx");
+        }
     }
 }

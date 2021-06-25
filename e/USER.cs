@@ -14,6 +14,12 @@ namespace e
     
     public partial class USER
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public USER()
+        {
+            this.PERMISSIONS = new HashSet<PERMISSION>();
+        }
+    
         public int ID { get; set; }
         public string CIN { get; set; }
         public string F_NAME { get; set; }
@@ -26,5 +32,8 @@ namespace e
         public System.DateTime CREATED_AT { get; set; }
         public int UPDATED_BY { get; set; }
         public System.DateTime UPDATED_AT { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PERMISSION> PERMISSIONS { get; set; }
     }
 }

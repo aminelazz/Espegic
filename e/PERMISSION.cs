@@ -22,5 +22,7 @@ namespace e
         public Nullable<bool> STUDENTS { get; set; }
         public Nullable<bool> FORMATIONS { get; set; }
         public Nullable<bool> MODULES { get; set; }
+    
+        public virtual USER USER { get; set; }
     }
 }

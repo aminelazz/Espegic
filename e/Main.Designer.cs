@@ -41,7 +41,6 @@ namespace e
             this.Plus = new System.Windows.Forms.ToolStripMenuItem();
             this.StatisticsBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.UserGuideBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.TechnicalGuideBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.Profile = new System.Windows.Forms.ToolStripMenuItem();
             this.ProfileBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,10 +78,10 @@ namespace e
             this.paymentBtn,
             this.Plus});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(228, 27);
+            this.menuStrip1.Location = new System.Drawing.Point(108, 27);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(485, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(605, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -134,8 +133,7 @@ namespace e
             // 
             this.Plus.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StatisticsBtn,
-            this.UserGuideBtn,
-            this.TechnicalGuideBtn});
+            this.UserGuideBtn});
             this.Plus.Name = "Plus";
             this.Plus.Size = new System.Drawing.Size(43, 20);
             this.Plus.Text = "Plus";
@@ -152,12 +150,7 @@ namespace e
             this.UserGuideBtn.Name = "UserGuideBtn";
             this.UserGuideBtn.Size = new System.Drawing.Size(180, 22);
             this.UserGuideBtn.Text = "Guide d\'utilisation";
-            // 
-            // TechnicalGuideBtn
-            // 
-            this.TechnicalGuideBtn.Name = "TechnicalGuideBtn";
-            this.TechnicalGuideBtn.Size = new System.Drawing.Size(180, 22);
-            this.TechnicalGuideBtn.Text = "Guide technique";
+            this.UserGuideBtn.Click += new System.EventHandler(this.UserGuideBtn_Click);
             // 
             // menuStrip2
             // 
@@ -242,7 +235,6 @@ namespace e
         private Guna.UI2.WinForms.Guna2Panel Content;
         private System.Windows.Forms.ToolStripMenuItem Plus;
         private System.Windows.Forms.ToolStripMenuItem UserGuideBtn;
-        private System.Windows.Forms.ToolStripMenuItem TechnicalGuideBtn;
         private System.Windows.Forms.ToolStripMenuItem StatisticsBtn;
         public System.Windows.Forms.ToolStripMenuItem HomeBtn;
         private System.Windows.Forms.ToolStripMenuItem ProfessorsBtn;
